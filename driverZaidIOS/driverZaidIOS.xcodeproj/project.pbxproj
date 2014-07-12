@@ -98,6 +98,25 @@
 		5B570B8719711A7300B2E9E1 /* zmq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B4319711A7300B2E9E1 /* zmq.cpp */; };
 		5B570B8819711CA100B2E9E1 /* libZeroMQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708FE197106D600B2E9E1 /* libZeroMQ.a */; };
 		5B570B8A19711D3500B2E9E1 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B570B8919711D3500B2E9E1 /* libc++.dylib */; };
+		5B570B8C1971323600B2E9E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B570B8B1971323600B2E9E1 /* CoreLocation.framework */; };
+		5B570B8F1971342000B2E9E1 /* DAOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B8E1971342000B2E9E1 /* DAOptions.m */; };
+		5B570B9919714AE200B2E9E1 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B9719714AE200B2E9E1 /* cJSON.c */; };
+		5B570BAB197154EF00B2E9E1 /* DAIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B570BAA197154EF00B2E9E1 /* DAIndicator.m */; };
+		5B570BAC19715AA500B2E9E1 /* app_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA719714C2600B2E9E1 /* app_dark.png */; };
+		5B570BAD19715AA500B2E9E1 /* app_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA819714C2600B2E9E1 /* app_light.png */; };
+		5B570BAE19715AA500B2E9E1 /* accidenthotspot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570B9A19714C0500B2E9E1 /* accidenthotspot.png */; };
+		5B570BAF19715AA500B2E9E1 /* animalcross.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570B9B19714C0500B2E9E1 /* animalcross.png */; };
+		5B570BB019715AA500B2E9E1 /* bikelanes.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570B9C19714C0500B2E9E1 /* bikelanes.png */; };
+		5B570BB119715AA500B2E9E1 /* carpark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570B9D19714C0500B2E9E1 /* carpark.png */; };
+		5B570BB219715AA500B2E9E1 /* caution_high_dark (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570B9E19714C0500B2E9E1 /* caution_high_dark (1).png */; };
+		5B570BB319715AA500B2E9E1 /* caution_high_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570B9F19714C0500B2E9E1 /* caution_high_light.png */; };
+		5B570BB419715AA500B2E9E1 /* caution.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA019714C0500B2E9E1 /* caution.png */; };
+		5B570BB519715AA500B2E9E1 /* crossing.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA119714C0500B2E9E1 /* crossing.png */; };
+		5B570BB619715AA500B2E9E1 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA219714C0500B2E9E1 /* info.png */; };
+		5B570BB719715AA500B2E9E1 /* knownradar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA319714C0500B2E9E1 /* knownradar.png */; };
+		5B570BB819715AA500B2E9E1 /* publictransport.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA419714C0500B2E9E1 /* publictransport.png */; };
+		5B570BB919715AA500B2E9E1 /* roadblock.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA519714C0500B2E9E1 /* roadblock.png */; };
+		5B570BBA19715AA500B2E9E1 /* roadquality.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA619714C0500B2E9E1 /* roadquality.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +334,28 @@
 		5B570B4219711A7300B2E9E1 /* zmq_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = zmq_utils.cpp; path = "../libs/zeromq-4.0.4/src/zmq_utils.cpp"; sourceTree = "<group>"; };
 		5B570B4319711A7300B2E9E1 /* zmq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = zmq.cpp; path = "../libs/zeromq-4.0.4/src/zmq.cpp"; sourceTree = "<group>"; };
 		5B570B8919711D3500B2E9E1 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		5B570B8B1971323600B2E9E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5B570B8D1971342000B2E9E1 /* DAOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOptions.h; sourceTree = "<group>"; };
+		5B570B8E1971342000B2E9E1 /* DAOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOptions.m; sourceTree = "<group>"; };
+		5B570B9719714AE200B2E9E1 /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
+		5B570B9819714AE200B2E9E1 /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
+		5B570B9A19714C0500B2E9E1 /* accidenthotspot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidenthotspot.png; sourceTree = "<group>"; };
+		5B570B9B19714C0500B2E9E1 /* animalcross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animalcross.png; sourceTree = "<group>"; };
+		5B570B9C19714C0500B2E9E1 /* bikelanes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bikelanes.png; sourceTree = "<group>"; };
+		5B570B9D19714C0500B2E9E1 /* carpark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carpark.png; sourceTree = "<group>"; };
+		5B570B9E19714C0500B2E9E1 /* caution_high_dark (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "caution_high_dark (1).png"; sourceTree = "<group>"; };
+		5B570B9F19714C0500B2E9E1 /* caution_high_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caution_high_light.png; sourceTree = "<group>"; };
+		5B570BA019714C0500B2E9E1 /* caution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caution.png; sourceTree = "<group>"; };
+		5B570BA119714C0500B2E9E1 /* crossing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crossing.png; sourceTree = "<group>"; };
+		5B570BA219714C0500B2E9E1 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		5B570BA319714C0500B2E9E1 /* knownradar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knownradar.png; sourceTree = "<group>"; };
+		5B570BA419714C0500B2E9E1 /* publictransport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = publictransport.png; sourceTree = "<group>"; };
+		5B570BA519714C0500B2E9E1 /* roadblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roadblock.png; sourceTree = "<group>"; };
+		5B570BA619714C0500B2E9E1 /* roadquality.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roadquality.png; sourceTree = "<group>"; };
+		5B570BA719714C2600B2E9E1 /* app_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_dark.png; sourceTree = "<group>"; };
+		5B570BA819714C2600B2E9E1 /* app_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_light.png; sourceTree = "<group>"; };
+		5B570BA9197154EF00B2E9E1 /* DAIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAIndicator.h; sourceTree = "<group>"; };
+		5B570BAA197154EF00B2E9E1 /* DAIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +363,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B570B8C1971323600B2E9E1 /* CoreLocation.framework in Frameworks */,
 				5B570B8A19711D3500B2E9E1 /* libc++.dylib in Frameworks */,
 				5B570B8819711CA100B2E9E1 /* libZeroMQ.a in Frameworks */,
 				5B5708C31970FD2400B2E9E1 /* CoreGraphics.framework in Frameworks */,
@@ -365,6 +407,7 @@
 		5B5708B41970FD2400B2E9E1 = {
 			isa = PBXGroup;
 			children = (
+				5B570B9619714AA800B2E9E1 /* JSON */,
 				5B570A9E19711A5200B2E9E1 /* ZeroMQ */,
 				5B5708C61970FD2400B2E9E1 /* driverZaidIOS */,
 				5B5708E51970FD2400B2E9E1 /* driverZaidIOSTests */,
@@ -387,6 +430,7 @@
 		5B5708BF1970FD2400B2E9E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B570B8B1971323600B2E9E1 /* CoreLocation.framework */,
 				5B570B8919711D3500B2E9E1 /* libc++.dylib */,
 				5B5709201971120600B2E9E1 /* libzmq.a */,
 				5B5708C01970FD2400B2E9E1 /* Foundation.framework */,
@@ -408,6 +452,10 @@
 				5B5708D61970FD2400B2E9E1 /* ViewController.m */,
 				5B5708D81970FD2400B2E9E1 /* Images.xcassets */,
 				5B5708C71970FD2400B2E9E1 /* Supporting Files */,
+				5B570B8D1971342000B2E9E1 /* DAOptions.h */,
+				5B570B8E1971342000B2E9E1 /* DAOptions.m */,
+				5B570BA9197154EF00B2E9E1 /* DAIndicator.h */,
+				5B570BAA197154EF00B2E9E1 /* DAIndicator.m */,
 			);
 			path = driverZaidIOS;
 			sourceTree = "<group>";
@@ -444,6 +492,21 @@
 		5B5708F51971041500B2E9E1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5B570BA719714C2600B2E9E1 /* app_dark.png */,
+				5B570BA819714C2600B2E9E1 /* app_light.png */,
+				5B570B9A19714C0500B2E9E1 /* accidenthotspot.png */,
+				5B570B9B19714C0500B2E9E1 /* animalcross.png */,
+				5B570B9C19714C0500B2E9E1 /* bikelanes.png */,
+				5B570B9D19714C0500B2E9E1 /* carpark.png */,
+				5B570B9E19714C0500B2E9E1 /* caution_high_dark (1).png */,
+				5B570B9F19714C0500B2E9E1 /* caution_high_light.png */,
+				5B570BA019714C0500B2E9E1 /* caution.png */,
+				5B570BA119714C0500B2E9E1 /* crossing.png */,
+				5B570BA219714C0500B2E9E1 /* info.png */,
+				5B570BA319714C0500B2E9E1 /* knownradar.png */,
+				5B570BA419714C0500B2E9E1 /* publictransport.png */,
+				5B570BA519714C0500B2E9E1 /* roadblock.png */,
+				5B570BA619714C0500B2E9E1 /* roadquality.png */,
 				5B5708F8197105F700B2E9E1 /* do_not_enter.png */,
 				5B5708F61971041500B2E9E1 /* do_not_enter.jpg */,
 			);
@@ -617,6 +680,15 @@
 			name = ZeroMQ;
 			sourceTree = "<group>";
 		};
+		5B570B9619714AA800B2E9E1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5B570B9719714AE200B2E9E1 /* cJSON.c */,
+				5B570B9819714AE200B2E9E1 /* cJSON.h */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -733,6 +805,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B570BAC19715AA500B2E9E1 /* app_dark.png in Resources */,
+				5B570BAD19715AA500B2E9E1 /* app_light.png in Resources */,
+				5B570BAE19715AA500B2E9E1 /* accidenthotspot.png in Resources */,
+				5B570BAF19715AA500B2E9E1 /* animalcross.png in Resources */,
+				5B570BB019715AA500B2E9E1 /* bikelanes.png in Resources */,
+				5B570BB119715AA500B2E9E1 /* carpark.png in Resources */,
+				5B570BB219715AA500B2E9E1 /* caution_high_dark (1).png in Resources */,
+				5B570BB319715AA500B2E9E1 /* caution_high_light.png in Resources */,
+				5B570BB419715AA500B2E9E1 /* caution.png in Resources */,
+				5B570BB519715AA500B2E9E1 /* crossing.png in Resources */,
+				5B570BB619715AA500B2E9E1 /* info.png in Resources */,
+				5B570BB719715AA500B2E9E1 /* knownradar.png in Resources */,
+				5B570BB819715AA500B2E9E1 /* publictransport.png in Resources */,
+				5B570BB919715AA500B2E9E1 /* roadblock.png in Resources */,
+				5B570BBA19715AA500B2E9E1 /* roadquality.png in Resources */,
 				5B5708D91970FD2400B2E9E1 /* Images.xcassets in Resources */,
 				5B5708CB1970FD2400B2E9E1 /* InfoPlist.strings in Resources */,
 				5B5708D41970FD2400B2E9E1 /* Main.storyboard in Resources */,
@@ -766,6 +853,9 @@
 				5B5708D71970FD2400B2E9E1 /* ViewController.m in Sources */,
 				5B5708D11970FD2400B2E9E1 /* AppDelegate.m in Sources */,
 				5B5708CD1970FD2400B2E9E1 /* main.m in Sources */,
+				5B570B9919714AE200B2E9E1 /* cJSON.c in Sources */,
+				5B570BAB197154EF00B2E9E1 /* DAIndicator.m in Sources */,
+				5B570B8F1971342000B2E9E1 /* DAOptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,7 +1025,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/usr/lib";
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/include/";
@@ -969,7 +1059,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/usr/lib";
+				LIBRARY_SEARCH_PATHS = "";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/include/";
 				VALIDATE_PRODUCT = YES;
@@ -985,10 +1075,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "driverZaidIOS/driverZaidIOS-Prefix.pch";
 				INFOPLIST_FILE = "driverZaidIOS/driverZaidIOS-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/build/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
@@ -1005,10 +1092,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "driverZaidIOS/driverZaidIOS-Prefix.pch";
 				INFOPLIST_FILE = "driverZaidIOS/driverZaidIOS-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/build/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";

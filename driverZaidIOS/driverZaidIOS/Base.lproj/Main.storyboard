@@ -16,64 +16,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0s-ID-nN8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="d0s-ID-nN8">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-zg-aFm">
-                                <rect key="frame" x="92" y="236" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Z-TX-Pv7">
+                                <rect key="frame" x="520" y="252" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="do_not_enter.png">
+                                <state key="normal" title="RoadBlock" image="roadblock.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-Rp-2Wf">
+                                <rect key="frame" x="368" y="252" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Caution" image="caution.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-bY-Uyl">
+                                <rect key="frame" x="420" y="252" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CarPark" image="carpark.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eir-rb-2ag">
+                                <rect key="frame" x="471" y="252" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Crossing" image="crossing.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnM-Qu-cTD">
+                                <rect key="frame" x="317" y="252" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AnimalCrossing" image="animalcross.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjR-z9-SJb">
+                                <rect key="frame" x="20" y="36" width="528" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="200"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfR-9F-xNK">
+                                <rect key="frame" x="265" y="252" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="KnownRadar" image="knownradar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-zg-aFm">
+                                <rect key="frame" x="55" y="252" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BikeLanes" image="bikelanes.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiQ-ig-Uve">
-                                <rect key="frame" x="164" y="236" width="64" height="64"/>
+                                <rect key="frame" x="108" y="252" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="do_not_enter.png">
+                                <state key="normal" title="AccidentHotSpot" image="accidenthotspot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7t-3U-uLW">
-                                <rect key="frame" x="236" y="236" width="64" height="64"/>
+                                <rect key="frame" x="161" y="252" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="do_not_enter.png">
+                                <state key="normal" title="Info" image="info.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQw-yt-OYw">
-                                <rect key="frame" x="308" y="236" width="64" height="64"/>
+                                <rect key="frame" x="213" y="252" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="do_not_enter.png">
+                                <state key="normal" title="PublicTransport" image="publictransport.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQv-ML-I35">
-                                <rect key="frame" x="20" y="236" width="64" height="64"/>
+                                <rect key="frame" x="4" y="252" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="do_not_enter.png">
+                                <state key="normal" title="RoadQuality" image="roadquality.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjR-z9-SJb">
-                                <rect key="frame" x="192" y="28" width="356" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="200"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="alertA" destination="CQv-ML-I35" id="cAY-Iu-uKW"/>
-                        <outlet property="alertB" destination="vWF-zg-aFm" id="08D-EE-wza"/>
-                        <outlet property="alertC" destination="fiQ-ig-Uve" id="DjZ-RI-Prq"/>
-                        <outlet property="alertD" destination="i7t-3U-uLW" id="cl7-VV-LZJ"/>
-                        <outlet property="alertE" destination="AQw-yt-OYw" id="5P1-2k-VLr"/>
+                        <outlet property="alertA" destination="CQv-ML-I35" id="w1b-XE-u6d"/>
+                        <outlet property="alertB" destination="vWF-zg-aFm" id="3DQ-jZ-ysA"/>
+                        <outlet property="alertC" destination="fiQ-ig-Uve" id="lpi-KT-6r1"/>
+                        <outlet property="alertD" destination="i7t-3U-uLW" id="g5C-1O-jRa"/>
+                        <outlet property="alertE" destination="AQw-yt-OYw" id="Vrz-nk-7PG"/>
+                        <outlet property="alertF" destination="AfR-9F-xNK" id="1AX-7G-5Om"/>
+                        <outlet property="alertG" destination="DnM-Qu-cTD" id="6k3-jn-9Pg"/>
+                        <outlet property="alertH" destination="mmC-Rp-2Wf" id="rVg-oz-7Ll"/>
+                        <outlet property="alertI" destination="Fu0-bY-Uyl" id="5BI-Tj-hCc"/>
+                        <outlet property="alertJ" destination="eir-rb-2ag" id="XdQ-W8-JrE"/>
+                        <outlet property="alertK" destination="E1Z-TX-Pv7" id="jM7-Ak-xK7"/>
                         <outlet property="mainImage" destination="d0s-ID-nN8" id="oM6-lI-wNV"/>
                     </connections>
                 </viewController>
@@ -82,7 +132,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="do_not_enter.png" width="64" height="64"/>
+        <image name="accidenthotspot.png" width="97" height="97"/>
+        <image name="animalcross.png" width="97" height="97"/>
+        <image name="app_dark.png" width="1136" height="640"/>
+        <image name="bikelanes.png" width="97" height="97"/>
+        <image name="carpark.png" width="99" height="99"/>
+        <image name="caution.png" width="97" height="97"/>
+        <image name="crossing.png" width="97" height="97"/>
+        <image name="info.png" width="97" height="97"/>
+        <image name="knownradar.png" width="97" height="97"/>
+        <image name="publictransport.png" width="97" height="97"/>
+        <image name="roadblock.png" width="97" height="97"/>
+        <image name="roadquality.png" width="97" height="97"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

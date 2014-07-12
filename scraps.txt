@@ -1,0 +1,61 @@
+        //if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        //    plistPath = [[NSBundle mainBundle] pathForResource:@"settings" ofType:@"plist"];
+        //}
+        /*NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+        NSDictionary *opts = (NSDictionary *)[NSPropertyListSerialization
+                                              propertyListFromData:plistXML
+                                              mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                              format:&format
+                                              errorDescription:&errorDesc];
+        */
+        //NSDictionary *opts = [[NSDictionary alloc] init];
+
+        /*
+        if ([opts objectForKey:@"ShowBikeLanes"] == nil) {
+            DAIndicator *ind = [[DAIndicator alloc]
+                 initWithKey:@"BikeLanes"
+                  settingKey:@"ShowBikeLanes"
+                andImageName:@"bikelanes.png"];
+            [opts setValue:ind forKey:@"ShowBikeLanes"];
+        }
+        if ([opts objectForKey:@"ShowRoadQuality"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowRoadQuality"];
+        if ([opts objectForKey:@"ShowPublicTransport"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowPublicTransport"];
+        if ([opts objectForKey:@"ShowAccidentHotSpots"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowAccidentHotSpots"];
+        if ([opts objectForKey:@"ShowCrossings"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowCrossings"];
+        if ([opts objectForKey:@"ShowAnimalCrossings"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowAnimalCrossings"];
+        if ([opts objectForKey:@"ShowRadarHotSpots"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowRadarHotSpots"];
+        if ([opts objectForKey:@"ShowInfo"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowInfo"];
+        if ([opts objectForKey:@"ShowRoadBlocks"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowRoadBlocks"];
+        if ([opts objectForKey:@"ShowCarParks"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowCarParks"];
+        if ([opts objectForKey:@"ShowCautions"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowCautions"];
+        if ([opts objectForKey:@"UseDarkBackgound"] == nil)
+            [opts setValue:[NSNumber numberWithBool:YES] forKey:@"ShowCautions"];
+         */
+        /*
+         NSString *path = [[NSBundle mainBundle] pathForResource:@"daSettings" ofType:@"txt"];
+        NSMutableDictionary *opts = [[NSMutableDictionary alloc] initWithCapacity:5];
+        NSString* fileData = [NSString stringWithContentsOfFile:path
+                                                       encoding: [NSString defaultCStringEncoding] error:nil];
+        NSScanner* fileScanner = [NSScanner scannerWithString:fileData];
+        while ([fileScanner isAtEnd]==NO){
+            NSString* line;
+            [fileScanner scanUpToString:@"\n" intoString:&line];
+            NSArray *items = [line componentsSeparatedByString:@":"];
+            [opts setObject:[items objectAtIndex:1] forKey:[items objectAtIndex:0]];
+        }
+         */
+
+        //NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithDictionary:self.options];
+        //NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
+        //                                                    format:NSPropertyListXMLFormat_v1_0
+        //                                                    errorDescription:&error];
