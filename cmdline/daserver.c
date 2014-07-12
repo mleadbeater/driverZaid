@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include <string.h>
 #include <assert.h>
+#include <errno.h>
+#include <cJSON.h>
 
 int main (void)
 {
@@ -15,11 +17,16 @@ int main (void)
     assert (rc == 0);
 
     while (1) {
-        char buffer [10];
-        zmq_recv (responder, buffer, 10, 0);
-        printf ("Received Hello\n");
-        sleep (1);          //  Do some 'work'
-        zmq_send (responder, "World", 5, 0);
+        char buffer [100];
+        int n = zmq_recv (responder, buffer, 100, 0);
+	if (n) {
+		buffer[n] = 0;
+	        printf ("Received %s\n", buffer);
+        	zmq_send (responder, "World", 5, 0);
+	}
+	else {
+		fprintf(stderr, "zmq_recv: %d\n", zmq_strerror(errno));
+	}
     }
     return 0;
 }
