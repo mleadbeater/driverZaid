@@ -99,7 +99,7 @@ void *api_socket = 0;
         NSLog(@"latitude %+.6f, longitude %+.6f\n",
               location.coordinate.latitude,
               location.coordinate.longitude);
-        char incoming[100];
+        char incoming[200];
         char outgoing[50];
         snprintf(outgoing, 50, "%+.6lf %+.6lf", location.coordinate.latitude, location.coordinate.longitude);
         zmq_send (api_socket, outgoing, strlen(outgoing), 0);

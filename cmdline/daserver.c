@@ -7,6 +7,13 @@
 #include <assert.h>
 #include <errno.h>
 #include <cJSON.h>
+#include <stdlib.h>
+
+/* indicator keys */
+
+const char *keys[] = { "RoadQuality", "BikeLanes", "AccidentHotSpot",
+            "Info", "PublicTransport", "KnownRadar", "AnimalCross",
+			"Caution", "CarPark", "Crossing", "RoadBlock" };
 
 int main (void)
 {
@@ -20,9 +27,26 @@ int main (void)
         char buffer [100];
         int n = zmq_recv (responder, buffer, 100, 0);
 	if (n) {
+		cJSON *response = 0;
+		cJSON *indicators = 0;
 		buffer[n] = 0;
-	        printf ("Received %s\n", buffer);
-        	zmq_send (responder, "World", 5, 0);
+		printf ("Received %s\n", buffer);
+		response = cJSON_CreateObject();
+		cJSON_AddStringToObject(response, "limit", "50");
+		indicators = cJSON_CreateArray();
+		if (random() % 3) {
+			cJSON_AddItemToArray(indicators, cJSON_CreateString(keys[2]));
+			cJSON_AddItemToArray(indicators, cJSON_CreateString(keys[5]));	
+		}
+		else {
+			cJSON_AddItemToArray(indicators, cJSON_CreateString(keys[9]));	
+		}
+		cJSON_AddItemToArray(indicators, cJSON_CreateString(keys[1]));	
+		cJSON_AddItemToObject(response, "indicators", indicators);
+		char *res = cJSON_Print(response);
+		cJSON_Delete(response);
+		zmq_send (responder, res, strlen(res), 0);
+		free(res);
 	}
 	else {
 		fprintf(stderr, "zmq_recv: %s\n", zmq_strerror(errno));
