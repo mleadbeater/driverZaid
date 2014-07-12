@@ -1,0 +1,181 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node COLOR="#000000" CREATED="1405112405767" ID="ID_749064422" MODIFIED="1405128509618" TEXT="DriversAid">
+<font NAME="SansSerif" SIZE="20"/>
+<hook NAME="accessories/plugins/AutomaticLayout.properties"/>
+<node COLOR="#0033ff" CREATED="1405112610947" ID="ID_570369765" MODIFIED="1405112743759" POSITION="right" TEXT="inform">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1405112597739" HGAP="19" ID="ID_518720652" MODIFIED="1405112741316" TEXT="display" VSHIFT="-5">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405112744408" ID="ID_1292751911" MODIFIED="1405112758731" TEXT="speak">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405113557003" ID="ID_1513602203" MODIFIED="1405113640392" TEXT="recent alerts">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113562589" ID="ID_878157096" MODIFIED="1405113640393" TEXT="govt warning">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113572060" ID="ID_563265871" MODIFIED="1405113640394" TEXT="hot spot">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1405112618489" ID="ID_489062396" MODIFIED="1405112685052" POSITION="right" TEXT="challenges">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1405112627432" ID="ID_427238686" MODIFIED="1405112685054" TEXT="direction">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113665614" ID="ID_667799088" MODIFIED="1405113706216" TEXT="match road">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113671845" ID="ID_1333661085" MODIFIED="1405113675168" TEXT="facing">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1405112632656" ID="ID_1198851081" MODIFIED="1405112685055" TEXT="proximity">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113708661" ID="ID_184518377" MODIFIED="1405113715720" TEXT="close changes">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1405112651115" ID="ID_748711197" MODIFIED="1405112685056" TEXT="performance">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405112797873" ID="ID_559638900" MODIFIED="1405112804449" TEXT="capture">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405112804450" ID="ID_1430838389" MODIFIED="1405112808339" TEXT="while moving">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405112813799" ID="ID_824808779" MODIFIED="1405112857385" TEXT="accuracy">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1405112857386" ID="ID_422528932" MODIFIED="1405112860460" TEXT="gps"/>
+<node COLOR="#111111" CREATED="1405112864689" ID="ID_224264026" MODIFIED="1405112881914" TEXT="user"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1405113076694" ID="ID_834454122" MODIFIED="1405113381836" POSITION="left" TEXT="capture">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1405113105293" ID="ID_1681864343" MODIFIED="1405113381837" TEXT="map">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113156204" ID="ID_1048559472" MODIFIED="1405113381838" TEXT="select road">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113159652" ID="ID_33446566" MODIFIED="1405113381838" TEXT="show direction">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1405113110613" ID="ID_1754506267" MODIFIED="1405113381839" TEXT="quick">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113120518" ID="ID_133001511" MODIFIED="1405113381840" TEXT="use current motion">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113128709" ID="ID_925504287" MODIFIED="1405113381840" TEXT="voice input">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1405113140489" ID="ID_108924229" MODIFIED="1405113143245" TEXT="getready"/>
+<node COLOR="#111111" CREATED="1405113144185" ID="ID_1457565506" MODIFIED="1405113146028" TEXT="now"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1405113195796" ID="ID_1479530212" MODIFIED="1405113381842" TEXT="simple">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113197381" ID="ID_1220185878" MODIFIED="1405113381842" TEXT="face direction">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113211461" ID="ID_1081263844" MODIFIED="1405113381843" TEXT="select speed">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1405113074246" ID="ID_101110996" MODIFIED="1405113076693" POSITION="right" TEXT="GUI">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1405113395613" ID="ID_631385908" MODIFIED="1405113412463" TEXT="capture">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113413788" ID="ID_562375467" MODIFIED="1405113418969" TEXT="alarm">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113420111" ID="ID_455101518" MODIFIED="1405113421458" TEXT="icon">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113736725" ID="ID_1625083365" MODIFIED="1405113745225" TEXT="select">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1405113745226" ID="ID_1239103544" MODIFIED="1405113751396" TEXT="speed button"/>
+<node COLOR="#111111" CREATED="1405113752449" ID="ID_482609653" MODIFIED="1405113785333" TEXT="map">
+<node COLOR="#111111" CREATED="1405113853028" ID="ID_1128646826" MODIFIED="1405113856702" TEXT="confirm location"/>
+<node COLOR="#111111" CREATED="1405113858107" ID="ID_1780323801" MODIFIED="1405113860110" TEXT="select road"/>
+</node>
+<node COLOR="#111111" CREATED="1405113780610" ID="ID_1609322767" MODIFIED="1405113819415" TEXT="reliability">
+<node COLOR="#111111" CREATED="1405113820092" ID="ID_640147096" MODIFIED="1405113830343" TEXT="are there other changes close"/>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1405113082166" ID="ID_734269568" MODIFIED="1405113085504" TEXT="warn">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405113086133" ID="ID_1595040000" MODIFIED="1405113103632" TEXT="explore">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1405113430918" ID="ID_305901624" MODIFIED="1405113435198" POSITION="left" TEXT="assumptions">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1405113435199" ID="ID_1767132156" MODIFIED="1405113467773" TEXT="unreliable internet">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405113469962" ID="ID_1306507498" MODIFIED="1405113485040" TEXT="safety first">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1405113489294" ID="ID_1121924507" MODIFIED="1405113493952" TEXT="limit distractions">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1405113494565" ID="ID_1711812055" MODIFIED="1405113531698" TEXT="stationary input">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1405113871379" ID="ID_165219629" MODIFIED="1405113873605" POSITION="left" TEXT="data">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1405114047188" ID="ID_1650341415" MODIFIED="1405114050870" TEXT="road crashes">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405114051404" ID="ID_1720589626" MODIFIED="1405114054142" TEXT="rest areas">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405114066092" ID="ID_43698722" MODIFIED="1405114070086" TEXT="significant sites">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405114096907" ID="ID_100610015" MODIFIED="1405114101340" TEXT="pedestrian crossing">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405114104042" ID="ID_840483810" MODIFIED="1405114124188" TEXT="traffic signals">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1405114146033" ID="ID_666013452" MODIFIED="1405114149872" TEXT="bike network">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
+</node>
+</map>

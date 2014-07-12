@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ZeroMQ.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>driverZaidIOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5B5708BC1970FD2400B2E9E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B5708DD1970FD2400B2E9E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B5708FD197106D600B2E9E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B57090A197106D600B2E9E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

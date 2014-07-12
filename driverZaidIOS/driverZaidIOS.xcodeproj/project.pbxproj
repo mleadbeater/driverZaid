@@ -1,0 +1,1180 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B5708C11970FD2400B2E9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C01970FD2400B2E9E1 /* Foundation.framework */; };
+		5B5708C31970FD2400B2E9E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C21970FD2400B2E9E1 /* CoreGraphics.framework */; };
+		5B5708C51970FD2400B2E9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C41970FD2400B2E9E1 /* UIKit.framework */; };
+		5B5708CB1970FD2400B2E9E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B5708C91970FD2400B2E9E1 /* InfoPlist.strings */; };
+		5B5708CD1970FD2400B2E9E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5708CC1970FD2400B2E9E1 /* main.m */; };
+		5B5708D11970FD2400B2E9E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5708D01970FD2400B2E9E1 /* AppDelegate.m */; };
+		5B5708D41970FD2400B2E9E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5708D21970FD2400B2E9E1 /* Main.storyboard */; };
+		5B5708D71970FD2400B2E9E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5708D61970FD2400B2E9E1 /* ViewController.m */; };
+		5B5708D91970FD2400B2E9E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5708D81970FD2400B2E9E1 /* Images.xcassets */; };
+		5B5708E01970FD2400B2E9E1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708DF1970FD2400B2E9E1 /* XCTest.framework */; };
+		5B5708E11970FD2400B2E9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C01970FD2400B2E9E1 /* Foundation.framework */; };
+		5B5708E21970FD2400B2E9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C41970FD2400B2E9E1 /* UIKit.framework */; };
+		5B5708EA1970FD2400B2E9E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B5708E81970FD2400B2E9E1 /* InfoPlist.strings */; };
+		5B5708EC1970FD2400B2E9E1 /* driverZaidIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5708EB1970FD2400B2E9E1 /* driverZaidIOSTests.m */; };
+		5B5708F71971041500B2E9E1 /* do_not_enter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B5708F61971041500B2E9E1 /* do_not_enter.jpg */; };
+		5B5708F9197105F700B2E9E1 /* do_not_enter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B5708F8197105F700B2E9E1 /* do_not_enter.png */; };
+		5B5708FF197106D600B2E9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C01970FD2400B2E9E1 /* Foundation.framework */; };
+		5B57090C197106D600B2E9E1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708DF1970FD2400B2E9E1 /* XCTest.framework */; };
+		5B57090D197106D600B2E9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C01970FD2400B2E9E1 /* Foundation.framework */; };
+		5B57090E197106D600B2E9E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708C41970FD2400B2E9E1 /* UIKit.framework */; };
+		5B570911197106D600B2E9E1 /* libZeroMQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708FE197106D600B2E9E1 /* libZeroMQ.a */; };
+		5B570B4419711A7300B2E9E1 /* address.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570A9F19711A7300B2E9E1 /* address.cpp */; };
+		5B570B4519711A7300B2E9E1 /* clock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AA519711A7300B2E9E1 /* clock.cpp */; };
+		5B570B4619711A7300B2E9E1 /* ctx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AA919711A7300B2E9E1 /* ctx.cpp */; };
+		5B570B4719711A7300B2E9E1 /* curve_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AAB19711A7300B2E9E1 /* curve_client.cpp */; };
+		5B570B4819711A7300B2E9E1 /* curve_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AAD19711A7300B2E9E1 /* curve_server.cpp */; };
+		5B570B4919711A7300B2E9E1 /* dealer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AB019711A7300B2E9E1 /* dealer.cpp */; };
+		5B570B4A19711A7300B2E9E1 /* devpoll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AB319711A7300B2E9E1 /* devpoll.cpp */; };
+		5B570B4B19711A7300B2E9E1 /* dist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AB519711A7300B2E9E1 /* dist.cpp */; };
+		5B570B4C19711A7300B2E9E1 /* epoll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AB819711A7300B2E9E1 /* epoll.cpp */; };
+		5B570B4D19711A7300B2E9E1 /* err.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ABA19711A7300B2E9E1 /* err.cpp */; };
+		5B570B4E19711A7300B2E9E1 /* fq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ABD19711A7300B2E9E1 /* fq.cpp */; };
+		5B570B4F19711A7300B2E9E1 /* io_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AC319711A7300B2E9E1 /* io_object.cpp */; };
+		5B570B5019711A7300B2E9E1 /* io_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AC519711A7300B2E9E1 /* io_thread.cpp */; };
+		5B570B5119711A7300B2E9E1 /* ip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AC719711A7300B2E9E1 /* ip.cpp */; };
+		5B570B5219711A7300B2E9E1 /* ipc_address.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AC919711A7300B2E9E1 /* ipc_address.cpp */; };
+		5B570B5319711A7300B2E9E1 /* ipc_connecter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ACB19711A7300B2E9E1 /* ipc_connecter.cpp */; };
+		5B570B5419711A7300B2E9E1 /* ipc_listener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ACD19711A7300B2E9E1 /* ipc_listener.cpp */; };
+		5B570B5519711A7300B2E9E1 /* kqueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ACF19711A7300B2E9E1 /* kqueue.cpp */; };
+		5B570B5619711A7300B2E9E1 /* lb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AD119711A7300B2E9E1 /* lb.cpp */; };
+		5B570B5719711A7300B2E9E1 /* mailbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AD619711A7300B2E9E1 /* mailbox.cpp */; };
+		5B570B5819711A7300B2E9E1 /* mechanism.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ADA19711A7300B2E9E1 /* mechanism.cpp */; };
+		5B570B5919711A7300B2E9E1 /* msg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ADC19711A7300B2E9E1 /* msg.cpp */; };
+		5B570B5A19711A7300B2E9E1 /* mtrie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570ADE19711A7300B2E9E1 /* mtrie.cpp */; };
+		5B570B5B19711A7300B2E9E1 /* null_mechanism.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AE119711A7300B2E9E1 /* null_mechanism.cpp */; };
+		5B570B5C19711A7300B2E9E1 /* object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AE319711A7300B2E9E1 /* object.cpp */; };
+		5B570B5D19711A7300B2E9E1 /* options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AE519711A7300B2E9E1 /* options.cpp */; };
+		5B570B5E19711A7300B2E9E1 /* own.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AE719711A7300B2E9E1 /* own.cpp */; };
+		5B570B5F19711A7300B2E9E1 /* pair.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AE919711A7300B2E9E1 /* pair.cpp */; };
+		5B570B6019711A7300B2E9E1 /* pgm_receiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AEB19711A7300B2E9E1 /* pgm_receiver.cpp */; };
+		5B570B6119711A7300B2E9E1 /* pgm_sender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AED19711A7300B2E9E1 /* pgm_sender.cpp */; };
+		5B570B6219711A7300B2E9E1 /* pgm_socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AEF19711A7300B2E9E1 /* pgm_socket.cpp */; };
+		5B570B6319711A7300B2E9E1 /* pipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AF119711A7300B2E9E1 /* pipe.cpp */; };
+		5B570B6419711A7300B2E9E1 /* plain_mechanism.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AF319711A7300B2E9E1 /* plain_mechanism.cpp */; };
+		5B570B6519711A7300B2E9E1 /* poll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AF719711A7300B2E9E1 /* poll.cpp */; };
+		5B570B6619711A7300B2E9E1 /* poller_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AF919711A7300B2E9E1 /* poller_base.cpp */; };
+		5B570B6719711A7300B2E9E1 /* precompiled.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AFC19711A7300B2E9E1 /* precompiled.cpp */; };
+		5B570B6819711A7300B2E9E1 /* proxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570AFE19711A7300B2E9E1 /* proxy.cpp */; };
+		5B570B6919711A7300B2E9E1 /* pub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0019711A7300B2E9E1 /* pub.cpp */; };
+		5B570B6A19711A7300B2E9E1 /* pull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0219711A7300B2E9E1 /* pull.cpp */; };
+		5B570B6B19711A7300B2E9E1 /* push.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0419711A7300B2E9E1 /* push.cpp */; };
+		5B570B6C19711A7300B2E9E1 /* random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0619711A7300B2E9E1 /* random.cpp */; };
+		5B570B6D19711A7300B2E9E1 /* raw_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0819711A7300B2E9E1 /* raw_decoder.cpp */; };
+		5B570B6E19711A7300B2E9E1 /* raw_encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0A19711A7300B2E9E1 /* raw_encoder.cpp */; };
+		5B570B6F19711A7300B2E9E1 /* reaper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0C19711A7300B2E9E1 /* reaper.cpp */; };
+		5B570B7019711A7300B2E9E1 /* rep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B0E19711A7300B2E9E1 /* rep.cpp */; };
+		5B570B7119711A7300B2E9E1 /* req.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1019711A7300B2E9E1 /* req.cpp */; };
+		5B570B7219711A7300B2E9E1 /* router.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1219711A7300B2E9E1 /* router.cpp */; };
+		5B570B7319711A7300B2E9E1 /* select.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1419711A7300B2E9E1 /* select.cpp */; };
+		5B570B7419711A7300B2E9E1 /* session_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1619711A7300B2E9E1 /* session_base.cpp */; };
+		5B570B7519711A7300B2E9E1 /* signaler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1819711A7300B2E9E1 /* signaler.cpp */; };
+		5B570B7619711A7300B2E9E1 /* socket_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1A19711A7300B2E9E1 /* socket_base.cpp */; };
+		5B570B7719711A7300B2E9E1 /* stream_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1D19711A7300B2E9E1 /* stream_engine.cpp */; };
+		5B570B7819711A7300B2E9E1 /* stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B1F19711A7300B2E9E1 /* stream.cpp */; };
+		5B570B7919711A7300B2E9E1 /* sub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2119711A7300B2E9E1 /* sub.cpp */; };
+		5B570B7A19711A7300B2E9E1 /* tcp_address.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2319711A7300B2E9E1 /* tcp_address.cpp */; };
+		5B570B7B19711A7300B2E9E1 /* tcp_connecter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2519711A7300B2E9E1 /* tcp_connecter.cpp */; };
+		5B570B7C19711A7300B2E9E1 /* tcp_listener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2719711A7300B2E9E1 /* tcp_listener.cpp */; };
+		5B570B7D19711A7300B2E9E1 /* tcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2919711A7300B2E9E1 /* tcp.cpp */; };
+		5B570B7E19711A7300B2E9E1 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2B19711A7300B2E9E1 /* thread.cpp */; };
+		5B570B7F19711A7300B2E9E1 /* trie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2D19711A7300B2E9E1 /* trie.cpp */; };
+		5B570B8019711A7300B2E9E1 /* v1_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B2F19711A7300B2E9E1 /* v1_decoder.cpp */; };
+		5B570B8119711A7300B2E9E1 /* v1_encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B3119711A7300B2E9E1 /* v1_encoder.cpp */; };
+		5B570B8219711A7300B2E9E1 /* v2_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B3319711A7300B2E9E1 /* v2_decoder.cpp */; };
+		5B570B8319711A7300B2E9E1 /* v2_encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B3519711A7300B2E9E1 /* v2_encoder.cpp */; };
+		5B570B8419711A7300B2E9E1 /* xpub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B3A19711A7300B2E9E1 /* xpub.cpp */; };
+		5B570B8519711A7300B2E9E1 /* xsub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B3C19711A7300B2E9E1 /* xsub.cpp */; };
+		5B570B8619711A7300B2E9E1 /* zmq_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B4219711A7300B2E9E1 /* zmq_utils.cpp */; };
+		5B570B8719711A7300B2E9E1 /* zmq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B4319711A7300B2E9E1 /* zmq.cpp */; };
+		5B570B8819711CA100B2E9E1 /* libZeroMQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5708FE197106D600B2E9E1 /* libZeroMQ.a */; };
+		5B570B8A19711D3500B2E9E1 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B570B8919711D3500B2E9E1 /* libc++.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B5708E31970FD2400B2E9E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B5708B51970FD2400B2E9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B5708BC1970FD2400B2E9E1;
+			remoteInfo = driverZaidIOS;
+		};
+		5B57090F197106D600B2E9E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B5708B51970FD2400B2E9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B5708FD197106D600B2E9E1;
+			remoteInfo = ZeroMQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B5708FC197106D600B2E9E1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B5708BD1970FD2400B2E9E1 /* driverZaidIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = driverZaidIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5708C01970FD2400B2E9E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5B5708C21970FD2400B2E9E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5B5708C41970FD2400B2E9E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5B5708C81970FD2400B2E9E1 /* driverZaidIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "driverZaidIOS-Info.plist"; sourceTree = "<group>"; };
+		5B5708CA1970FD2400B2E9E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B5708CC1970FD2400B2E9E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B5708CE1970FD2400B2E9E1 /* driverZaidIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "driverZaidIOS-Prefix.pch"; sourceTree = "<group>"; };
+		5B5708CF1970FD2400B2E9E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B5708D01970FD2400B2E9E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B5708D31970FD2400B2E9E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B5708D51970FD2400B2E9E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5B5708D61970FD2400B2E9E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B5708D81970FD2400B2E9E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5B5708DE1970FD2400B2E9E1 /* driverZaidIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = driverZaidIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5708DF1970FD2400B2E9E1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5B5708E71970FD2400B2E9E1 /* driverZaidIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "driverZaidIOSTests-Info.plist"; sourceTree = "<group>"; };
+		5B5708E91970FD2400B2E9E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B5708EB1970FD2400B2E9E1 /* driverZaidIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = driverZaidIOSTests.m; sourceTree = "<group>"; };
+		5B5708F61971041500B2E9E1 /* do_not_enter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = do_not_enter.jpg; sourceTree = "<group>"; };
+		5B5708F8197105F700B2E9E1 /* do_not_enter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = do_not_enter.png; sourceTree = "<group>"; };
+		5B5708FE197106D600B2E9E1 /* libZeroMQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZeroMQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B57090B197106D600B2E9E1 /* ZeroMQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroMQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5709201971120600B2E9E1 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzmq.a; path = "../libs/zeromq-4.0.4/build/lib/libzmq.a"; sourceTree = "<group>"; };
+		5B570A9F19711A7300B2E9E1 /* address.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = address.cpp; path = "../libs/zeromq-4.0.4/src/address.cpp"; sourceTree = "<group>"; };
+		5B570AA019711A7300B2E9E1 /* address.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = address.hpp; path = "../libs/zeromq-4.0.4/src/address.hpp"; sourceTree = "<group>"; };
+		5B570AA119711A7300B2E9E1 /* array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = array.hpp; path = "../libs/zeromq-4.0.4/src/array.hpp"; sourceTree = "<group>"; };
+		5B570AA219711A7300B2E9E1 /* atomic_counter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = atomic_counter.hpp; path = "../libs/zeromq-4.0.4/src/atomic_counter.hpp"; sourceTree = "<group>"; };
+		5B570AA319711A7300B2E9E1 /* atomic_ptr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = atomic_ptr.hpp; path = "../libs/zeromq-4.0.4/src/atomic_ptr.hpp"; sourceTree = "<group>"; };
+		5B570AA419711A7300B2E9E1 /* blob.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = blob.hpp; path = "../libs/zeromq-4.0.4/src/blob.hpp"; sourceTree = "<group>"; };
+		5B570AA519711A7300B2E9E1 /* clock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = clock.cpp; path = "../libs/zeromq-4.0.4/src/clock.cpp"; sourceTree = "<group>"; };
+		5B570AA619711A7300B2E9E1 /* clock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = clock.hpp; path = "../libs/zeromq-4.0.4/src/clock.hpp"; sourceTree = "<group>"; };
+		5B570AA719711A7300B2E9E1 /* command.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = command.hpp; path = "../libs/zeromq-4.0.4/src/command.hpp"; sourceTree = "<group>"; };
+		5B570AA819711A7300B2E9E1 /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = config.hpp; path = "../libs/zeromq-4.0.4/src/config.hpp"; sourceTree = "<group>"; };
+		5B570AA919711A7300B2E9E1 /* ctx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ctx.cpp; path = "../libs/zeromq-4.0.4/src/ctx.cpp"; sourceTree = "<group>"; };
+		5B570AAA19711A7300B2E9E1 /* ctx.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ctx.hpp; path = "../libs/zeromq-4.0.4/src/ctx.hpp"; sourceTree = "<group>"; };
+		5B570AAB19711A7300B2E9E1 /* curve_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = curve_client.cpp; path = "../libs/zeromq-4.0.4/src/curve_client.cpp"; sourceTree = "<group>"; };
+		5B570AAC19711A7300B2E9E1 /* curve_client.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = curve_client.hpp; path = "../libs/zeromq-4.0.4/src/curve_client.hpp"; sourceTree = "<group>"; };
+		5B570AAD19711A7300B2E9E1 /* curve_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = curve_server.cpp; path = "../libs/zeromq-4.0.4/src/curve_server.cpp"; sourceTree = "<group>"; };
+		5B570AAE19711A7300B2E9E1 /* curve_server.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = curve_server.hpp; path = "../libs/zeromq-4.0.4/src/curve_server.hpp"; sourceTree = "<group>"; };
+		5B570AAF19711A7300B2E9E1 /* dbuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = dbuffer.hpp; path = "../libs/zeromq-4.0.4/src/dbuffer.hpp"; sourceTree = "<group>"; };
+		5B570AB019711A7300B2E9E1 /* dealer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dealer.cpp; path = "../libs/zeromq-4.0.4/src/dealer.cpp"; sourceTree = "<group>"; };
+		5B570AB119711A7300B2E9E1 /* dealer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = dealer.hpp; path = "../libs/zeromq-4.0.4/src/dealer.hpp"; sourceTree = "<group>"; };
+		5B570AB219711A7300B2E9E1 /* decoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = decoder.hpp; path = "../libs/zeromq-4.0.4/src/decoder.hpp"; sourceTree = "<group>"; };
+		5B570AB319711A7300B2E9E1 /* devpoll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = devpoll.cpp; path = "../libs/zeromq-4.0.4/src/devpoll.cpp"; sourceTree = "<group>"; };
+		5B570AB419711A7300B2E9E1 /* devpoll.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = devpoll.hpp; path = "../libs/zeromq-4.0.4/src/devpoll.hpp"; sourceTree = "<group>"; };
+		5B570AB519711A7300B2E9E1 /* dist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dist.cpp; path = "../libs/zeromq-4.0.4/src/dist.cpp"; sourceTree = "<group>"; };
+		5B570AB619711A7300B2E9E1 /* dist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = dist.hpp; path = "../libs/zeromq-4.0.4/src/dist.hpp"; sourceTree = "<group>"; };
+		5B570AB719711A7300B2E9E1 /* encoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = encoder.hpp; path = "../libs/zeromq-4.0.4/src/encoder.hpp"; sourceTree = "<group>"; };
+		5B570AB819711A7300B2E9E1 /* epoll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = epoll.cpp; path = "../libs/zeromq-4.0.4/src/epoll.cpp"; sourceTree = "<group>"; };
+		5B570AB919711A7300B2E9E1 /* epoll.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = epoll.hpp; path = "../libs/zeromq-4.0.4/src/epoll.hpp"; sourceTree = "<group>"; };
+		5B570ABA19711A7300B2E9E1 /* err.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = err.cpp; path = "../libs/zeromq-4.0.4/src/err.cpp"; sourceTree = "<group>"; };
+		5B570ABB19711A7300B2E9E1 /* err.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = err.hpp; path = "../libs/zeromq-4.0.4/src/err.hpp"; sourceTree = "<group>"; };
+		5B570ABC19711A7300B2E9E1 /* fd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fd.hpp; path = "../libs/zeromq-4.0.4/src/fd.hpp"; sourceTree = "<group>"; };
+		5B570ABD19711A7300B2E9E1 /* fq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fq.cpp; path = "../libs/zeromq-4.0.4/src/fq.cpp"; sourceTree = "<group>"; };
+		5B570ABE19711A7300B2E9E1 /* fq.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fq.hpp; path = "../libs/zeromq-4.0.4/src/fq.hpp"; sourceTree = "<group>"; };
+		5B570ABF19711A7300B2E9E1 /* i_decoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = i_decoder.hpp; path = "../libs/zeromq-4.0.4/src/i_decoder.hpp"; sourceTree = "<group>"; };
+		5B570AC019711A7300B2E9E1 /* i_encoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = i_encoder.hpp; path = "../libs/zeromq-4.0.4/src/i_encoder.hpp"; sourceTree = "<group>"; };
+		5B570AC119711A7300B2E9E1 /* i_engine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = i_engine.hpp; path = "../libs/zeromq-4.0.4/src/i_engine.hpp"; sourceTree = "<group>"; };
+		5B570AC219711A7300B2E9E1 /* i_poll_events.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = i_poll_events.hpp; path = "../libs/zeromq-4.0.4/src/i_poll_events.hpp"; sourceTree = "<group>"; };
+		5B570AC319711A7300B2E9E1 /* io_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = io_object.cpp; path = "../libs/zeromq-4.0.4/src/io_object.cpp"; sourceTree = "<group>"; };
+		5B570AC419711A7300B2E9E1 /* io_object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = io_object.hpp; path = "../libs/zeromq-4.0.4/src/io_object.hpp"; sourceTree = "<group>"; };
+		5B570AC519711A7300B2E9E1 /* io_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = io_thread.cpp; path = "../libs/zeromq-4.0.4/src/io_thread.cpp"; sourceTree = "<group>"; };
+		5B570AC619711A7300B2E9E1 /* io_thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = io_thread.hpp; path = "../libs/zeromq-4.0.4/src/io_thread.hpp"; sourceTree = "<group>"; };
+		5B570AC719711A7300B2E9E1 /* ip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ip.cpp; path = "../libs/zeromq-4.0.4/src/ip.cpp"; sourceTree = "<group>"; };
+		5B570AC819711A7300B2E9E1 /* ip.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ip.hpp; path = "../libs/zeromq-4.0.4/src/ip.hpp"; sourceTree = "<group>"; };
+		5B570AC919711A7300B2E9E1 /* ipc_address.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ipc_address.cpp; path = "../libs/zeromq-4.0.4/src/ipc_address.cpp"; sourceTree = "<group>"; };
+		5B570ACA19711A7300B2E9E1 /* ipc_address.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ipc_address.hpp; path = "../libs/zeromq-4.0.4/src/ipc_address.hpp"; sourceTree = "<group>"; };
+		5B570ACB19711A7300B2E9E1 /* ipc_connecter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ipc_connecter.cpp; path = "../libs/zeromq-4.0.4/src/ipc_connecter.cpp"; sourceTree = "<group>"; };
+		5B570ACC19711A7300B2E9E1 /* ipc_connecter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ipc_connecter.hpp; path = "../libs/zeromq-4.0.4/src/ipc_connecter.hpp"; sourceTree = "<group>"; };
+		5B570ACD19711A7300B2E9E1 /* ipc_listener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ipc_listener.cpp; path = "../libs/zeromq-4.0.4/src/ipc_listener.cpp"; sourceTree = "<group>"; };
+		5B570ACE19711A7300B2E9E1 /* ipc_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ipc_listener.hpp; path = "../libs/zeromq-4.0.4/src/ipc_listener.hpp"; sourceTree = "<group>"; };
+		5B570ACF19711A7300B2E9E1 /* kqueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kqueue.cpp; path = "../libs/zeromq-4.0.4/src/kqueue.cpp"; sourceTree = "<group>"; };
+		5B570AD019711A7300B2E9E1 /* kqueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = kqueue.hpp; path = "../libs/zeromq-4.0.4/src/kqueue.hpp"; sourceTree = "<group>"; };
+		5B570AD119711A7300B2E9E1 /* lb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lb.cpp; path = "../libs/zeromq-4.0.4/src/lb.cpp"; sourceTree = "<group>"; };
+		5B570AD219711A7300B2E9E1 /* lb.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = lb.hpp; path = "../libs/zeromq-4.0.4/src/lb.hpp"; sourceTree = "<group>"; };
+		5B570AD519711A7300B2E9E1 /* likely.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = likely.hpp; path = "../libs/zeromq-4.0.4/src/likely.hpp"; sourceTree = "<group>"; };
+		5B570AD619711A7300B2E9E1 /* mailbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mailbox.cpp; path = "../libs/zeromq-4.0.4/src/mailbox.cpp"; sourceTree = "<group>"; };
+		5B570AD719711A7300B2E9E1 /* mailbox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mailbox.hpp; path = "../libs/zeromq-4.0.4/src/mailbox.hpp"; sourceTree = "<group>"; };
+		5B570ADA19711A7300B2E9E1 /* mechanism.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mechanism.cpp; path = "../libs/zeromq-4.0.4/src/mechanism.cpp"; sourceTree = "<group>"; };
+		5B570ADB19711A7300B2E9E1 /* mechanism.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mechanism.hpp; path = "../libs/zeromq-4.0.4/src/mechanism.hpp"; sourceTree = "<group>"; };
+		5B570ADC19711A7300B2E9E1 /* msg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = msg.cpp; path = "../libs/zeromq-4.0.4/src/msg.cpp"; sourceTree = "<group>"; };
+		5B570ADD19711A7300B2E9E1 /* msg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = msg.hpp; path = "../libs/zeromq-4.0.4/src/msg.hpp"; sourceTree = "<group>"; };
+		5B570ADE19711A7300B2E9E1 /* mtrie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mtrie.cpp; path = "../libs/zeromq-4.0.4/src/mtrie.cpp"; sourceTree = "<group>"; };
+		5B570ADF19711A7300B2E9E1 /* mtrie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mtrie.hpp; path = "../libs/zeromq-4.0.4/src/mtrie.hpp"; sourceTree = "<group>"; };
+		5B570AE019711A7300B2E9E1 /* mutex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mutex.hpp; path = "../libs/zeromq-4.0.4/src/mutex.hpp"; sourceTree = "<group>"; };
+		5B570AE119711A7300B2E9E1 /* null_mechanism.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = null_mechanism.cpp; path = "../libs/zeromq-4.0.4/src/null_mechanism.cpp"; sourceTree = "<group>"; };
+		5B570AE219711A7300B2E9E1 /* null_mechanism.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = null_mechanism.hpp; path = "../libs/zeromq-4.0.4/src/null_mechanism.hpp"; sourceTree = "<group>"; };
+		5B570AE319711A7300B2E9E1 /* object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = object.cpp; path = "../libs/zeromq-4.0.4/src/object.cpp"; sourceTree = "<group>"; };
+		5B570AE419711A7300B2E9E1 /* object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = object.hpp; path = "../libs/zeromq-4.0.4/src/object.hpp"; sourceTree = "<group>"; };
+		5B570AE519711A7300B2E9E1 /* options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = options.cpp; path = "../libs/zeromq-4.0.4/src/options.cpp"; sourceTree = "<group>"; };
+		5B570AE619711A7300B2E9E1 /* options.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = options.hpp; path = "../libs/zeromq-4.0.4/src/options.hpp"; sourceTree = "<group>"; };
+		5B570AE719711A7300B2E9E1 /* own.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = own.cpp; path = "../libs/zeromq-4.0.4/src/own.cpp"; sourceTree = "<group>"; };
+		5B570AE819711A7300B2E9E1 /* own.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = own.hpp; path = "../libs/zeromq-4.0.4/src/own.hpp"; sourceTree = "<group>"; };
+		5B570AE919711A7300B2E9E1 /* pair.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pair.cpp; path = "../libs/zeromq-4.0.4/src/pair.cpp"; sourceTree = "<group>"; };
+		5B570AEA19711A7300B2E9E1 /* pair.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pair.hpp; path = "../libs/zeromq-4.0.4/src/pair.hpp"; sourceTree = "<group>"; };
+		5B570AEB19711A7300B2E9E1 /* pgm_receiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pgm_receiver.cpp; path = "../libs/zeromq-4.0.4/src/pgm_receiver.cpp"; sourceTree = "<group>"; };
+		5B570AEC19711A7300B2E9E1 /* pgm_receiver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pgm_receiver.hpp; path = "../libs/zeromq-4.0.4/src/pgm_receiver.hpp"; sourceTree = "<group>"; };
+		5B570AED19711A7300B2E9E1 /* pgm_sender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pgm_sender.cpp; path = "../libs/zeromq-4.0.4/src/pgm_sender.cpp"; sourceTree = "<group>"; };
+		5B570AEE19711A7300B2E9E1 /* pgm_sender.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pgm_sender.hpp; path = "../libs/zeromq-4.0.4/src/pgm_sender.hpp"; sourceTree = "<group>"; };
+		5B570AEF19711A7300B2E9E1 /* pgm_socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pgm_socket.cpp; path = "../libs/zeromq-4.0.4/src/pgm_socket.cpp"; sourceTree = "<group>"; };
+		5B570AF019711A7300B2E9E1 /* pgm_socket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pgm_socket.hpp; path = "../libs/zeromq-4.0.4/src/pgm_socket.hpp"; sourceTree = "<group>"; };
+		5B570AF119711A7300B2E9E1 /* pipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pipe.cpp; path = "../libs/zeromq-4.0.4/src/pipe.cpp"; sourceTree = "<group>"; };
+		5B570AF219711A7300B2E9E1 /* pipe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pipe.hpp; path = "../libs/zeromq-4.0.4/src/pipe.hpp"; sourceTree = "<group>"; };
+		5B570AF319711A7300B2E9E1 /* plain_mechanism.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = plain_mechanism.cpp; path = "../libs/zeromq-4.0.4/src/plain_mechanism.cpp"; sourceTree = "<group>"; };
+		5B570AF419711A7300B2E9E1 /* plain_mechanism.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = plain_mechanism.hpp; path = "../libs/zeromq-4.0.4/src/plain_mechanism.hpp"; sourceTree = "<group>"; };
+		5B570AF519711A7300B2E9E1 /* platform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = platform.hpp; path = "../libs/zeromq-4.0.4/src/platform.hpp"; sourceTree = "<group>"; };
+		5B570AF719711A7300B2E9E1 /* poll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poll.cpp; path = "../libs/zeromq-4.0.4/src/poll.cpp"; sourceTree = "<group>"; };
+		5B570AF819711A7300B2E9E1 /* poll.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = poll.hpp; path = "../libs/zeromq-4.0.4/src/poll.hpp"; sourceTree = "<group>"; };
+		5B570AF919711A7300B2E9E1 /* poller_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poller_base.cpp; path = "../libs/zeromq-4.0.4/src/poller_base.cpp"; sourceTree = "<group>"; };
+		5B570AFA19711A7300B2E9E1 /* poller_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = poller_base.hpp; path = "../libs/zeromq-4.0.4/src/poller_base.hpp"; sourceTree = "<group>"; };
+		5B570AFB19711A7300B2E9E1 /* poller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = poller.hpp; path = "../libs/zeromq-4.0.4/src/poller.hpp"; sourceTree = "<group>"; };
+		5B570AFC19711A7300B2E9E1 /* precompiled.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = precompiled.cpp; path = "../libs/zeromq-4.0.4/src/precompiled.cpp"; sourceTree = "<group>"; };
+		5B570AFD19711A7300B2E9E1 /* precompiled.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = precompiled.hpp; path = "../libs/zeromq-4.0.4/src/precompiled.hpp"; sourceTree = "<group>"; };
+		5B570AFE19711A7300B2E9E1 /* proxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = proxy.cpp; path = "../libs/zeromq-4.0.4/src/proxy.cpp"; sourceTree = "<group>"; };
+		5B570AFF19711A7300B2E9E1 /* proxy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = proxy.hpp; path = "../libs/zeromq-4.0.4/src/proxy.hpp"; sourceTree = "<group>"; };
+		5B570B0019711A7300B2E9E1 /* pub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pub.cpp; path = "../libs/zeromq-4.0.4/src/pub.cpp"; sourceTree = "<group>"; };
+		5B570B0119711A7300B2E9E1 /* pub.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pub.hpp; path = "../libs/zeromq-4.0.4/src/pub.hpp"; sourceTree = "<group>"; };
+		5B570B0219711A7300B2E9E1 /* pull.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pull.cpp; path = "../libs/zeromq-4.0.4/src/pull.cpp"; sourceTree = "<group>"; };
+		5B570B0319711A7300B2E9E1 /* pull.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pull.hpp; path = "../libs/zeromq-4.0.4/src/pull.hpp"; sourceTree = "<group>"; };
+		5B570B0419711A7300B2E9E1 /* push.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = push.cpp; path = "../libs/zeromq-4.0.4/src/push.cpp"; sourceTree = "<group>"; };
+		5B570B0519711A7300B2E9E1 /* push.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = push.hpp; path = "../libs/zeromq-4.0.4/src/push.hpp"; sourceTree = "<group>"; };
+		5B570B0619711A7300B2E9E1 /* random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = random.cpp; path = "../libs/zeromq-4.0.4/src/random.cpp"; sourceTree = "<group>"; };
+		5B570B0719711A7300B2E9E1 /* random.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = random.hpp; path = "../libs/zeromq-4.0.4/src/random.hpp"; sourceTree = "<group>"; };
+		5B570B0819711A7300B2E9E1 /* raw_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = raw_decoder.cpp; path = "../libs/zeromq-4.0.4/src/raw_decoder.cpp"; sourceTree = "<group>"; };
+		5B570B0919711A7300B2E9E1 /* raw_decoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = raw_decoder.hpp; path = "../libs/zeromq-4.0.4/src/raw_decoder.hpp"; sourceTree = "<group>"; };
+		5B570B0A19711A7300B2E9E1 /* raw_encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = raw_encoder.cpp; path = "../libs/zeromq-4.0.4/src/raw_encoder.cpp"; sourceTree = "<group>"; };
+		5B570B0B19711A7300B2E9E1 /* raw_encoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = raw_encoder.hpp; path = "../libs/zeromq-4.0.4/src/raw_encoder.hpp"; sourceTree = "<group>"; };
+		5B570B0C19711A7300B2E9E1 /* reaper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reaper.cpp; path = "../libs/zeromq-4.0.4/src/reaper.cpp"; sourceTree = "<group>"; };
+		5B570B0D19711A7300B2E9E1 /* reaper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = reaper.hpp; path = "../libs/zeromq-4.0.4/src/reaper.hpp"; sourceTree = "<group>"; };
+		5B570B0E19711A7300B2E9E1 /* rep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rep.cpp; path = "../libs/zeromq-4.0.4/src/rep.cpp"; sourceTree = "<group>"; };
+		5B570B0F19711A7300B2E9E1 /* rep.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rep.hpp; path = "../libs/zeromq-4.0.4/src/rep.hpp"; sourceTree = "<group>"; };
+		5B570B1019711A7300B2E9E1 /* req.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = req.cpp; path = "../libs/zeromq-4.0.4/src/req.cpp"; sourceTree = "<group>"; };
+		5B570B1119711A7300B2E9E1 /* req.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = req.hpp; path = "../libs/zeromq-4.0.4/src/req.hpp"; sourceTree = "<group>"; };
+		5B570B1219711A7300B2E9E1 /* router.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = router.cpp; path = "../libs/zeromq-4.0.4/src/router.cpp"; sourceTree = "<group>"; };
+		5B570B1319711A7300B2E9E1 /* router.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = router.hpp; path = "../libs/zeromq-4.0.4/src/router.hpp"; sourceTree = "<group>"; };
+		5B570B1419711A7300B2E9E1 /* select.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = select.cpp; path = "../libs/zeromq-4.0.4/src/select.cpp"; sourceTree = "<group>"; };
+		5B570B1519711A7300B2E9E1 /* select.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = select.hpp; path = "../libs/zeromq-4.0.4/src/select.hpp"; sourceTree = "<group>"; };
+		5B570B1619711A7300B2E9E1 /* session_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = session_base.cpp; path = "../libs/zeromq-4.0.4/src/session_base.cpp"; sourceTree = "<group>"; };
+		5B570B1719711A7300B2E9E1 /* session_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = session_base.hpp; path = "../libs/zeromq-4.0.4/src/session_base.hpp"; sourceTree = "<group>"; };
+		5B570B1819711A7300B2E9E1 /* signaler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = signaler.cpp; path = "../libs/zeromq-4.0.4/src/signaler.cpp"; sourceTree = "<group>"; };
+		5B570B1919711A7300B2E9E1 /* signaler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = signaler.hpp; path = "../libs/zeromq-4.0.4/src/signaler.hpp"; sourceTree = "<group>"; };
+		5B570B1A19711A7300B2E9E1 /* socket_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socket_base.cpp; path = "../libs/zeromq-4.0.4/src/socket_base.cpp"; sourceTree = "<group>"; };
+		5B570B1B19711A7300B2E9E1 /* socket_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = socket_base.hpp; path = "../libs/zeromq-4.0.4/src/socket_base.hpp"; sourceTree = "<group>"; };
+		5B570B1C19711A7300B2E9E1 /* stdint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stdint.hpp; path = "../libs/zeromq-4.0.4/src/stdint.hpp"; sourceTree = "<group>"; };
+		5B570B1D19711A7300B2E9E1 /* stream_engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stream_engine.cpp; path = "../libs/zeromq-4.0.4/src/stream_engine.cpp"; sourceTree = "<group>"; };
+		5B570B1E19711A7300B2E9E1 /* stream_engine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stream_engine.hpp; path = "../libs/zeromq-4.0.4/src/stream_engine.hpp"; sourceTree = "<group>"; };
+		5B570B1F19711A7300B2E9E1 /* stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stream.cpp; path = "../libs/zeromq-4.0.4/src/stream.cpp"; sourceTree = "<group>"; };
+		5B570B2019711A7300B2E9E1 /* stream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stream.hpp; path = "../libs/zeromq-4.0.4/src/stream.hpp"; sourceTree = "<group>"; };
+		5B570B2119711A7300B2E9E1 /* sub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sub.cpp; path = "../libs/zeromq-4.0.4/src/sub.cpp"; sourceTree = "<group>"; };
+		5B570B2219711A7300B2E9E1 /* sub.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sub.hpp; path = "../libs/zeromq-4.0.4/src/sub.hpp"; sourceTree = "<group>"; };
+		5B570B2319711A7300B2E9E1 /* tcp_address.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tcp_address.cpp; path = "../libs/zeromq-4.0.4/src/tcp_address.cpp"; sourceTree = "<group>"; };
+		5B570B2419711A7300B2E9E1 /* tcp_address.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tcp_address.hpp; path = "../libs/zeromq-4.0.4/src/tcp_address.hpp"; sourceTree = "<group>"; };
+		5B570B2519711A7300B2E9E1 /* tcp_connecter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tcp_connecter.cpp; path = "../libs/zeromq-4.0.4/src/tcp_connecter.cpp"; sourceTree = "<group>"; };
+		5B570B2619711A7300B2E9E1 /* tcp_connecter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tcp_connecter.hpp; path = "../libs/zeromq-4.0.4/src/tcp_connecter.hpp"; sourceTree = "<group>"; };
+		5B570B2719711A7300B2E9E1 /* tcp_listener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tcp_listener.cpp; path = "../libs/zeromq-4.0.4/src/tcp_listener.cpp"; sourceTree = "<group>"; };
+		5B570B2819711A7300B2E9E1 /* tcp_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tcp_listener.hpp; path = "../libs/zeromq-4.0.4/src/tcp_listener.hpp"; sourceTree = "<group>"; };
+		5B570B2919711A7300B2E9E1 /* tcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tcp.cpp; path = "../libs/zeromq-4.0.4/src/tcp.cpp"; sourceTree = "<group>"; };
+		5B570B2A19711A7300B2E9E1 /* tcp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tcp.hpp; path = "../libs/zeromq-4.0.4/src/tcp.hpp"; sourceTree = "<group>"; };
+		5B570B2B19711A7300B2E9E1 /* thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = thread.cpp; path = "../libs/zeromq-4.0.4/src/thread.cpp"; sourceTree = "<group>"; };
+		5B570B2C19711A7300B2E9E1 /* thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = thread.hpp; path = "../libs/zeromq-4.0.4/src/thread.hpp"; sourceTree = "<group>"; };
+		5B570B2D19711A7300B2E9E1 /* trie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = trie.cpp; path = "../libs/zeromq-4.0.4/src/trie.cpp"; sourceTree = "<group>"; };
+		5B570B2E19711A7300B2E9E1 /* trie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = trie.hpp; path = "../libs/zeromq-4.0.4/src/trie.hpp"; sourceTree = "<group>"; };
+		5B570B2F19711A7300B2E9E1 /* v1_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = v1_decoder.cpp; path = "../libs/zeromq-4.0.4/src/v1_decoder.cpp"; sourceTree = "<group>"; };
+		5B570B3019711A7300B2E9E1 /* v1_decoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = v1_decoder.hpp; path = "../libs/zeromq-4.0.4/src/v1_decoder.hpp"; sourceTree = "<group>"; };
+		5B570B3119711A7300B2E9E1 /* v1_encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = v1_encoder.cpp; path = "../libs/zeromq-4.0.4/src/v1_encoder.cpp"; sourceTree = "<group>"; };
+		5B570B3219711A7300B2E9E1 /* v1_encoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = v1_encoder.hpp; path = "../libs/zeromq-4.0.4/src/v1_encoder.hpp"; sourceTree = "<group>"; };
+		5B570B3319711A7300B2E9E1 /* v2_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = v2_decoder.cpp; path = "../libs/zeromq-4.0.4/src/v2_decoder.cpp"; sourceTree = "<group>"; };
+		5B570B3419711A7300B2E9E1 /* v2_decoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = v2_decoder.hpp; path = "../libs/zeromq-4.0.4/src/v2_decoder.hpp"; sourceTree = "<group>"; };
+		5B570B3519711A7300B2E9E1 /* v2_encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = v2_encoder.cpp; path = "../libs/zeromq-4.0.4/src/v2_encoder.cpp"; sourceTree = "<group>"; };
+		5B570B3619711A7300B2E9E1 /* v2_encoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = v2_encoder.hpp; path = "../libs/zeromq-4.0.4/src/v2_encoder.hpp"; sourceTree = "<group>"; };
+		5B570B3719711A7300B2E9E1 /* v2_protocol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = v2_protocol.hpp; path = "../libs/zeromq-4.0.4/src/v2_protocol.hpp"; sourceTree = "<group>"; };
+		5B570B3819711A7300B2E9E1 /* windows.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = windows.hpp; path = "../libs/zeromq-4.0.4/src/windows.hpp"; sourceTree = "<group>"; };
+		5B570B3919711A7300B2E9E1 /* wire.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = wire.hpp; path = "../libs/zeromq-4.0.4/src/wire.hpp"; sourceTree = "<group>"; };
+		5B570B3A19711A7300B2E9E1 /* xpub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xpub.cpp; path = "../libs/zeromq-4.0.4/src/xpub.cpp"; sourceTree = "<group>"; };
+		5B570B3B19711A7300B2E9E1 /* xpub.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xpub.hpp; path = "../libs/zeromq-4.0.4/src/xpub.hpp"; sourceTree = "<group>"; };
+		5B570B3C19711A7300B2E9E1 /* xsub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xsub.cpp; path = "../libs/zeromq-4.0.4/src/xsub.cpp"; sourceTree = "<group>"; };
+		5B570B3D19711A7300B2E9E1 /* xsub.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xsub.hpp; path = "../libs/zeromq-4.0.4/src/xsub.hpp"; sourceTree = "<group>"; };
+		5B570B3E19711A7300B2E9E1 /* ypipe_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ypipe_base.hpp; path = "../libs/zeromq-4.0.4/src/ypipe_base.hpp"; sourceTree = "<group>"; };
+		5B570B3F19711A7300B2E9E1 /* ypipe_conflate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ypipe_conflate.hpp; path = "../libs/zeromq-4.0.4/src/ypipe_conflate.hpp"; sourceTree = "<group>"; };
+		5B570B4019711A7300B2E9E1 /* ypipe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ypipe.hpp; path = "../libs/zeromq-4.0.4/src/ypipe.hpp"; sourceTree = "<group>"; };
+		5B570B4119711A7300B2E9E1 /* yqueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = yqueue.hpp; path = "../libs/zeromq-4.0.4/src/yqueue.hpp"; sourceTree = "<group>"; };
+		5B570B4219711A7300B2E9E1 /* zmq_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = zmq_utils.cpp; path = "../libs/zeromq-4.0.4/src/zmq_utils.cpp"; sourceTree = "<group>"; };
+		5B570B4319711A7300B2E9E1 /* zmq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = zmq.cpp; path = "../libs/zeromq-4.0.4/src/zmq.cpp"; sourceTree = "<group>"; };
+		5B570B8919711D3500B2E9E1 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B5708BA1970FD2400B2E9E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B570B8A19711D3500B2E9E1 /* libc++.dylib in Frameworks */,
+				5B570B8819711CA100B2E9E1 /* libZeroMQ.a in Frameworks */,
+				5B5708C31970FD2400B2E9E1 /* CoreGraphics.framework in Frameworks */,
+				5B5708C51970FD2400B2E9E1 /* UIKit.framework in Frameworks */,
+				5B5708C11970FD2400B2E9E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B5708DB1970FD2400B2E9E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5708E01970FD2400B2E9E1 /* XCTest.framework in Frameworks */,
+				5B5708E21970FD2400B2E9E1 /* UIKit.framework in Frameworks */,
+				5B5708E11970FD2400B2E9E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B5708FB197106D600B2E9E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5708FF197106D600B2E9E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B570908197106D600B2E9E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B57090C197106D600B2E9E1 /* XCTest.framework in Frameworks */,
+				5B57090E197106D600B2E9E1 /* UIKit.framework in Frameworks */,
+				5B57090D197106D600B2E9E1 /* Foundation.framework in Frameworks */,
+				5B570911197106D600B2E9E1 /* libZeroMQ.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B5708B41970FD2400B2E9E1 = {
+			isa = PBXGroup;
+			children = (
+				5B570A9E19711A5200B2E9E1 /* ZeroMQ */,
+				5B5708C61970FD2400B2E9E1 /* driverZaidIOS */,
+				5B5708E51970FD2400B2E9E1 /* driverZaidIOSTests */,
+				5B5708BF1970FD2400B2E9E1 /* Frameworks */,
+				5B5708BE1970FD2400B2E9E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B5708BE1970FD2400B2E9E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B5708BD1970FD2400B2E9E1 /* driverZaidIOS.app */,
+				5B5708DE1970FD2400B2E9E1 /* driverZaidIOSTests.xctest */,
+				5B5708FE197106D600B2E9E1 /* libZeroMQ.a */,
+				5B57090B197106D600B2E9E1 /* ZeroMQTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B5708BF1970FD2400B2E9E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B570B8919711D3500B2E9E1 /* libc++.dylib */,
+				5B5709201971120600B2E9E1 /* libzmq.a */,
+				5B5708C01970FD2400B2E9E1 /* Foundation.framework */,
+				5B5708C21970FD2400B2E9E1 /* CoreGraphics.framework */,
+				5B5708C41970FD2400B2E9E1 /* UIKit.framework */,
+				5B5708DF1970FD2400B2E9E1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B5708C61970FD2400B2E9E1 /* driverZaidIOS */ = {
+			isa = PBXGroup;
+			children = (
+				5B5708F51971041500B2E9E1 /* images */,
+				5B5708CF1970FD2400B2E9E1 /* AppDelegate.h */,
+				5B5708D01970FD2400B2E9E1 /* AppDelegate.m */,
+				5B5708D21970FD2400B2E9E1 /* Main.storyboard */,
+				5B5708D51970FD2400B2E9E1 /* ViewController.h */,
+				5B5708D61970FD2400B2E9E1 /* ViewController.m */,
+				5B5708D81970FD2400B2E9E1 /* Images.xcassets */,
+				5B5708C71970FD2400B2E9E1 /* Supporting Files */,
+			);
+			path = driverZaidIOS;
+			sourceTree = "<group>";
+		};
+		5B5708C71970FD2400B2E9E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B5708C81970FD2400B2E9E1 /* driverZaidIOS-Info.plist */,
+				5B5708C91970FD2400B2E9E1 /* InfoPlist.strings */,
+				5B5708CC1970FD2400B2E9E1 /* main.m */,
+				5B5708CE1970FD2400B2E9E1 /* driverZaidIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B5708E51970FD2400B2E9E1 /* driverZaidIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B5708EB1970FD2400B2E9E1 /* driverZaidIOSTests.m */,
+				5B5708E61970FD2400B2E9E1 /* Supporting Files */,
+			);
+			path = driverZaidIOSTests;
+			sourceTree = "<group>";
+		};
+		5B5708E61970FD2400B2E9E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B5708E71970FD2400B2E9E1 /* driverZaidIOSTests-Info.plist */,
+				5B5708E81970FD2400B2E9E1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B5708F51971041500B2E9E1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5B5708F8197105F700B2E9E1 /* do_not_enter.png */,
+				5B5708F61971041500B2E9E1 /* do_not_enter.jpg */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
+		};
+		5B570A9E19711A5200B2E9E1 /* ZeroMQ */ = {
+			isa = PBXGroup;
+			children = (
+				5B570A9F19711A7300B2E9E1 /* address.cpp */,
+				5B570AA019711A7300B2E9E1 /* address.hpp */,
+				5B570AA119711A7300B2E9E1 /* array.hpp */,
+				5B570AA219711A7300B2E9E1 /* atomic_counter.hpp */,
+				5B570AA319711A7300B2E9E1 /* atomic_ptr.hpp */,
+				5B570AA419711A7300B2E9E1 /* blob.hpp */,
+				5B570AA519711A7300B2E9E1 /* clock.cpp */,
+				5B570AA619711A7300B2E9E1 /* clock.hpp */,
+				5B570AA719711A7300B2E9E1 /* command.hpp */,
+				5B570AA819711A7300B2E9E1 /* config.hpp */,
+				5B570AA919711A7300B2E9E1 /* ctx.cpp */,
+				5B570AAA19711A7300B2E9E1 /* ctx.hpp */,
+				5B570AAB19711A7300B2E9E1 /* curve_client.cpp */,
+				5B570AAC19711A7300B2E9E1 /* curve_client.hpp */,
+				5B570AAD19711A7300B2E9E1 /* curve_server.cpp */,
+				5B570AAE19711A7300B2E9E1 /* curve_server.hpp */,
+				5B570AAF19711A7300B2E9E1 /* dbuffer.hpp */,
+				5B570AB019711A7300B2E9E1 /* dealer.cpp */,
+				5B570AB119711A7300B2E9E1 /* dealer.hpp */,
+				5B570AB219711A7300B2E9E1 /* decoder.hpp */,
+				5B570AB319711A7300B2E9E1 /* devpoll.cpp */,
+				5B570AB419711A7300B2E9E1 /* devpoll.hpp */,
+				5B570AB519711A7300B2E9E1 /* dist.cpp */,
+				5B570AB619711A7300B2E9E1 /* dist.hpp */,
+				5B570AB719711A7300B2E9E1 /* encoder.hpp */,
+				5B570AB819711A7300B2E9E1 /* epoll.cpp */,
+				5B570AB919711A7300B2E9E1 /* epoll.hpp */,
+				5B570ABA19711A7300B2E9E1 /* err.cpp */,
+				5B570ABB19711A7300B2E9E1 /* err.hpp */,
+				5B570ABC19711A7300B2E9E1 /* fd.hpp */,
+				5B570ABD19711A7300B2E9E1 /* fq.cpp */,
+				5B570ABE19711A7300B2E9E1 /* fq.hpp */,
+				5B570ABF19711A7300B2E9E1 /* i_decoder.hpp */,
+				5B570AC019711A7300B2E9E1 /* i_encoder.hpp */,
+				5B570AC119711A7300B2E9E1 /* i_engine.hpp */,
+				5B570AC219711A7300B2E9E1 /* i_poll_events.hpp */,
+				5B570AC319711A7300B2E9E1 /* io_object.cpp */,
+				5B570AC419711A7300B2E9E1 /* io_object.hpp */,
+				5B570AC519711A7300B2E9E1 /* io_thread.cpp */,
+				5B570AC619711A7300B2E9E1 /* io_thread.hpp */,
+				5B570AC719711A7300B2E9E1 /* ip.cpp */,
+				5B570AC819711A7300B2E9E1 /* ip.hpp */,
+				5B570AC919711A7300B2E9E1 /* ipc_address.cpp */,
+				5B570ACA19711A7300B2E9E1 /* ipc_address.hpp */,
+				5B570ACB19711A7300B2E9E1 /* ipc_connecter.cpp */,
+				5B570ACC19711A7300B2E9E1 /* ipc_connecter.hpp */,
+				5B570ACD19711A7300B2E9E1 /* ipc_listener.cpp */,
+				5B570ACE19711A7300B2E9E1 /* ipc_listener.hpp */,
+				5B570ACF19711A7300B2E9E1 /* kqueue.cpp */,
+				5B570AD019711A7300B2E9E1 /* kqueue.hpp */,
+				5B570AD119711A7300B2E9E1 /* lb.cpp */,
+				5B570AD219711A7300B2E9E1 /* lb.hpp */,
+				5B570AD519711A7300B2E9E1 /* likely.hpp */,
+				5B570AD619711A7300B2E9E1 /* mailbox.cpp */,
+				5B570AD719711A7300B2E9E1 /* mailbox.hpp */,
+				5B570ADA19711A7300B2E9E1 /* mechanism.cpp */,
+				5B570ADB19711A7300B2E9E1 /* mechanism.hpp */,
+				5B570ADC19711A7300B2E9E1 /* msg.cpp */,
+				5B570ADD19711A7300B2E9E1 /* msg.hpp */,
+				5B570ADE19711A7300B2E9E1 /* mtrie.cpp */,
+				5B570ADF19711A7300B2E9E1 /* mtrie.hpp */,
+				5B570AE019711A7300B2E9E1 /* mutex.hpp */,
+				5B570AE119711A7300B2E9E1 /* null_mechanism.cpp */,
+				5B570AE219711A7300B2E9E1 /* null_mechanism.hpp */,
+				5B570AE319711A7300B2E9E1 /* object.cpp */,
+				5B570AE419711A7300B2E9E1 /* object.hpp */,
+				5B570AE519711A7300B2E9E1 /* options.cpp */,
+				5B570AE619711A7300B2E9E1 /* options.hpp */,
+				5B570AE719711A7300B2E9E1 /* own.cpp */,
+				5B570AE819711A7300B2E9E1 /* own.hpp */,
+				5B570AE919711A7300B2E9E1 /* pair.cpp */,
+				5B570AEA19711A7300B2E9E1 /* pair.hpp */,
+				5B570AEB19711A7300B2E9E1 /* pgm_receiver.cpp */,
+				5B570AEC19711A7300B2E9E1 /* pgm_receiver.hpp */,
+				5B570AED19711A7300B2E9E1 /* pgm_sender.cpp */,
+				5B570AEE19711A7300B2E9E1 /* pgm_sender.hpp */,
+				5B570AEF19711A7300B2E9E1 /* pgm_socket.cpp */,
+				5B570AF019711A7300B2E9E1 /* pgm_socket.hpp */,
+				5B570AF119711A7300B2E9E1 /* pipe.cpp */,
+				5B570AF219711A7300B2E9E1 /* pipe.hpp */,
+				5B570AF319711A7300B2E9E1 /* plain_mechanism.cpp */,
+				5B570AF419711A7300B2E9E1 /* plain_mechanism.hpp */,
+				5B570AF519711A7300B2E9E1 /* platform.hpp */,
+				5B570AF719711A7300B2E9E1 /* poll.cpp */,
+				5B570AF819711A7300B2E9E1 /* poll.hpp */,
+				5B570AF919711A7300B2E9E1 /* poller_base.cpp */,
+				5B570AFA19711A7300B2E9E1 /* poller_base.hpp */,
+				5B570AFB19711A7300B2E9E1 /* poller.hpp */,
+				5B570AFC19711A7300B2E9E1 /* precompiled.cpp */,
+				5B570AFD19711A7300B2E9E1 /* precompiled.hpp */,
+				5B570AFE19711A7300B2E9E1 /* proxy.cpp */,
+				5B570AFF19711A7300B2E9E1 /* proxy.hpp */,
+				5B570B0019711A7300B2E9E1 /* pub.cpp */,
+				5B570B0119711A7300B2E9E1 /* pub.hpp */,
+				5B570B0219711A7300B2E9E1 /* pull.cpp */,
+				5B570B0319711A7300B2E9E1 /* pull.hpp */,
+				5B570B0419711A7300B2E9E1 /* push.cpp */,
+				5B570B0519711A7300B2E9E1 /* push.hpp */,
+				5B570B0619711A7300B2E9E1 /* random.cpp */,
+				5B570B0719711A7300B2E9E1 /* random.hpp */,
+				5B570B0819711A7300B2E9E1 /* raw_decoder.cpp */,
+				5B570B0919711A7300B2E9E1 /* raw_decoder.hpp */,
+				5B570B0A19711A7300B2E9E1 /* raw_encoder.cpp */,
+				5B570B0B19711A7300B2E9E1 /* raw_encoder.hpp */,
+				5B570B0C19711A7300B2E9E1 /* reaper.cpp */,
+				5B570B0D19711A7300B2E9E1 /* reaper.hpp */,
+				5B570B0E19711A7300B2E9E1 /* rep.cpp */,
+				5B570B0F19711A7300B2E9E1 /* rep.hpp */,
+				5B570B1019711A7300B2E9E1 /* req.cpp */,
+				5B570B1119711A7300B2E9E1 /* req.hpp */,
+				5B570B1219711A7300B2E9E1 /* router.cpp */,
+				5B570B1319711A7300B2E9E1 /* router.hpp */,
+				5B570B1419711A7300B2E9E1 /* select.cpp */,
+				5B570B1519711A7300B2E9E1 /* select.hpp */,
+				5B570B1619711A7300B2E9E1 /* session_base.cpp */,
+				5B570B1719711A7300B2E9E1 /* session_base.hpp */,
+				5B570B1819711A7300B2E9E1 /* signaler.cpp */,
+				5B570B1919711A7300B2E9E1 /* signaler.hpp */,
+				5B570B1A19711A7300B2E9E1 /* socket_base.cpp */,
+				5B570B1B19711A7300B2E9E1 /* socket_base.hpp */,
+				5B570B1C19711A7300B2E9E1 /* stdint.hpp */,
+				5B570B1D19711A7300B2E9E1 /* stream_engine.cpp */,
+				5B570B1E19711A7300B2E9E1 /* stream_engine.hpp */,
+				5B570B1F19711A7300B2E9E1 /* stream.cpp */,
+				5B570B2019711A7300B2E9E1 /* stream.hpp */,
+				5B570B2119711A7300B2E9E1 /* sub.cpp */,
+				5B570B2219711A7300B2E9E1 /* sub.hpp */,
+				5B570B2319711A7300B2E9E1 /* tcp_address.cpp */,
+				5B570B2419711A7300B2E9E1 /* tcp_address.hpp */,
+				5B570B2519711A7300B2E9E1 /* tcp_connecter.cpp */,
+				5B570B2619711A7300B2E9E1 /* tcp_connecter.hpp */,
+				5B570B2719711A7300B2E9E1 /* tcp_listener.cpp */,
+				5B570B2819711A7300B2E9E1 /* tcp_listener.hpp */,
+				5B570B2919711A7300B2E9E1 /* tcp.cpp */,
+				5B570B2A19711A7300B2E9E1 /* tcp.hpp */,
+				5B570B2B19711A7300B2E9E1 /* thread.cpp */,
+				5B570B2C19711A7300B2E9E1 /* thread.hpp */,
+				5B570B2D19711A7300B2E9E1 /* trie.cpp */,
+				5B570B2E19711A7300B2E9E1 /* trie.hpp */,
+				5B570B2F19711A7300B2E9E1 /* v1_decoder.cpp */,
+				5B570B3019711A7300B2E9E1 /* v1_decoder.hpp */,
+				5B570B3119711A7300B2E9E1 /* v1_encoder.cpp */,
+				5B570B3219711A7300B2E9E1 /* v1_encoder.hpp */,
+				5B570B3319711A7300B2E9E1 /* v2_decoder.cpp */,
+				5B570B3419711A7300B2E9E1 /* v2_decoder.hpp */,
+				5B570B3519711A7300B2E9E1 /* v2_encoder.cpp */,
+				5B570B3619711A7300B2E9E1 /* v2_encoder.hpp */,
+				5B570B3719711A7300B2E9E1 /* v2_protocol.hpp */,
+				5B570B3819711A7300B2E9E1 /* windows.hpp */,
+				5B570B3919711A7300B2E9E1 /* wire.hpp */,
+				5B570B3A19711A7300B2E9E1 /* xpub.cpp */,
+				5B570B3B19711A7300B2E9E1 /* xpub.hpp */,
+				5B570B3C19711A7300B2E9E1 /* xsub.cpp */,
+				5B570B3D19711A7300B2E9E1 /* xsub.hpp */,
+				5B570B3E19711A7300B2E9E1 /* ypipe_base.hpp */,
+				5B570B3F19711A7300B2E9E1 /* ypipe_conflate.hpp */,
+				5B570B4019711A7300B2E9E1 /* ypipe.hpp */,
+				5B570B4119711A7300B2E9E1 /* yqueue.hpp */,
+				5B570B4219711A7300B2E9E1 /* zmq_utils.cpp */,
+				5B570B4319711A7300B2E9E1 /* zmq.cpp */,
+			);
+			name = ZeroMQ;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B5708BC1970FD2400B2E9E1 /* driverZaidIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B5708EF1970FD2400B2E9E1 /* Build configuration list for PBXNativeTarget "driverZaidIOS" */;
+			buildPhases = (
+				5B5708B91970FD2400B2E9E1 /* Sources */,
+				5B5708BA1970FD2400B2E9E1 /* Frameworks */,
+				5B5708BB1970FD2400B2E9E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = driverZaidIOS;
+			productName = driverZaidIOS;
+			productReference = 5B5708BD1970FD2400B2E9E1 /* driverZaidIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B5708DD1970FD2400B2E9E1 /* driverZaidIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B5708F21970FD2400B2E9E1 /* Build configuration list for PBXNativeTarget "driverZaidIOSTests" */;
+			buildPhases = (
+				5B5708DA1970FD2400B2E9E1 /* Sources */,
+				5B5708DB1970FD2400B2E9E1 /* Frameworks */,
+				5B5708DC1970FD2400B2E9E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B5708E41970FD2400B2E9E1 /* PBXTargetDependency */,
+			);
+			name = driverZaidIOSTests;
+			productName = driverZaidIOSTests;
+			productReference = 5B5708DE1970FD2400B2E9E1 /* driverZaidIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B5708FD197106D600B2E9E1 /* ZeroMQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B57091A197106D600B2E9E1 /* Build configuration list for PBXNativeTarget "ZeroMQ" */;
+			buildPhases = (
+				5B5708FA197106D600B2E9E1 /* Sources */,
+				5B5708FB197106D600B2E9E1 /* Frameworks */,
+				5B5708FC197106D600B2E9E1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeroMQ;
+			productName = ZeroMQ;
+			productReference = 5B5708FE197106D600B2E9E1 /* libZeroMQ.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5B57090A197106D600B2E9E1 /* ZeroMQTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B57091D197106D600B2E9E1 /* Build configuration list for PBXNativeTarget "ZeroMQTests" */;
+			buildPhases = (
+				5B570907197106D600B2E9E1 /* Sources */,
+				5B570908197106D600B2E9E1 /* Frameworks */,
+				5B570909197106D600B2E9E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B570910197106D600B2E9E1 /* PBXTargetDependency */,
+			);
+			name = ZeroMQTests;
+			productName = ZeroMQTests;
+			productReference = 5B57090B197106D600B2E9E1 /* ZeroMQTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B5708B51970FD2400B2E9E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Martin;
+				TargetAttributes = {
+					5B5708DD1970FD2400B2E9E1 = {
+						TestTargetID = 5B5708BC1970FD2400B2E9E1;
+					};
+					5B57090A197106D600B2E9E1 = {
+						TestTargetID = 5B5708BC1970FD2400B2E9E1;
+					};
+				};
+			};
+			buildConfigurationList = 5B5708B81970FD2400B2E9E1 /* Build configuration list for PBXProject "driverZaidIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B5708B41970FD2400B2E9E1;
+			productRefGroup = 5B5708BE1970FD2400B2E9E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B5708BC1970FD2400B2E9E1 /* driverZaidIOS */,
+				5B5708DD1970FD2400B2E9E1 /* driverZaidIOSTests */,
+				5B5708FD197106D600B2E9E1 /* ZeroMQ */,
+				5B57090A197106D600B2E9E1 /* ZeroMQTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B5708BB1970FD2400B2E9E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5708D91970FD2400B2E9E1 /* Images.xcassets in Resources */,
+				5B5708CB1970FD2400B2E9E1 /* InfoPlist.strings in Resources */,
+				5B5708D41970FD2400B2E9E1 /* Main.storyboard in Resources */,
+				5B5708F71971041500B2E9E1 /* do_not_enter.jpg in Resources */,
+				5B5708F9197105F700B2E9E1 /* do_not_enter.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B5708DC1970FD2400B2E9E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5708EA1970FD2400B2E9E1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B570909197106D600B2E9E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B5708B91970FD2400B2E9E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5708D71970FD2400B2E9E1 /* ViewController.m in Sources */,
+				5B5708D11970FD2400B2E9E1 /* AppDelegate.m in Sources */,
+				5B5708CD1970FD2400B2E9E1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B5708DA1970FD2400B2E9E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5708EC1970FD2400B2E9E1 /* driverZaidIOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B5708FA197106D600B2E9E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B570B4F19711A7300B2E9E1 /* io_object.cpp in Sources */,
+				5B570B7B19711A7300B2E9E1 /* tcp_connecter.cpp in Sources */,
+				5B570B6D19711A7300B2E9E1 /* raw_decoder.cpp in Sources */,
+				5B570B5F19711A7300B2E9E1 /* pair.cpp in Sources */,
+				5B570B5019711A7300B2E9E1 /* io_thread.cpp in Sources */,
+				5B570B7619711A7300B2E9E1 /* socket_base.cpp in Sources */,
+				5B570B6919711A7300B2E9E1 /* pub.cpp in Sources */,
+				5B570B7919711A7300B2E9E1 /* sub.cpp in Sources */,
+				5B570B5D19711A7300B2E9E1 /* options.cpp in Sources */,
+				5B570B5B19711A7300B2E9E1 /* null_mechanism.cpp in Sources */,
+				5B570B5119711A7300B2E9E1 /* ip.cpp in Sources */,
+				5B570B8019711A7300B2E9E1 /* v1_decoder.cpp in Sources */,
+				5B570B4919711A7300B2E9E1 /* dealer.cpp in Sources */,
+				5B570B8419711A7300B2E9E1 /* xpub.cpp in Sources */,
+				5B570B6A19711A7300B2E9E1 /* pull.cpp in Sources */,
+				5B570B6319711A7300B2E9E1 /* pipe.cpp in Sources */,
+				5B570B8119711A7300B2E9E1 /* v1_encoder.cpp in Sources */,
+				5B570B8519711A7300B2E9E1 /* xsub.cpp in Sources */,
+				5B570B4E19711A7300B2E9E1 /* fq.cpp in Sources */,
+				5B570B4719711A7300B2E9E1 /* curve_client.cpp in Sources */,
+				5B570B4619711A7300B2E9E1 /* ctx.cpp in Sources */,
+				5B570B4519711A7300B2E9E1 /* clock.cpp in Sources */,
+				5B570B5C19711A7300B2E9E1 /* object.cpp in Sources */,
+				5B570B7D19711A7300B2E9E1 /* tcp.cpp in Sources */,
+				5B570B8719711A7300B2E9E1 /* zmq.cpp in Sources */,
+				5B570B6619711A7300B2E9E1 /* poller_base.cpp in Sources */,
+				5B570B8219711A7300B2E9E1 /* v2_decoder.cpp in Sources */,
+				5B570B5719711A7300B2E9E1 /* mailbox.cpp in Sources */,
+				5B570B7519711A7300B2E9E1 /* signaler.cpp in Sources */,
+				5B570B5219711A7300B2E9E1 /* ipc_address.cpp in Sources */,
+				5B570B5A19711A7300B2E9E1 /* mtrie.cpp in Sources */,
+				5B570B6219711A7300B2E9E1 /* pgm_socket.cpp in Sources */,
+				5B570B7C19711A7300B2E9E1 /* tcp_listener.cpp in Sources */,
+				5B570B4819711A7300B2E9E1 /* curve_server.cpp in Sources */,
+				5B570B5E19711A7300B2E9E1 /* own.cpp in Sources */,
+				5B570B6719711A7300B2E9E1 /* precompiled.cpp in Sources */,
+				5B570B5919711A7300B2E9E1 /* msg.cpp in Sources */,
+				5B570B4C19711A7300B2E9E1 /* epoll.cpp in Sources */,
+				5B570B6E19711A7300B2E9E1 /* raw_encoder.cpp in Sources */,
+				5B570B7A19711A7300B2E9E1 /* tcp_address.cpp in Sources */,
+				5B570B7319711A7300B2E9E1 /* select.cpp in Sources */,
+				5B570B8319711A7300B2E9E1 /* v2_encoder.cpp in Sources */,
+				5B570B7E19711A7300B2E9E1 /* thread.cpp in Sources */,
+				5B570B5819711A7300B2E9E1 /* mechanism.cpp in Sources */,
+				5B570B6019711A7300B2E9E1 /* pgm_receiver.cpp in Sources */,
+				5B570B5619711A7300B2E9E1 /* lb.cpp in Sources */,
+				5B570B7419711A7300B2E9E1 /* session_base.cpp in Sources */,
+				5B570B7019711A7300B2E9E1 /* rep.cpp in Sources */,
+				5B570B7719711A7300B2E9E1 /* stream_engine.cpp in Sources */,
+				5B570B6419711A7300B2E9E1 /* plain_mechanism.cpp in Sources */,
+				5B570B4B19711A7300B2E9E1 /* dist.cpp in Sources */,
+				5B570B7819711A7300B2E9E1 /* stream.cpp in Sources */,
+				5B570B6519711A7300B2E9E1 /* poll.cpp in Sources */,
+				5B570B6C19711A7300B2E9E1 /* random.cpp in Sources */,
+				5B570B6F19711A7300B2E9E1 /* reaper.cpp in Sources */,
+				5B570B8619711A7300B2E9E1 /* zmq_utils.cpp in Sources */,
+				5B570B7219711A7300B2E9E1 /* router.cpp in Sources */,
+				5B570B4A19711A7300B2E9E1 /* devpoll.cpp in Sources */,
+				5B570B5519711A7300B2E9E1 /* kqueue.cpp in Sources */,
+				5B570B7119711A7300B2E9E1 /* req.cpp in Sources */,
+				5B570B6B19711A7300B2E9E1 /* push.cpp in Sources */,
+				5B570B7F19711A7300B2E9E1 /* trie.cpp in Sources */,
+				5B570B6119711A7300B2E9E1 /* pgm_sender.cpp in Sources */,
+				5B570B5419711A7300B2E9E1 /* ipc_listener.cpp in Sources */,
+				5B570B4419711A7300B2E9E1 /* address.cpp in Sources */,
+				5B570B5319711A7300B2E9E1 /* ipc_connecter.cpp in Sources */,
+				5B570B4D19711A7300B2E9E1 /* err.cpp in Sources */,
+				5B570B6819711A7300B2E9E1 /* proxy.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B570907197106D600B2E9E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B5708E41970FD2400B2E9E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B5708BC1970FD2400B2E9E1 /* driverZaidIOS */;
+			targetProxy = 5B5708E31970FD2400B2E9E1 /* PBXContainerItemProxy */;
+		};
+		5B570910197106D600B2E9E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B5708FD197106D600B2E9E1 /* ZeroMQ */;
+			targetProxy = 5B57090F197106D600B2E9E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B5708C91970FD2400B2E9E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B5708CA1970FD2400B2E9E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5B5708D21970FD2400B2E9E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B5708D31970FD2400B2E9E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B5708E81970FD2400B2E9E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B5708E91970FD2400B2E9E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B5708ED1970FD2400B2E9E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/usr/lib";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/include/";
+			};
+			name = Debug;
+		};
+		5B5708EE1970FD2400B2E9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/usr/lib";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../libs/zeromq-4.0.4/build/include/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B5708F01970FD2400B2E9E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "driverZaidIOS/driverZaidIOS-Prefix.pch";
+				INFOPLIST_FILE = "driverZaidIOS/driverZaidIOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/build/lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5B5708F11970FD2400B2E9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "driverZaidIOS/driverZaidIOS-Prefix.pch";
+				INFOPLIST_FILE = "driverZaidIOS/driverZaidIOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/build/lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5B5708F31970FD2400B2E9E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/driverZaidIOS.app/driverZaidIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "driverZaidIOS/driverZaidIOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "driverZaidIOSTests/driverZaidIOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5B5708F41970FD2400B2E9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/driverZaidIOS.app/driverZaidIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "driverZaidIOS/driverZaidIOS-Prefix.pch";
+				INFOPLIST_FILE = "driverZaidIOSTests/driverZaidIOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		5B57091B197106D600B2E9E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ZeroMQ.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "ZeroMQ/ZeroMQ-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5B57091C197106D600B2E9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ZeroMQ.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "ZeroMQ/ZeroMQ-Prefix.pch";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5B57091E197106D600B2E9E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/driverZaidIOS.app/driverZaidIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZeroMQ/ZeroMQ-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ZeroMQTests/ZeroMQTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5B57091F197106D600B2E9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/driverZaidIOS.app/driverZaidIOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZeroMQ/ZeroMQ-Prefix.pch";
+				INFOPLIST_FILE = "ZeroMQTests/ZeroMQTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B5708B81970FD2400B2E9E1 /* Build configuration list for PBXProject "driverZaidIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B5708ED1970FD2400B2E9E1 /* Debug */,
+				5B5708EE1970FD2400B2E9E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B5708EF1970FD2400B2E9E1 /* Build configuration list for PBXNativeTarget "driverZaidIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B5708F01970FD2400B2E9E1 /* Debug */,
+				5B5708F11970FD2400B2E9E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B5708F21970FD2400B2E9E1 /* Build configuration list for PBXNativeTarget "driverZaidIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B5708F31970FD2400B2E9E1 /* Debug */,
+				5B5708F41970FD2400B2E9E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B57091A197106D600B2E9E1 /* Build configuration list for PBXNativeTarget "ZeroMQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B57091B197106D600B2E9E1 /* Debug */,
+				5B57091C197106D600B2E9E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B57091D197106D600B2E9E1 /* Build configuration list for PBXNativeTarget "ZeroMQTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B57091E197106D600B2E9E1 /* Debug */,
+				5B57091F197106D600B2E9E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B5708B51970FD2400B2E9E1 /* Project object */;
+}
