@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *image_name;
 @property (strong, nonatomic) NSNumber *visible;
 @property (strong, nonatomic) NSString *url;
+@property (strong, nonatomic) UIButton *indicator_btn;
 
 - (instancetype)init;
 - (void)setKey: (NSString*) k settingKey: (NSString*) s andImageName: (NSString*)i;

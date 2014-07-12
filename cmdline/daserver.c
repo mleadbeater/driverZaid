@@ -34,7 +34,7 @@ int main (void)
 		response = cJSON_CreateObject();
 		cJSON_AddStringToObject(response, "limit", "50");
 		indicators = cJSON_CreateArray();
-		if (random() % 3) {
+		if (random() % 2) {
 			cJSON_AddItemToArray(indicators, cJSON_CreateString(keys[2]));
 			cJSON_AddItemToArray(indicators, cJSON_CreateString(keys[5]));	
 		}

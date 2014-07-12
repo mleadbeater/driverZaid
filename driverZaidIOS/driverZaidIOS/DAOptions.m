@@ -54,7 +54,7 @@ BOOL needSave = NO;
             if ([opts objectForKey:item] == nil) {
                 DAIndicator *ind = [[DAIndicator alloc] init];
                 [ind setKey:item settingKey:setting andImageName:img];
-                ind.visible = [NSNumber numberWithBool:((random() % 2) ? YES : NO)];
+                ind.visible = [NSNumber numberWithBool:(1 ? YES : NO)];
                 [opts setValue:ind forKey:item];
                 needSave = YES;
             }

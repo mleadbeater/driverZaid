@@ -38,6 +38,7 @@ void *api_socket = 0;
             UIButton *btn = [self.buttons objectAtIndex:idx];
             btn.imageView.image = [UIImage imageNamed:ind.image_name];
             btn.hidden = NO;
+            ind.indicator_btn = btn;
             idx++;
         }
     }
@@ -107,6 +108,42 @@ void *api_socket = 0;
         if (len) {
             incoming[len] = 0;
             NSLog(@"%@", [NSString stringWithUTF8String:incoming]);
+            NSError* error;
+            NSDictionary *loaded = [NSJSONSerialization
+                                    JSONObjectWithData:[NSData dataWithBytes:incoming length:len]
+                                    options:kNilOptions
+                                    error:&error];
+            for (NSString *key in loaded) {
+                if ([key compare:@"limit"] == 0) {
+                    self.lblSpeedLimit.text = [loaded objectForKey:key];
+                    NSLog(@"speed limit: %@", [loaded objectForKey:key]);
+                }
+                else if ([key compare:@"indicators"] == 0) {
+                    for (NSString *item in self.options.categories) {
+                        DAIndicator *ind = [self.options.options objectForKey:item];
+                        if ([ind.visible intValue]) {
+                            ind.indicator_btn.enabled = NO;
+                        }
+                    }
+                    NSArray *indicators = [loaded objectForKey:key];
+                    for (NSString *ind_str in indicators) {
+                        DAIndicator *ind = [self.options.options objectForKey:ind_str];
+                        if (ind) {
+                            if (ind.visible) {
+                                if (!ind.indicator_btn) NSLog(@"indicator %@ does not have a button", ind_str);
+                                NSLog(@"showing %@", ind_str);
+                                ind.indicator_btn.enabled = YES;
+                            }
+                            else
+                                NSLog(@"not displaying %@", ind_str);
+                            
+                        }
+                        else
+                            NSLog(@"unknown key %@", ind_str);
+                        
+                    }
+                }
+            }
         }
         else {
             NSLog(@"server communication error getting response");

@@ -13,6 +13,7 @@
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *lblSpeedLimit;
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
 @property (strong) NSArray *indicators;
 @property (weak, nonatomic) IBOutlet UIButton *alertA;
