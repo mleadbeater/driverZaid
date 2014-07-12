@@ -25,7 +25,7 @@ int main (void)
         	zmq_send (responder, "World", 5, 0);
 	}
 	else {
-		fprintf(stderr, "zmq_recv: %d\n", zmq_strerror(errno));
+		fprintf(stderr, "zmq_recv: %s\n", zmq_strerror(errno));
 	}
     }
     return 0;

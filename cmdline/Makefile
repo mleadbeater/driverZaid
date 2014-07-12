@@ -1,13 +1,14 @@
-CFLAGS=-I/usr/local/include
-LDFLAGS=-L/usr/local/lib
+CFLAGS=-I/usr/local/include -I../libs/cJSON
+LDFLAGS=-L/usr/local/lib -lzmq
+JSON=../libs/cJSON/cJSON.c
 
 all:	daserver daclient
 
 daclient:	daclient.c
-	gcc -o daclient daclient.c -lzmq
+	gcc $(CFLAGS) -o daclient $(LDFLAGS) daclient.c $(JSON)
 
 daserver:	daserver.c
-	gcc -o daserver daserver.c -lzmq
+	gcc $(CFLAGS) -o daserver $(LDFLAGS) daserver.c $(JSON) 
 
 clean:
 	rm daclient daserver

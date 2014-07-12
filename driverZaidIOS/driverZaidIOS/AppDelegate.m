@@ -18,6 +18,12 @@
     
     zmq_context = zmq_ctx_new();
     //ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    if ([launchOptions objectForKey:UIApplicationLaunchOptionsURLKey] != nil) {
+        // ref https://developer.apple.com/library/ios/documentation/userexperience/Conceptual/LocationAwarenessPG/CoreLocation/CoreLocation.html#//apple_ref/doc/uid/TP40009497-CH2-SW2
+        ViewController* mainController = (ViewController*)  self.window.rootViewController;
+        mainController.locationManager = nil;
+        [mainController startStandardUpdates];
+    }
     return YES;
 }
 							

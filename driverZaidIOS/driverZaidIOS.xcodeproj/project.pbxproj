@@ -100,7 +100,6 @@
 		5B570B8A19711D3500B2E9E1 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B570B8919711D3500B2E9E1 /* libc++.dylib */; };
 		5B570B8C1971323600B2E9E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B570B8B1971323600B2E9E1 /* CoreLocation.framework */; };
 		5B570B8F1971342000B2E9E1 /* DAOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B8E1971342000B2E9E1 /* DAOptions.m */; };
-		5B570B9919714AE200B2E9E1 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B570B9719714AE200B2E9E1 /* cJSON.c */; };
 		5B570BAB197154EF00B2E9E1 /* DAIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B570BAA197154EF00B2E9E1 /* DAIndicator.m */; };
 		5B570BAC19715AA500B2E9E1 /* app_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA719714C2600B2E9E1 /* app_dark.png */; };
 		5B570BAD19715AA500B2E9E1 /* app_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B570BA819714C2600B2E9E1 /* app_light.png */; };
@@ -337,8 +336,6 @@
 		5B570B8B1971323600B2E9E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B570B8D1971342000B2E9E1 /* DAOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOptions.h; sourceTree = "<group>"; };
 		5B570B8E1971342000B2E9E1 /* DAOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOptions.m; sourceTree = "<group>"; };
-		5B570B9719714AE200B2E9E1 /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
-		5B570B9819714AE200B2E9E1 /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
 		5B570B9A19714C0500B2E9E1 /* accidenthotspot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidenthotspot.png; sourceTree = "<group>"; };
 		5B570B9B19714C0500B2E9E1 /* animalcross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animalcross.png; sourceTree = "<group>"; };
 		5B570B9C19714C0500B2E9E1 /* bikelanes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bikelanes.png; sourceTree = "<group>"; };
@@ -407,7 +404,6 @@
 		5B5708B41970FD2400B2E9E1 = {
 			isa = PBXGroup;
 			children = (
-				5B570B9619714AA800B2E9E1 /* JSON */,
 				5B570A9E19711A5200B2E9E1 /* ZeroMQ */,
 				5B5708C61970FD2400B2E9E1 /* driverZaidIOS */,
 				5B5708E51970FD2400B2E9E1 /* driverZaidIOSTests */,
@@ -680,15 +676,6 @@
 			name = ZeroMQ;
 			sourceTree = "<group>";
 		};
-		5B570B9619714AA800B2E9E1 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				5B570B9719714AE200B2E9E1 /* cJSON.c */,
-				5B570B9819714AE200B2E9E1 /* cJSON.h */,
-			);
-			name = JSON;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -853,7 +840,6 @@
 				5B5708D71970FD2400B2E9E1 /* ViewController.m in Sources */,
 				5B5708D11970FD2400B2E9E1 /* AppDelegate.m in Sources */,
 				5B5708CD1970FD2400B2E9E1 /* main.m in Sources */,
-				5B570B9919714AE200B2E9E1 /* cJSON.c in Sources */,
 				5B570BAB197154EF00B2E9E1 /* DAIndicator.m in Sources */,
 				5B570B8F1971342000B2E9E1 /* DAOptions.m in Sources */,
 			);
@@ -1249,6 +1235,7 @@
 				5B57091C197106D600B2E9E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B57091D197106D600B2E9E1 /* Build configuration list for PBXNativeTarget "ZeroMQTests" */ = {
 			isa = XCConfigurationList;
@@ -1257,6 +1244,7 @@
 				5B57091F197106D600B2E9E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

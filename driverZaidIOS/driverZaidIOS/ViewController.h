@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @class DAOptions;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
 @property (strong) NSArray *indicators;
@@ -28,4 +29,9 @@
 @property (strong, nonatomic) NSArray *buttons;
 @property (strong, nonatomic) DAOptions *options;
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
+- (void)startStandardUpdates;
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations;
 @end
