@@ -54,7 +54,7 @@ void *api_socket = 0;
     char buffer [10];
     if ( [CLLocationManager locationServicesEnabled] == YES ) {
         api_socket = zmq_socket (zmq_context, ZMQ_REQ);
-        zmq_connect (api_socket, "tcp://192.168.4.199:34231");
+        zmq_connect (api_socket, "tcp://122.248.252.183:34231");
         zmq_send (api_socket, "Hello", 5, 0);
         zmq_recv (api_socket, buffer, 10, 0);
         [self startStandardUpdates];
@@ -123,6 +123,7 @@ void *api_socket = 0;
                         DAIndicator *ind = [self.options.options objectForKey:item];
                         if ([ind.visible intValue]) {
                             ind.indicator_btn.enabled = NO;
+                            ind.indicator_btn.highlighted = YES;
                         }
                     }
                     NSArray *indicators = [loaded objectForKey:key];
@@ -133,6 +134,7 @@ void *api_socket = 0;
                                 if (!ind.indicator_btn) NSLog(@"indicator %@ does not have a button", ind_str);
                                 NSLog(@"showing %@", ind_str);
                                 ind.indicator_btn.enabled = YES;
+                                ind.indicator_btn.highlighted = NO;
                             }
                             else
                                 NSLog(@"not displaying %@", ind_str);
