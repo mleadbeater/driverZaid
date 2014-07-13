@@ -80,10 +80,10 @@ void *api_socket = 0;
         self.locationManager = [[CLLocationManager alloc] init];
     
     self.locationManager.delegate = self;
-    _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     // Set a movement threshold for new events.
-    _locationManager.distanceFilter = 100; // meters
+    _locationManager.distanceFilter = 1.; // meters
     
     [_locationManager startUpdatingLocation];
 }

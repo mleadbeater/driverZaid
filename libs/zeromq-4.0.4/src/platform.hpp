@@ -1,6 +1,8 @@
 /* src/platform.hpp.  Generated from platform.hpp.in by configure.  */
 /* src/platform.hpp.in.  Generated from configure.ac by autoheader.  */
 
+#define ZMQ_HAVE_OSX 1
+
 /* Define to 1 if you have the <alloca.h> header file. */
 #define HAVE_ALLOCA_H 1
 
@@ -183,7 +185,7 @@
 /* #undef ZMQ_HAVE_CYGWIN */
 
 /* Have eventfd extension. */
-#define ZMQ_HAVE_EVENTFD 1
+/*#define ZMQ_HAVE_EVENTFD 1 */
 
 /* Have FreeBSD OS */
 /* #undef ZMQ_HAVE_FREEBSD */
@@ -195,7 +197,7 @@
 #define ZMQ_HAVE_IFADDRS 1
 
 /* Have Linux OS */
-#define ZMQ_HAVE_LINUX 1
+/*#define ZMQ_HAVE_LINUX 1*/
 
 /* Have MinGW32 */
 /* #undef ZMQ_HAVE_MINGW32 */
@@ -216,13 +218,13 @@
 /* #undef ZMQ_HAVE_QNXNTO */
 
 /* Whether SOCK_CLOEXEC is defined and functioning. */
-#define ZMQ_HAVE_SOCK_CLOEXEC 1
+/*#define ZMQ_HAVE_SOCK_CLOEXEC 1 */
 
 /* Have Solaris OS */
 /* #undef ZMQ_HAVE_SOLARIS */
 
 /* Whether SO_KEEPALIVE is supported. */
-#define ZMQ_HAVE_SO_KEEPALIVE 1
+/*#define ZMQ_HAVE_SO_KEEPALIVE 1 */
 
 /* Whether TCP_KEEPALIVE is supported. */
 /* #undef ZMQ_HAVE_TCP_KEEPALIVE */
