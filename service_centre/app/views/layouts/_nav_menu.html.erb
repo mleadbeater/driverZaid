@@ -1,0 +1,13 @@
+<div class="nav_menu">
+  <div class="navmenu_sep"></div>
+    <% @items = Menu.find_all_by_kind('side') %>
+    <% if ! @items.nil? %>
+        <% @items.each do |menu| %>
+            <% if ( menu.title != '-' ) %>
+                <div class="menu"><a href=<%= menu.path %> ><%= menu.title %></a></div>
+            <% else %>
+                <div class="navmenu_sep"></div>
+            <% end %>
+        <% end %>
+    <% end %>
+</div>

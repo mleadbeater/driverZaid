@@ -1,0 +1,15 @@
+<div class="header">
+    <div class="header_navsep"></div>
+    <div class="header_title">DriverZaid Feedback Distributor</div>
+    <div class="header_menubar">
+        <% if ! @menus.nil? %>
+            <% @menus.each do |menu| %>
+                <div class="header_menu"><a href=<%= menu.path %> ><%= menu.title %></a></div>
+            <% end %>
+        <% end %>
+    </div>
+        <div class="login">
+    <div><a href="/login">Login</a></div>
+    </div>
+</div>
+<div style="clear:both"></div>

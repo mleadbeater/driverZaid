@@ -1,0 +1,47 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+body {  background-color:#e0e0cc; 
+	    color:#208000; 
+		font-family:sans-serif; 
+	    font-size:14px;
+		background-image:url("/images/plain.png");
+		background-size:100% auto;
+		background-repeat:no-repeat;
+		margin: 0px;
+	}
+.header { background-color:#0080C0; height:90px; margin: 0px; padding:0px;  }
+
+.header_navsep { width: 200px; float:left; height:72px;  margin: 0px; padding:0px; }
+.header_title { margin-top:10px;float:left; font-size:24px; height:32px; width:80%;color:#ff0;}
+.header_menubar {  float:left; width:50%; margin:20px 0px 0px 15%; height:20px; }
+.header_menubar a, .header_menubar a:visited { text-decoration:none; margin:2% 0 0 0; color:#ff0; }
+.header_menubar a:hover { color:#ffcc99; }
+.header_menu { font-family:sans-serif; float:left; font-size:1.0em; height:24px; margin: 0 5% 0px 0px;}
+
+.login { float:right; width:10%; margin:24px 10px 0 0;}
+.login a,
+ .login a:visited { font-size:1.0em; float:right;color:#ff0; }
+.login a:hover { color:#ffcc99; }
+
+.nav_menu { width: 120px; height:1000px; float:left; background-color:#0080C0;}
+.navmenu_sep {height:140px; }
+.menu { width:106px; height:30px; }
+.menu a,
+  .menu a:visited { font-family:sans-serif; font-size:1.0em; float:right; text-decoration:none; color:#ff0;}
+  .menu a:hover { color:#ffcc99; }
+
+.body { width:80%;float:left}
+.body_spacer { width:12px; float:left; height:1000px;}
+
+table { width:80%; }

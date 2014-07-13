@@ -1,4 +1,4 @@
-prefix=/Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/build
+prefix=/usr/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

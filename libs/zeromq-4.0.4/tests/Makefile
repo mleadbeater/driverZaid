@@ -32,8 +32,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-apple-darwin13.2.0
-host_triplet = arm-apple-darwin
+build_triplet = i686-pc-linux-gnu
+host_triplet = i686-pc-linux-gnu
 noinst_PROGRAMS = test_system$(EXEEXT) test_pair_inproc$(EXEEXT) \
 	test_pair_tcp$(EXEEXT) test_reqrep_inproc$(EXEEXT) \
 	test_reqrep_tcp$(EXEEXT) test_hwm$(EXEEXT) \
@@ -60,7 +60,7 @@ am__append_1 = test_shutdown_stress \
                    test_timeo \
                    test_fork
 
-XFAIL_TESTS = test_abstract_ipc$(EXEEXT)
+#XFAIL_TESTS = test_abstract_ipc$(EXEEXT)
 subdir = tests
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -356,66 +356,64 @@ CTAGS = ctags
 am__tty_colors = \
 red=; grn=; lgn=; blu=; std=
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/ar
-AS = /usr/bin/as
+AR = ar
+AS = as
 ASCIIDOC = 
-AUTOCONF = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run automake-1.11
-AWK = awk
-CC = /usr/bin/clang
-CCDEPMODE = depmode=none
-CFLAGS = -g -O2
-CPP = cpp
-CPPFLAGS = -Wall -Wno-uninitialized -D_DARWIN_C_SOURCE -D_REENTRANT -D_THREAD_SAFE  -DZMQ_FORCE_KQUEUE
-CXX = /usr/bin/clang
-CXXCPP = cpp
-CXXDEPMODE = depmode=none
+AUTOCONF = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run automake-1.11
+AWK = mawk
+CC = gcc -std=gnu99
+CCDEPMODE = depmode=gcc3
+CFLAGS = -I/opt/bitnami/common/include
+CPP = gcc -std=gnu99 -E
+CPPFLAGS = -pedantic -Werror -Wall -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE  -DZMQ_FORCE_EPOLL
+CXX = g++
+CXXCPP = g++ -E
+CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = dlltool
-DSYMUTIL = dsymutil
-DUMPBIN = :
-ECHO_C = \c
-ECHO_N = 
+DSYMUTIL = 
+DUMPBIN = 
+ECHO_C = 
+ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 EXEEXT = 
-FGREP = /usr/bin/grep -F
-GREP = /usr/bin/grep
+FGREP = /bin/grep -F
+GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld
-LDFLAGS = -lstdc++
+LDFLAGS = 
 LIBOBJS = 
-LIBS = -lsodium -lpthread 
+LIBS = -lrt -lpthread 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBZMQ_EXTRA_CFLAGS = 
 LIBZMQ_EXTRA_CXXFLAGS = -fvisibility=hidden 
 LIBZMQ_EXTRA_LDFLAGS = 
-LIPO = lipo
+LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
 LTVER = 4:0:1
-MAKEINFO = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = ../config/install-sh -c -d
-NM = nm
-NMEDIT = nmedit
+MKDIR_P = /bin/mkdir -p
+NM = /usr/bin/nm -B
+NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
-OTOOL = otool
-OTOOL64 = otool64
-OpenPGM_CFLAGS = 
-OpenPGM_LIBS = 
+OTOOL = 
+OTOOL64 = 
 PACKAGE = zeromq
 PACKAGE_BUGREPORT = zeromq-dev@lists.zeromq.org
 PACKAGE_NAME = zeromq
@@ -424,50 +422,47 @@ PACKAGE_TARNAME = zeromq
 PACKAGE_URL = 
 PACKAGE_VERSION = 4.0.4
 PATH_SEPARATOR = :
-PKG_CONFIG = 
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
-RANLIB = /usr/bin/ranlib
-SED = /usr/local/bin/sed
+RANLIB = ranlib
+SED = /bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
-STRIP = /usr/bin/strip
+SHELL = /bin/bash
+STRIP = strip
 VERSION = 4.0.4
 XMLTO = 
-abs_builddir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/tests
-abs_srcdir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/tests
-abs_top_builddir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4
-abs_top_srcdir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4
-ac_ct_AR = 
-ac_ct_CC = 
-ac_ct_CXX = 
-ac_ct_DUMPBIN = link -dump
+abs_builddir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/tests
+abs_srcdir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/tests
+abs_top_builddir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4
+abs_top_srcdir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4
+ac_ct_AR = ar
+ac_ct_CC = gcc
+ac_ct_CXX = g++
+ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
 am__quote = 
 am__tar = tar --format=ustar -chf - "$$tardir"
 am__untar = tar -xf -
 bindir = ${exec_prefix}/bin
-build = x86_64-apple-darwin13.2.0
+build = i686-pc-linux-gnu
 build_alias = 
-build_cpu = x86_64
-build_os = darwin13.2.0
-build_vendor = apple
+build_cpu = i686
+build_os = linux-gnu
+build_vendor = pc
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = arm-apple-darwin
-host_alias = arm-apple-darwin
-host_cpu = arm
-host_os = darwin
-host_vendor = apple
+host = i686-pc-linux-gnu
+host_alias = 
+host_cpu = i686
+host_os = linux-gnu
+host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/install-sh
+install_sh = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 libzmq_have_asciidoc = no
@@ -475,13 +470,13 @@ libzmq_have_xmlto = no
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
-mkdir_p = $(top_builddir)/config/install-sh -c -d
+mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
 pgm_basename = libpgm-5.2.122~dfsg
 pgm_srcdir = 
 pgm_subdir = 
-prefix = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/build
+prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -722,70 +717,70 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-#include ./$(DEPDIR)/test_abstract_ipc.Po
-#include ./$(DEPDIR)/test_conflate.Po
-#include ./$(DEPDIR)/test_connect_resolve.Po
-#include ./$(DEPDIR)/test_ctx_destroy.Po
-#include ./$(DEPDIR)/test_ctx_options.Po
-#include ./$(DEPDIR)/test_disconnect_inproc.Po
-#include ./$(DEPDIR)/test_fork.Po
-#include ./$(DEPDIR)/test_hwm.Po
-#include ./$(DEPDIR)/test_immediate.Po
-#include ./$(DEPDIR)/test_inproc_connect.Po
-#include ./$(DEPDIR)/test_invalid_rep.Po
-#include ./$(DEPDIR)/test_iov.Po
-#include ./$(DEPDIR)/test_issue_566.Po
-#include ./$(DEPDIR)/test_last_endpoint.Po
-#include ./$(DEPDIR)/test_many_sockets.Po
-#include ./$(DEPDIR)/test_monitor.Po
-#include ./$(DEPDIR)/test_msg_flags.Po
-#include ./$(DEPDIR)/test_pair_inproc.Po
-#include ./$(DEPDIR)/test_pair_ipc.Po
-#include ./$(DEPDIR)/test_pair_tcp.Po
-#include ./$(DEPDIR)/test_probe_router.Po
-#include ./$(DEPDIR)/test_req_correlate.Po
-#include ./$(DEPDIR)/test_req_relaxed.Po
-#include ./$(DEPDIR)/test_reqrep_device.Po
-#include ./$(DEPDIR)/test_reqrep_inproc.Po
-#include ./$(DEPDIR)/test_reqrep_ipc.Po
-#include ./$(DEPDIR)/test_reqrep_tcp.Po
-#include ./$(DEPDIR)/test_router_mandatory.Po
-#include ./$(DEPDIR)/test_router_raw_empty.Po
-#include ./$(DEPDIR)/test_security_curve.Po
-#include ./$(DEPDIR)/test_security_null.Po
-#include ./$(DEPDIR)/test_security_plain.Po
-#include ./$(DEPDIR)/test_shutdown_stress.Po
-#include ./$(DEPDIR)/test_spec_dealer.Po
-#include ./$(DEPDIR)/test_spec_pushpull.Po
-#include ./$(DEPDIR)/test_spec_rep.Po
-#include ./$(DEPDIR)/test_spec_req.Po
-#include ./$(DEPDIR)/test_spec_router.Po
-#include ./$(DEPDIR)/test_stream.Po
-#include ./$(DEPDIR)/test_sub_forward.Po
-#include ./$(DEPDIR)/test_system.Po
-#include ./$(DEPDIR)/test_term_endpoint.Po
-#include ./$(DEPDIR)/test_timeo.Po
+include ./$(DEPDIR)/test_abstract_ipc.Po
+include ./$(DEPDIR)/test_conflate.Po
+include ./$(DEPDIR)/test_connect_resolve.Po
+include ./$(DEPDIR)/test_ctx_destroy.Po
+include ./$(DEPDIR)/test_ctx_options.Po
+include ./$(DEPDIR)/test_disconnect_inproc.Po
+include ./$(DEPDIR)/test_fork.Po
+include ./$(DEPDIR)/test_hwm.Po
+include ./$(DEPDIR)/test_immediate.Po
+include ./$(DEPDIR)/test_inproc_connect.Po
+include ./$(DEPDIR)/test_invalid_rep.Po
+include ./$(DEPDIR)/test_iov.Po
+include ./$(DEPDIR)/test_issue_566.Po
+include ./$(DEPDIR)/test_last_endpoint.Po
+include ./$(DEPDIR)/test_many_sockets.Po
+include ./$(DEPDIR)/test_monitor.Po
+include ./$(DEPDIR)/test_msg_flags.Po
+include ./$(DEPDIR)/test_pair_inproc.Po
+include ./$(DEPDIR)/test_pair_ipc.Po
+include ./$(DEPDIR)/test_pair_tcp.Po
+include ./$(DEPDIR)/test_probe_router.Po
+include ./$(DEPDIR)/test_req_correlate.Po
+include ./$(DEPDIR)/test_req_relaxed.Po
+include ./$(DEPDIR)/test_reqrep_device.Po
+include ./$(DEPDIR)/test_reqrep_inproc.Po
+include ./$(DEPDIR)/test_reqrep_ipc.Po
+include ./$(DEPDIR)/test_reqrep_tcp.Po
+include ./$(DEPDIR)/test_router_mandatory.Po
+include ./$(DEPDIR)/test_router_raw_empty.Po
+include ./$(DEPDIR)/test_security_curve.Po
+include ./$(DEPDIR)/test_security_null.Po
+include ./$(DEPDIR)/test_security_plain.Po
+include ./$(DEPDIR)/test_shutdown_stress.Po
+include ./$(DEPDIR)/test_spec_dealer.Po
+include ./$(DEPDIR)/test_spec_pushpull.Po
+include ./$(DEPDIR)/test_spec_rep.Po
+include ./$(DEPDIR)/test_spec_req.Po
+include ./$(DEPDIR)/test_spec_router.Po
+include ./$(DEPDIR)/test_stream.Po
+include ./$(DEPDIR)/test_sub_forward.Po
+include ./$(DEPDIR)/test_system.Po
+include ./$(DEPDIR)/test_term_endpoint.Po
+include ./$(DEPDIR)/test_timeo.Po
 
 .cpp.o:
-#	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(CXXCOMPILE) -c -o $@ $<
+	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ $<
 
 .cpp.obj:
-#	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .cpp.lo:
-#	$(AM_V_CXX)$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CXX)source='$<' object='$@' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LTCXXCOMPILE) -c -o $@ $<
+	$(AM_V_CXX)$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CXX)source='$<' object='$@' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
 
 mostlyclean-libtool:
 	-rm -f *.lo

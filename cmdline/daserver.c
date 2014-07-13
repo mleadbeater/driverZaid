@@ -46,11 +46,13 @@ int main (void)
 		char *res = cJSON_Print(response);
 		cJSON_Delete(response);
 		zmq_send (responder, res, strlen(res), 0);
+		printf("responed: %s\n", res);
 		free(res);
 	}
 	else {
 		fprintf(stderr, "zmq_recv: %s\n", zmq_strerror(errno));
 	}
+	fflush(stdout);
     }
     return 0;
 }

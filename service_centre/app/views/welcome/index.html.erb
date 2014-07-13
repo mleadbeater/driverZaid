@@ -1,0 +1,54 @@
+<h2>Work in Progress</h2>
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Due</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @work_orders.each do |work_order| %>
+  <tr>
+    <td><%= work_order.category %></td>
+    <td><%= work_order.description %></td>
+    <td><%= work_order.due %></td>
+    <td><%= work_order.status %></td>
+    <td><%= link_to 'Show', work_order %></td>
+    <td><%= link_to 'Edit', edit_work_order_path(work_order) %></td>
+    <td><%= link_to 'Destroy', work_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<h2>Alerts</h2>
+<p>No active alerts</p>
+<h2>Opportunities</h2>
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @opportunities.each do |opportunity| %>
+  <tr>
+    <td><%= opportunity.location %></td>
+    <td><%= opportunity.description %></td>
+    <td><%= opportunity.status %></td>
+    <td><%= link_to 'Show', opportunity %></td>
+    <td><%= link_to 'Edit', edit_opportunity_path(opportunity) %></td>
+    <td><%= link_to 'Destroy', opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Opportunity', new_opportunity_path %>
+

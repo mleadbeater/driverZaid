@@ -34,8 +34,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-apple-darwin13.2.0
-host_triplet = arm-apple-darwin
+build_triplet = i686-pc-linux-gnu
+host_triplet = i686-pc-linux-gnu
 subdir = src
 DIST_COMMON = $(include_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/libzmq.pc.in \
@@ -169,66 +169,64 @@ HEADERS = $(include_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/ar
-AS = /usr/bin/as
+AR = ar
+AS = as
 ASCIIDOC = 
-AUTOCONF = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run automake-1.11
-AWK = awk
-CC = /usr/bin/clang
-CCDEPMODE = depmode=none
-CFLAGS = -g -O2
-CPP = cpp
-CPPFLAGS = -Wall -Wno-uninitialized -D_DARWIN_C_SOURCE -D_REENTRANT -D_THREAD_SAFE  -DZMQ_FORCE_KQUEUE
-CXX = /usr/bin/clang
-CXXCPP = cpp
-CXXDEPMODE = depmode=none
+AUTOCONF = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run automake-1.11
+AWK = mawk
+CC = gcc -std=gnu99
+CCDEPMODE = depmode=gcc3
+CFLAGS = -I/opt/bitnami/common/include
+CPP = gcc -std=gnu99 -E
+CPPFLAGS = -pedantic -Werror -Wall -D_GNU_SOURCE -D_REENTRANT -D_THREAD_SAFE  -DZMQ_FORCE_EPOLL
+CXX = g++
+CXXCPP = g++ -E
+CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = dlltool
-DSYMUTIL = dsymutil
-DUMPBIN = :
-ECHO_C = \c
-ECHO_N = 
+DSYMUTIL = 
+DUMPBIN = 
+ECHO_C = 
+ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 EXEEXT = 
-FGREP = /usr/bin/grep -F
-GREP = /usr/bin/grep
+FGREP = /bin/grep -F
+GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld
-LDFLAGS = -lstdc++
+LDFLAGS = 
 LIBOBJS = 
-LIBS = -lsodium -lpthread 
+LIBS = -lrt -lpthread 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBZMQ_EXTRA_CFLAGS = 
 LIBZMQ_EXTRA_CXXFLAGS = -fvisibility=hidden 
 LIBZMQ_EXTRA_LDFLAGS = 
-LIPO = lipo
+LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
 LTVER = 4:0:1
-MAKEINFO = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/missing --run makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = ../config/install-sh -c -d
-NM = nm
-NMEDIT = nmedit
+MKDIR_P = /bin/mkdir -p
+NM = /usr/bin/nm -B
+NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
-OTOOL = otool
-OTOOL64 = otool64
-OpenPGM_CFLAGS = 
-OpenPGM_LIBS = 
+OTOOL = 
+OTOOL64 = 
 PACKAGE = zeromq
 PACKAGE_BUGREPORT = zeromq-dev@lists.zeromq.org
 PACKAGE_NAME = zeromq
@@ -237,50 +235,47 @@ PACKAGE_TARNAME = zeromq
 PACKAGE_URL = 
 PACKAGE_VERSION = 4.0.4
 PATH_SEPARATOR = :
-PKG_CONFIG = 
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
-RANLIB = /usr/bin/ranlib
-SED = /usr/local/bin/sed
+RANLIB = ranlib
+SED = /bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
-STRIP = /usr/bin/strip
+SHELL = /bin/bash
+STRIP = strip
 VERSION = 4.0.4
 XMLTO = 
-abs_builddir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/src
-abs_srcdir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/src
-abs_top_builddir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4
-abs_top_srcdir = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4
-ac_ct_AR = 
-ac_ct_CC = 
-ac_ct_CXX = 
-ac_ct_DUMPBIN = link -dump
+abs_builddir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/src
+abs_srcdir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/src
+abs_top_builddir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4
+abs_top_srcdir = /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4
+ac_ct_AR = ar
+ac_ct_CC = gcc
+ac_ct_CXX = g++
+ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
 am__quote = 
 am__tar = tar --format=ustar -chf - "$$tardir"
 am__untar = tar -xf -
 bindir = ${exec_prefix}/bin
-build = x86_64-apple-darwin13.2.0
+build = i686-pc-linux-gnu
 build_alias = 
-build_cpu = x86_64
-build_os = darwin13.2.0
-build_vendor = apple
+build_cpu = i686
+build_os = linux-gnu
+build_vendor = pc
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = arm-apple-darwin
-host_alias = arm-apple-darwin
-host_cpu = arm
-host_os = darwin
-host_vendor = apple
+host = i686-pc-linux-gnu
+host_alias = 
+host_cpu = i686
+host_os = linux-gnu
+host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/config/install-sh
+install_sh = ${SHELL} /home/martin/driverzaid/driverZaid/libs/zeromq-4.0.4/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 libzmq_have_asciidoc = no
@@ -288,13 +283,13 @@ libzmq_have_xmlto = no
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
-mkdir_p = $(top_builddir)/config/install-sh -c -d
+mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
 pgm_basename = libpgm-5.2.122~dfsg
 pgm_srcdir = 
 pgm_subdir = 
-prefix = /Users/martin/projects/unleashed/driverZaid/libs/zeromq-4.0.4/build
+prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -472,8 +467,8 @@ libzmq_la_SOURCES = \
     ypipe_conflate.hpp \
     dbuffer.hpp
 
-libzmq_la_LDFLAGS = -version-info 4:0:1  -Wl
-#libzmq_la_LDFLAGS = -version-info 4:0:1  -Wl,--version-script=$(srcdir)/libzmq.vers
+#libzmq_la_LDFLAGS = -version-info 4:0:1  -Wl
+libzmq_la_LDFLAGS = -version-info 4:0:1  -Wl,--version-script=$(srcdir)/libzmq.vers
 #libzmq_la_LDFLAGS = -avoid-version -version-info 4:0:1 
 #libzmq_la_LDFLAGS = -no-undefined -avoid-version -version-info 4:0:1 
 EXTRA_DIST = libzmq.vers
@@ -572,563 +567,563 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-#include ./$(DEPDIR)/libzmq_la-address.Plo
-#include ./$(DEPDIR)/libzmq_la-clock.Plo
-#include ./$(DEPDIR)/libzmq_la-ctx.Plo
-#include ./$(DEPDIR)/libzmq_la-curve_client.Plo
-#include ./$(DEPDIR)/libzmq_la-curve_server.Plo
-#include ./$(DEPDIR)/libzmq_la-dealer.Plo
-#include ./$(DEPDIR)/libzmq_la-devpoll.Plo
-#include ./$(DEPDIR)/libzmq_la-dist.Plo
-#include ./$(DEPDIR)/libzmq_la-epoll.Plo
-#include ./$(DEPDIR)/libzmq_la-err.Plo
-#include ./$(DEPDIR)/libzmq_la-fq.Plo
-#include ./$(DEPDIR)/libzmq_la-io_object.Plo
-#include ./$(DEPDIR)/libzmq_la-io_thread.Plo
-#include ./$(DEPDIR)/libzmq_la-ip.Plo
-#include ./$(DEPDIR)/libzmq_la-ipc_address.Plo
-#include ./$(DEPDIR)/libzmq_la-ipc_connecter.Plo
-#include ./$(DEPDIR)/libzmq_la-ipc_listener.Plo
-#include ./$(DEPDIR)/libzmq_la-kqueue.Plo
-#include ./$(DEPDIR)/libzmq_la-lb.Plo
-#include ./$(DEPDIR)/libzmq_la-mailbox.Plo
-#include ./$(DEPDIR)/libzmq_la-mechanism.Plo
-#include ./$(DEPDIR)/libzmq_la-msg.Plo
-#include ./$(DEPDIR)/libzmq_la-mtrie.Plo
-#include ./$(DEPDIR)/libzmq_la-null_mechanism.Plo
-#include ./$(DEPDIR)/libzmq_la-object.Plo
-#include ./$(DEPDIR)/libzmq_la-options.Plo
-#include ./$(DEPDIR)/libzmq_la-own.Plo
-#include ./$(DEPDIR)/libzmq_la-pair.Plo
-#include ./$(DEPDIR)/libzmq_la-pgm_receiver.Plo
-#include ./$(DEPDIR)/libzmq_la-pgm_sender.Plo
-#include ./$(DEPDIR)/libzmq_la-pgm_socket.Plo
-#include ./$(DEPDIR)/libzmq_la-pipe.Plo
-#include ./$(DEPDIR)/libzmq_la-plain_mechanism.Plo
-#include ./$(DEPDIR)/libzmq_la-poll.Plo
-#include ./$(DEPDIR)/libzmq_la-poller_base.Plo
-#include ./$(DEPDIR)/libzmq_la-proxy.Plo
-#include ./$(DEPDIR)/libzmq_la-pub.Plo
-#include ./$(DEPDIR)/libzmq_la-pull.Plo
-#include ./$(DEPDIR)/libzmq_la-push.Plo
-#include ./$(DEPDIR)/libzmq_la-random.Plo
-#include ./$(DEPDIR)/libzmq_la-raw_decoder.Plo
-#include ./$(DEPDIR)/libzmq_la-raw_encoder.Plo
-#include ./$(DEPDIR)/libzmq_la-reaper.Plo
-#include ./$(DEPDIR)/libzmq_la-rep.Plo
-#include ./$(DEPDIR)/libzmq_la-req.Plo
-#include ./$(DEPDIR)/libzmq_la-router.Plo
-#include ./$(DEPDIR)/libzmq_la-select.Plo
-#include ./$(DEPDIR)/libzmq_la-session_base.Plo
-#include ./$(DEPDIR)/libzmq_la-signaler.Plo
-#include ./$(DEPDIR)/libzmq_la-socket_base.Plo
-#include ./$(DEPDIR)/libzmq_la-stream.Plo
-#include ./$(DEPDIR)/libzmq_la-stream_engine.Plo
-#include ./$(DEPDIR)/libzmq_la-sub.Plo
-#include ./$(DEPDIR)/libzmq_la-tcp.Plo
-#include ./$(DEPDIR)/libzmq_la-tcp_address.Plo
-#include ./$(DEPDIR)/libzmq_la-tcp_connecter.Plo
-#include ./$(DEPDIR)/libzmq_la-tcp_listener.Plo
-#include ./$(DEPDIR)/libzmq_la-thread.Plo
-#include ./$(DEPDIR)/libzmq_la-trie.Plo
-#include ./$(DEPDIR)/libzmq_la-v1_decoder.Plo
-#include ./$(DEPDIR)/libzmq_la-v1_encoder.Plo
-#include ./$(DEPDIR)/libzmq_la-v2_decoder.Plo
-#include ./$(DEPDIR)/libzmq_la-v2_encoder.Plo
-#include ./$(DEPDIR)/libzmq_la-xpub.Plo
-#include ./$(DEPDIR)/libzmq_la-xsub.Plo
-#include ./$(DEPDIR)/libzmq_la-zmq.Plo
-#include ./$(DEPDIR)/libzmq_la-zmq_utils.Plo
+include ./$(DEPDIR)/libzmq_la-address.Plo
+include ./$(DEPDIR)/libzmq_la-clock.Plo
+include ./$(DEPDIR)/libzmq_la-ctx.Plo
+include ./$(DEPDIR)/libzmq_la-curve_client.Plo
+include ./$(DEPDIR)/libzmq_la-curve_server.Plo
+include ./$(DEPDIR)/libzmq_la-dealer.Plo
+include ./$(DEPDIR)/libzmq_la-devpoll.Plo
+include ./$(DEPDIR)/libzmq_la-dist.Plo
+include ./$(DEPDIR)/libzmq_la-epoll.Plo
+include ./$(DEPDIR)/libzmq_la-err.Plo
+include ./$(DEPDIR)/libzmq_la-fq.Plo
+include ./$(DEPDIR)/libzmq_la-io_object.Plo
+include ./$(DEPDIR)/libzmq_la-io_thread.Plo
+include ./$(DEPDIR)/libzmq_la-ip.Plo
+include ./$(DEPDIR)/libzmq_la-ipc_address.Plo
+include ./$(DEPDIR)/libzmq_la-ipc_connecter.Plo
+include ./$(DEPDIR)/libzmq_la-ipc_listener.Plo
+include ./$(DEPDIR)/libzmq_la-kqueue.Plo
+include ./$(DEPDIR)/libzmq_la-lb.Plo
+include ./$(DEPDIR)/libzmq_la-mailbox.Plo
+include ./$(DEPDIR)/libzmq_la-mechanism.Plo
+include ./$(DEPDIR)/libzmq_la-msg.Plo
+include ./$(DEPDIR)/libzmq_la-mtrie.Plo
+include ./$(DEPDIR)/libzmq_la-null_mechanism.Plo
+include ./$(DEPDIR)/libzmq_la-object.Plo
+include ./$(DEPDIR)/libzmq_la-options.Plo
+include ./$(DEPDIR)/libzmq_la-own.Plo
+include ./$(DEPDIR)/libzmq_la-pair.Plo
+include ./$(DEPDIR)/libzmq_la-pgm_receiver.Plo
+include ./$(DEPDIR)/libzmq_la-pgm_sender.Plo
+include ./$(DEPDIR)/libzmq_la-pgm_socket.Plo
+include ./$(DEPDIR)/libzmq_la-pipe.Plo
+include ./$(DEPDIR)/libzmq_la-plain_mechanism.Plo
+include ./$(DEPDIR)/libzmq_la-poll.Plo
+include ./$(DEPDIR)/libzmq_la-poller_base.Plo
+include ./$(DEPDIR)/libzmq_la-proxy.Plo
+include ./$(DEPDIR)/libzmq_la-pub.Plo
+include ./$(DEPDIR)/libzmq_la-pull.Plo
+include ./$(DEPDIR)/libzmq_la-push.Plo
+include ./$(DEPDIR)/libzmq_la-random.Plo
+include ./$(DEPDIR)/libzmq_la-raw_decoder.Plo
+include ./$(DEPDIR)/libzmq_la-raw_encoder.Plo
+include ./$(DEPDIR)/libzmq_la-reaper.Plo
+include ./$(DEPDIR)/libzmq_la-rep.Plo
+include ./$(DEPDIR)/libzmq_la-req.Plo
+include ./$(DEPDIR)/libzmq_la-router.Plo
+include ./$(DEPDIR)/libzmq_la-select.Plo
+include ./$(DEPDIR)/libzmq_la-session_base.Plo
+include ./$(DEPDIR)/libzmq_la-signaler.Plo
+include ./$(DEPDIR)/libzmq_la-socket_base.Plo
+include ./$(DEPDIR)/libzmq_la-stream.Plo
+include ./$(DEPDIR)/libzmq_la-stream_engine.Plo
+include ./$(DEPDIR)/libzmq_la-sub.Plo
+include ./$(DEPDIR)/libzmq_la-tcp.Plo
+include ./$(DEPDIR)/libzmq_la-tcp_address.Plo
+include ./$(DEPDIR)/libzmq_la-tcp_connecter.Plo
+include ./$(DEPDIR)/libzmq_la-tcp_listener.Plo
+include ./$(DEPDIR)/libzmq_la-thread.Plo
+include ./$(DEPDIR)/libzmq_la-trie.Plo
+include ./$(DEPDIR)/libzmq_la-v1_decoder.Plo
+include ./$(DEPDIR)/libzmq_la-v1_encoder.Plo
+include ./$(DEPDIR)/libzmq_la-v2_decoder.Plo
+include ./$(DEPDIR)/libzmq_la-v2_encoder.Plo
+include ./$(DEPDIR)/libzmq_la-xpub.Plo
+include ./$(DEPDIR)/libzmq_la-xsub.Plo
+include ./$(DEPDIR)/libzmq_la-zmq.Plo
+include ./$(DEPDIR)/libzmq_la-zmq_utils.Plo
 
 .cpp.o:
-#	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(CXXCOMPILE) -c -o $@ $<
+	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ $<
 
 .cpp.obj:
-#	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
-#	$(AM_V_CXX)source='$<' object='$@' libtool=no 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CXX)source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .cpp.lo:
-#	$(AM_V_CXX)$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
-#	$(AM_V_CXX)source='$<' object='$@' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LTCXXCOMPILE) -c -o $@ $<
+	$(AM_V_CXX)$(LTCXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+#	$(AM_V_CXX)source='$<' object='$@' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
 
 libzmq_la-address.lo: address.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-address.lo -MD -MP -MF $(DEPDIR)/libzmq_la-address.Tpo -c -o libzmq_la-address.lo `test -f 'address.cpp' || echo '$(srcdir)/'`address.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-address.Tpo $(DEPDIR)/libzmq_la-address.Plo
-#	$(AM_V_CXX)source='address.cpp' object='libzmq_la-address.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-address.lo `test -f 'address.cpp' || echo '$(srcdir)/'`address.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-address.lo -MD -MP -MF $(DEPDIR)/libzmq_la-address.Tpo -c -o libzmq_la-address.lo `test -f 'address.cpp' || echo '$(srcdir)/'`address.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-address.Tpo $(DEPDIR)/libzmq_la-address.Plo
+#	$(AM_V_CXX)source='address.cpp' object='libzmq_la-address.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-address.lo `test -f 'address.cpp' || echo '$(srcdir)/'`address.cpp
 
 libzmq_la-clock.lo: clock.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-clock.lo -MD -MP -MF $(DEPDIR)/libzmq_la-clock.Tpo -c -o libzmq_la-clock.lo `test -f 'clock.cpp' || echo '$(srcdir)/'`clock.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-clock.Tpo $(DEPDIR)/libzmq_la-clock.Plo
-#	$(AM_V_CXX)source='clock.cpp' object='libzmq_la-clock.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-clock.lo `test -f 'clock.cpp' || echo '$(srcdir)/'`clock.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-clock.lo -MD -MP -MF $(DEPDIR)/libzmq_la-clock.Tpo -c -o libzmq_la-clock.lo `test -f 'clock.cpp' || echo '$(srcdir)/'`clock.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-clock.Tpo $(DEPDIR)/libzmq_la-clock.Plo
+#	$(AM_V_CXX)source='clock.cpp' object='libzmq_la-clock.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-clock.lo `test -f 'clock.cpp' || echo '$(srcdir)/'`clock.cpp
 
 libzmq_la-ctx.lo: ctx.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ctx.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ctx.Tpo -c -o libzmq_la-ctx.lo `test -f 'ctx.cpp' || echo '$(srcdir)/'`ctx.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ctx.Tpo $(DEPDIR)/libzmq_la-ctx.Plo
-#	$(AM_V_CXX)source='ctx.cpp' object='libzmq_la-ctx.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ctx.lo `test -f 'ctx.cpp' || echo '$(srcdir)/'`ctx.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ctx.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ctx.Tpo -c -o libzmq_la-ctx.lo `test -f 'ctx.cpp' || echo '$(srcdir)/'`ctx.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ctx.Tpo $(DEPDIR)/libzmq_la-ctx.Plo
+#	$(AM_V_CXX)source='ctx.cpp' object='libzmq_la-ctx.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ctx.lo `test -f 'ctx.cpp' || echo '$(srcdir)/'`ctx.cpp
 
 libzmq_la-curve_client.lo: curve_client.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-curve_client.lo -MD -MP -MF $(DEPDIR)/libzmq_la-curve_client.Tpo -c -o libzmq_la-curve_client.lo `test -f 'curve_client.cpp' || echo '$(srcdir)/'`curve_client.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-curve_client.Tpo $(DEPDIR)/libzmq_la-curve_client.Plo
-#	$(AM_V_CXX)source='curve_client.cpp' object='libzmq_la-curve_client.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-curve_client.lo `test -f 'curve_client.cpp' || echo '$(srcdir)/'`curve_client.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-curve_client.lo -MD -MP -MF $(DEPDIR)/libzmq_la-curve_client.Tpo -c -o libzmq_la-curve_client.lo `test -f 'curve_client.cpp' || echo '$(srcdir)/'`curve_client.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-curve_client.Tpo $(DEPDIR)/libzmq_la-curve_client.Plo
+#	$(AM_V_CXX)source='curve_client.cpp' object='libzmq_la-curve_client.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-curve_client.lo `test -f 'curve_client.cpp' || echo '$(srcdir)/'`curve_client.cpp
 
 libzmq_la-curve_server.lo: curve_server.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-curve_server.lo -MD -MP -MF $(DEPDIR)/libzmq_la-curve_server.Tpo -c -o libzmq_la-curve_server.lo `test -f 'curve_server.cpp' || echo '$(srcdir)/'`curve_server.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-curve_server.Tpo $(DEPDIR)/libzmq_la-curve_server.Plo
-#	$(AM_V_CXX)source='curve_server.cpp' object='libzmq_la-curve_server.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-curve_server.lo `test -f 'curve_server.cpp' || echo '$(srcdir)/'`curve_server.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-curve_server.lo -MD -MP -MF $(DEPDIR)/libzmq_la-curve_server.Tpo -c -o libzmq_la-curve_server.lo `test -f 'curve_server.cpp' || echo '$(srcdir)/'`curve_server.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-curve_server.Tpo $(DEPDIR)/libzmq_la-curve_server.Plo
+#	$(AM_V_CXX)source='curve_server.cpp' object='libzmq_la-curve_server.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-curve_server.lo `test -f 'curve_server.cpp' || echo '$(srcdir)/'`curve_server.cpp
 
 libzmq_la-devpoll.lo: devpoll.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-devpoll.lo -MD -MP -MF $(DEPDIR)/libzmq_la-devpoll.Tpo -c -o libzmq_la-devpoll.lo `test -f 'devpoll.cpp' || echo '$(srcdir)/'`devpoll.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-devpoll.Tpo $(DEPDIR)/libzmq_la-devpoll.Plo
-#	$(AM_V_CXX)source='devpoll.cpp' object='libzmq_la-devpoll.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-devpoll.lo `test -f 'devpoll.cpp' || echo '$(srcdir)/'`devpoll.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-devpoll.lo -MD -MP -MF $(DEPDIR)/libzmq_la-devpoll.Tpo -c -o libzmq_la-devpoll.lo `test -f 'devpoll.cpp' || echo '$(srcdir)/'`devpoll.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-devpoll.Tpo $(DEPDIR)/libzmq_la-devpoll.Plo
+#	$(AM_V_CXX)source='devpoll.cpp' object='libzmq_la-devpoll.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-devpoll.lo `test -f 'devpoll.cpp' || echo '$(srcdir)/'`devpoll.cpp
 
 libzmq_la-dist.lo: dist.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-dist.lo -MD -MP -MF $(DEPDIR)/libzmq_la-dist.Tpo -c -o libzmq_la-dist.lo `test -f 'dist.cpp' || echo '$(srcdir)/'`dist.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-dist.Tpo $(DEPDIR)/libzmq_la-dist.Plo
-#	$(AM_V_CXX)source='dist.cpp' object='libzmq_la-dist.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-dist.lo `test -f 'dist.cpp' || echo '$(srcdir)/'`dist.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-dist.lo -MD -MP -MF $(DEPDIR)/libzmq_la-dist.Tpo -c -o libzmq_la-dist.lo `test -f 'dist.cpp' || echo '$(srcdir)/'`dist.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-dist.Tpo $(DEPDIR)/libzmq_la-dist.Plo
+#	$(AM_V_CXX)source='dist.cpp' object='libzmq_la-dist.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-dist.lo `test -f 'dist.cpp' || echo '$(srcdir)/'`dist.cpp
 
 libzmq_la-epoll.lo: epoll.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-epoll.lo -MD -MP -MF $(DEPDIR)/libzmq_la-epoll.Tpo -c -o libzmq_la-epoll.lo `test -f 'epoll.cpp' || echo '$(srcdir)/'`epoll.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-epoll.Tpo $(DEPDIR)/libzmq_la-epoll.Plo
-#	$(AM_V_CXX)source='epoll.cpp' object='libzmq_la-epoll.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-epoll.lo `test -f 'epoll.cpp' || echo '$(srcdir)/'`epoll.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-epoll.lo -MD -MP -MF $(DEPDIR)/libzmq_la-epoll.Tpo -c -o libzmq_la-epoll.lo `test -f 'epoll.cpp' || echo '$(srcdir)/'`epoll.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-epoll.Tpo $(DEPDIR)/libzmq_la-epoll.Plo
+#	$(AM_V_CXX)source='epoll.cpp' object='libzmq_la-epoll.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-epoll.lo `test -f 'epoll.cpp' || echo '$(srcdir)/'`epoll.cpp
 
 libzmq_la-err.lo: err.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-err.lo -MD -MP -MF $(DEPDIR)/libzmq_la-err.Tpo -c -o libzmq_la-err.lo `test -f 'err.cpp' || echo '$(srcdir)/'`err.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-err.Tpo $(DEPDIR)/libzmq_la-err.Plo
-#	$(AM_V_CXX)source='err.cpp' object='libzmq_la-err.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-err.lo `test -f 'err.cpp' || echo '$(srcdir)/'`err.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-err.lo -MD -MP -MF $(DEPDIR)/libzmq_la-err.Tpo -c -o libzmq_la-err.lo `test -f 'err.cpp' || echo '$(srcdir)/'`err.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-err.Tpo $(DEPDIR)/libzmq_la-err.Plo
+#	$(AM_V_CXX)source='err.cpp' object='libzmq_la-err.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-err.lo `test -f 'err.cpp' || echo '$(srcdir)/'`err.cpp
 
 libzmq_la-fq.lo: fq.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-fq.lo -MD -MP -MF $(DEPDIR)/libzmq_la-fq.Tpo -c -o libzmq_la-fq.lo `test -f 'fq.cpp' || echo '$(srcdir)/'`fq.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-fq.Tpo $(DEPDIR)/libzmq_la-fq.Plo
-#	$(AM_V_CXX)source='fq.cpp' object='libzmq_la-fq.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-fq.lo `test -f 'fq.cpp' || echo '$(srcdir)/'`fq.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-fq.lo -MD -MP -MF $(DEPDIR)/libzmq_la-fq.Tpo -c -o libzmq_la-fq.lo `test -f 'fq.cpp' || echo '$(srcdir)/'`fq.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-fq.Tpo $(DEPDIR)/libzmq_la-fq.Plo
+#	$(AM_V_CXX)source='fq.cpp' object='libzmq_la-fq.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-fq.lo `test -f 'fq.cpp' || echo '$(srcdir)/'`fq.cpp
 
 libzmq_la-io_object.lo: io_object.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-io_object.lo -MD -MP -MF $(DEPDIR)/libzmq_la-io_object.Tpo -c -o libzmq_la-io_object.lo `test -f 'io_object.cpp' || echo '$(srcdir)/'`io_object.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-io_object.Tpo $(DEPDIR)/libzmq_la-io_object.Plo
-#	$(AM_V_CXX)source='io_object.cpp' object='libzmq_la-io_object.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-io_object.lo `test -f 'io_object.cpp' || echo '$(srcdir)/'`io_object.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-io_object.lo -MD -MP -MF $(DEPDIR)/libzmq_la-io_object.Tpo -c -o libzmq_la-io_object.lo `test -f 'io_object.cpp' || echo '$(srcdir)/'`io_object.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-io_object.Tpo $(DEPDIR)/libzmq_la-io_object.Plo
+#	$(AM_V_CXX)source='io_object.cpp' object='libzmq_la-io_object.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-io_object.lo `test -f 'io_object.cpp' || echo '$(srcdir)/'`io_object.cpp
 
 libzmq_la-io_thread.lo: io_thread.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-io_thread.lo -MD -MP -MF $(DEPDIR)/libzmq_la-io_thread.Tpo -c -o libzmq_la-io_thread.lo `test -f 'io_thread.cpp' || echo '$(srcdir)/'`io_thread.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-io_thread.Tpo $(DEPDIR)/libzmq_la-io_thread.Plo
-#	$(AM_V_CXX)source='io_thread.cpp' object='libzmq_la-io_thread.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-io_thread.lo `test -f 'io_thread.cpp' || echo '$(srcdir)/'`io_thread.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-io_thread.lo -MD -MP -MF $(DEPDIR)/libzmq_la-io_thread.Tpo -c -o libzmq_la-io_thread.lo `test -f 'io_thread.cpp' || echo '$(srcdir)/'`io_thread.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-io_thread.Tpo $(DEPDIR)/libzmq_la-io_thread.Plo
+#	$(AM_V_CXX)source='io_thread.cpp' object='libzmq_la-io_thread.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-io_thread.lo `test -f 'io_thread.cpp' || echo '$(srcdir)/'`io_thread.cpp
 
 libzmq_la-ip.lo: ip.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ip.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ip.Tpo -c -o libzmq_la-ip.lo `test -f 'ip.cpp' || echo '$(srcdir)/'`ip.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ip.Tpo $(DEPDIR)/libzmq_la-ip.Plo
-#	$(AM_V_CXX)source='ip.cpp' object='libzmq_la-ip.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ip.lo `test -f 'ip.cpp' || echo '$(srcdir)/'`ip.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ip.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ip.Tpo -c -o libzmq_la-ip.lo `test -f 'ip.cpp' || echo '$(srcdir)/'`ip.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ip.Tpo $(DEPDIR)/libzmq_la-ip.Plo
+#	$(AM_V_CXX)source='ip.cpp' object='libzmq_la-ip.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ip.lo `test -f 'ip.cpp' || echo '$(srcdir)/'`ip.cpp
 
 libzmq_la-ipc_address.lo: ipc_address.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ipc_address.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ipc_address.Tpo -c -o libzmq_la-ipc_address.lo `test -f 'ipc_address.cpp' || echo '$(srcdir)/'`ipc_address.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ipc_address.Tpo $(DEPDIR)/libzmq_la-ipc_address.Plo
-#	$(AM_V_CXX)source='ipc_address.cpp' object='libzmq_la-ipc_address.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ipc_address.lo `test -f 'ipc_address.cpp' || echo '$(srcdir)/'`ipc_address.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ipc_address.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ipc_address.Tpo -c -o libzmq_la-ipc_address.lo `test -f 'ipc_address.cpp' || echo '$(srcdir)/'`ipc_address.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ipc_address.Tpo $(DEPDIR)/libzmq_la-ipc_address.Plo
+#	$(AM_V_CXX)source='ipc_address.cpp' object='libzmq_la-ipc_address.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ipc_address.lo `test -f 'ipc_address.cpp' || echo '$(srcdir)/'`ipc_address.cpp
 
 libzmq_la-ipc_connecter.lo: ipc_connecter.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ipc_connecter.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ipc_connecter.Tpo -c -o libzmq_la-ipc_connecter.lo `test -f 'ipc_connecter.cpp' || echo '$(srcdir)/'`ipc_connecter.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ipc_connecter.Tpo $(DEPDIR)/libzmq_la-ipc_connecter.Plo
-#	$(AM_V_CXX)source='ipc_connecter.cpp' object='libzmq_la-ipc_connecter.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ipc_connecter.lo `test -f 'ipc_connecter.cpp' || echo '$(srcdir)/'`ipc_connecter.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ipc_connecter.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ipc_connecter.Tpo -c -o libzmq_la-ipc_connecter.lo `test -f 'ipc_connecter.cpp' || echo '$(srcdir)/'`ipc_connecter.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ipc_connecter.Tpo $(DEPDIR)/libzmq_la-ipc_connecter.Plo
+#	$(AM_V_CXX)source='ipc_connecter.cpp' object='libzmq_la-ipc_connecter.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ipc_connecter.lo `test -f 'ipc_connecter.cpp' || echo '$(srcdir)/'`ipc_connecter.cpp
 
 libzmq_la-ipc_listener.lo: ipc_listener.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ipc_listener.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ipc_listener.Tpo -c -o libzmq_la-ipc_listener.lo `test -f 'ipc_listener.cpp' || echo '$(srcdir)/'`ipc_listener.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ipc_listener.Tpo $(DEPDIR)/libzmq_la-ipc_listener.Plo
-#	$(AM_V_CXX)source='ipc_listener.cpp' object='libzmq_la-ipc_listener.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ipc_listener.lo `test -f 'ipc_listener.cpp' || echo '$(srcdir)/'`ipc_listener.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-ipc_listener.lo -MD -MP -MF $(DEPDIR)/libzmq_la-ipc_listener.Tpo -c -o libzmq_la-ipc_listener.lo `test -f 'ipc_listener.cpp' || echo '$(srcdir)/'`ipc_listener.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-ipc_listener.Tpo $(DEPDIR)/libzmq_la-ipc_listener.Plo
+#	$(AM_V_CXX)source='ipc_listener.cpp' object='libzmq_la-ipc_listener.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-ipc_listener.lo `test -f 'ipc_listener.cpp' || echo '$(srcdir)/'`ipc_listener.cpp
 
 libzmq_la-kqueue.lo: kqueue.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-kqueue.lo -MD -MP -MF $(DEPDIR)/libzmq_la-kqueue.Tpo -c -o libzmq_la-kqueue.lo `test -f 'kqueue.cpp' || echo '$(srcdir)/'`kqueue.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-kqueue.Tpo $(DEPDIR)/libzmq_la-kqueue.Plo
-#	$(AM_V_CXX)source='kqueue.cpp' object='libzmq_la-kqueue.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-kqueue.lo `test -f 'kqueue.cpp' || echo '$(srcdir)/'`kqueue.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-kqueue.lo -MD -MP -MF $(DEPDIR)/libzmq_la-kqueue.Tpo -c -o libzmq_la-kqueue.lo `test -f 'kqueue.cpp' || echo '$(srcdir)/'`kqueue.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-kqueue.Tpo $(DEPDIR)/libzmq_la-kqueue.Plo
+#	$(AM_V_CXX)source='kqueue.cpp' object='libzmq_la-kqueue.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-kqueue.lo `test -f 'kqueue.cpp' || echo '$(srcdir)/'`kqueue.cpp
 
 libzmq_la-lb.lo: lb.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-lb.lo -MD -MP -MF $(DEPDIR)/libzmq_la-lb.Tpo -c -o libzmq_la-lb.lo `test -f 'lb.cpp' || echo '$(srcdir)/'`lb.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-lb.Tpo $(DEPDIR)/libzmq_la-lb.Plo
-#	$(AM_V_CXX)source='lb.cpp' object='libzmq_la-lb.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-lb.lo `test -f 'lb.cpp' || echo '$(srcdir)/'`lb.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-lb.lo -MD -MP -MF $(DEPDIR)/libzmq_la-lb.Tpo -c -o libzmq_la-lb.lo `test -f 'lb.cpp' || echo '$(srcdir)/'`lb.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-lb.Tpo $(DEPDIR)/libzmq_la-lb.Plo
+#	$(AM_V_CXX)source='lb.cpp' object='libzmq_la-lb.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-lb.lo `test -f 'lb.cpp' || echo '$(srcdir)/'`lb.cpp
 
 libzmq_la-mailbox.lo: mailbox.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-mailbox.lo -MD -MP -MF $(DEPDIR)/libzmq_la-mailbox.Tpo -c -o libzmq_la-mailbox.lo `test -f 'mailbox.cpp' || echo '$(srcdir)/'`mailbox.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-mailbox.Tpo $(DEPDIR)/libzmq_la-mailbox.Plo
-#	$(AM_V_CXX)source='mailbox.cpp' object='libzmq_la-mailbox.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-mailbox.lo `test -f 'mailbox.cpp' || echo '$(srcdir)/'`mailbox.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-mailbox.lo -MD -MP -MF $(DEPDIR)/libzmq_la-mailbox.Tpo -c -o libzmq_la-mailbox.lo `test -f 'mailbox.cpp' || echo '$(srcdir)/'`mailbox.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-mailbox.Tpo $(DEPDIR)/libzmq_la-mailbox.Plo
+#	$(AM_V_CXX)source='mailbox.cpp' object='libzmq_la-mailbox.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-mailbox.lo `test -f 'mailbox.cpp' || echo '$(srcdir)/'`mailbox.cpp
 
 libzmq_la-mechanism.lo: mechanism.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-mechanism.lo -MD -MP -MF $(DEPDIR)/libzmq_la-mechanism.Tpo -c -o libzmq_la-mechanism.lo `test -f 'mechanism.cpp' || echo '$(srcdir)/'`mechanism.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-mechanism.Tpo $(DEPDIR)/libzmq_la-mechanism.Plo
-#	$(AM_V_CXX)source='mechanism.cpp' object='libzmq_la-mechanism.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-mechanism.lo `test -f 'mechanism.cpp' || echo '$(srcdir)/'`mechanism.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-mechanism.lo -MD -MP -MF $(DEPDIR)/libzmq_la-mechanism.Tpo -c -o libzmq_la-mechanism.lo `test -f 'mechanism.cpp' || echo '$(srcdir)/'`mechanism.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-mechanism.Tpo $(DEPDIR)/libzmq_la-mechanism.Plo
+#	$(AM_V_CXX)source='mechanism.cpp' object='libzmq_la-mechanism.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-mechanism.lo `test -f 'mechanism.cpp' || echo '$(srcdir)/'`mechanism.cpp
 
 libzmq_la-msg.lo: msg.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-msg.lo -MD -MP -MF $(DEPDIR)/libzmq_la-msg.Tpo -c -o libzmq_la-msg.lo `test -f 'msg.cpp' || echo '$(srcdir)/'`msg.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-msg.Tpo $(DEPDIR)/libzmq_la-msg.Plo
-#	$(AM_V_CXX)source='msg.cpp' object='libzmq_la-msg.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-msg.lo `test -f 'msg.cpp' || echo '$(srcdir)/'`msg.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-msg.lo -MD -MP -MF $(DEPDIR)/libzmq_la-msg.Tpo -c -o libzmq_la-msg.lo `test -f 'msg.cpp' || echo '$(srcdir)/'`msg.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-msg.Tpo $(DEPDIR)/libzmq_la-msg.Plo
+#	$(AM_V_CXX)source='msg.cpp' object='libzmq_la-msg.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-msg.lo `test -f 'msg.cpp' || echo '$(srcdir)/'`msg.cpp
 
 libzmq_la-mtrie.lo: mtrie.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-mtrie.lo -MD -MP -MF $(DEPDIR)/libzmq_la-mtrie.Tpo -c -o libzmq_la-mtrie.lo `test -f 'mtrie.cpp' || echo '$(srcdir)/'`mtrie.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-mtrie.Tpo $(DEPDIR)/libzmq_la-mtrie.Plo
-#	$(AM_V_CXX)source='mtrie.cpp' object='libzmq_la-mtrie.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-mtrie.lo `test -f 'mtrie.cpp' || echo '$(srcdir)/'`mtrie.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-mtrie.lo -MD -MP -MF $(DEPDIR)/libzmq_la-mtrie.Tpo -c -o libzmq_la-mtrie.lo `test -f 'mtrie.cpp' || echo '$(srcdir)/'`mtrie.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-mtrie.Tpo $(DEPDIR)/libzmq_la-mtrie.Plo
+#	$(AM_V_CXX)source='mtrie.cpp' object='libzmq_la-mtrie.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-mtrie.lo `test -f 'mtrie.cpp' || echo '$(srcdir)/'`mtrie.cpp
 
 libzmq_la-null_mechanism.lo: null_mechanism.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-null_mechanism.lo -MD -MP -MF $(DEPDIR)/libzmq_la-null_mechanism.Tpo -c -o libzmq_la-null_mechanism.lo `test -f 'null_mechanism.cpp' || echo '$(srcdir)/'`null_mechanism.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-null_mechanism.Tpo $(DEPDIR)/libzmq_la-null_mechanism.Plo
-#	$(AM_V_CXX)source='null_mechanism.cpp' object='libzmq_la-null_mechanism.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-null_mechanism.lo `test -f 'null_mechanism.cpp' || echo '$(srcdir)/'`null_mechanism.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-null_mechanism.lo -MD -MP -MF $(DEPDIR)/libzmq_la-null_mechanism.Tpo -c -o libzmq_la-null_mechanism.lo `test -f 'null_mechanism.cpp' || echo '$(srcdir)/'`null_mechanism.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-null_mechanism.Tpo $(DEPDIR)/libzmq_la-null_mechanism.Plo
+#	$(AM_V_CXX)source='null_mechanism.cpp' object='libzmq_la-null_mechanism.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-null_mechanism.lo `test -f 'null_mechanism.cpp' || echo '$(srcdir)/'`null_mechanism.cpp
 
 libzmq_la-object.lo: object.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-object.lo -MD -MP -MF $(DEPDIR)/libzmq_la-object.Tpo -c -o libzmq_la-object.lo `test -f 'object.cpp' || echo '$(srcdir)/'`object.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-object.Tpo $(DEPDIR)/libzmq_la-object.Plo
-#	$(AM_V_CXX)source='object.cpp' object='libzmq_la-object.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-object.lo `test -f 'object.cpp' || echo '$(srcdir)/'`object.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-object.lo -MD -MP -MF $(DEPDIR)/libzmq_la-object.Tpo -c -o libzmq_la-object.lo `test -f 'object.cpp' || echo '$(srcdir)/'`object.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-object.Tpo $(DEPDIR)/libzmq_la-object.Plo
+#	$(AM_V_CXX)source='object.cpp' object='libzmq_la-object.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-object.lo `test -f 'object.cpp' || echo '$(srcdir)/'`object.cpp
 
 libzmq_la-options.lo: options.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-options.lo -MD -MP -MF $(DEPDIR)/libzmq_la-options.Tpo -c -o libzmq_la-options.lo `test -f 'options.cpp' || echo '$(srcdir)/'`options.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-options.Tpo $(DEPDIR)/libzmq_la-options.Plo
-#	$(AM_V_CXX)source='options.cpp' object='libzmq_la-options.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-options.lo `test -f 'options.cpp' || echo '$(srcdir)/'`options.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-options.lo -MD -MP -MF $(DEPDIR)/libzmq_la-options.Tpo -c -o libzmq_la-options.lo `test -f 'options.cpp' || echo '$(srcdir)/'`options.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-options.Tpo $(DEPDIR)/libzmq_la-options.Plo
+#	$(AM_V_CXX)source='options.cpp' object='libzmq_la-options.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-options.lo `test -f 'options.cpp' || echo '$(srcdir)/'`options.cpp
 
 libzmq_la-own.lo: own.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-own.lo -MD -MP -MF $(DEPDIR)/libzmq_la-own.Tpo -c -o libzmq_la-own.lo `test -f 'own.cpp' || echo '$(srcdir)/'`own.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-own.Tpo $(DEPDIR)/libzmq_la-own.Plo
-#	$(AM_V_CXX)source='own.cpp' object='libzmq_la-own.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-own.lo `test -f 'own.cpp' || echo '$(srcdir)/'`own.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-own.lo -MD -MP -MF $(DEPDIR)/libzmq_la-own.Tpo -c -o libzmq_la-own.lo `test -f 'own.cpp' || echo '$(srcdir)/'`own.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-own.Tpo $(DEPDIR)/libzmq_la-own.Plo
+#	$(AM_V_CXX)source='own.cpp' object='libzmq_la-own.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-own.lo `test -f 'own.cpp' || echo '$(srcdir)/'`own.cpp
 
 libzmq_la-pair.lo: pair.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pair.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pair.Tpo -c -o libzmq_la-pair.lo `test -f 'pair.cpp' || echo '$(srcdir)/'`pair.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pair.Tpo $(DEPDIR)/libzmq_la-pair.Plo
-#	$(AM_V_CXX)source='pair.cpp' object='libzmq_la-pair.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pair.lo `test -f 'pair.cpp' || echo '$(srcdir)/'`pair.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pair.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pair.Tpo -c -o libzmq_la-pair.lo `test -f 'pair.cpp' || echo '$(srcdir)/'`pair.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pair.Tpo $(DEPDIR)/libzmq_la-pair.Plo
+#	$(AM_V_CXX)source='pair.cpp' object='libzmq_la-pair.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pair.lo `test -f 'pair.cpp' || echo '$(srcdir)/'`pair.cpp
 
 libzmq_la-pgm_receiver.lo: pgm_receiver.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pgm_receiver.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pgm_receiver.Tpo -c -o libzmq_la-pgm_receiver.lo `test -f 'pgm_receiver.cpp' || echo '$(srcdir)/'`pgm_receiver.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pgm_receiver.Tpo $(DEPDIR)/libzmq_la-pgm_receiver.Plo
-#	$(AM_V_CXX)source='pgm_receiver.cpp' object='libzmq_la-pgm_receiver.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pgm_receiver.lo `test -f 'pgm_receiver.cpp' || echo '$(srcdir)/'`pgm_receiver.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pgm_receiver.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pgm_receiver.Tpo -c -o libzmq_la-pgm_receiver.lo `test -f 'pgm_receiver.cpp' || echo '$(srcdir)/'`pgm_receiver.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pgm_receiver.Tpo $(DEPDIR)/libzmq_la-pgm_receiver.Plo
+#	$(AM_V_CXX)source='pgm_receiver.cpp' object='libzmq_la-pgm_receiver.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pgm_receiver.lo `test -f 'pgm_receiver.cpp' || echo '$(srcdir)/'`pgm_receiver.cpp
 
 libzmq_la-pgm_sender.lo: pgm_sender.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pgm_sender.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pgm_sender.Tpo -c -o libzmq_la-pgm_sender.lo `test -f 'pgm_sender.cpp' || echo '$(srcdir)/'`pgm_sender.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pgm_sender.Tpo $(DEPDIR)/libzmq_la-pgm_sender.Plo
-#	$(AM_V_CXX)source='pgm_sender.cpp' object='libzmq_la-pgm_sender.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pgm_sender.lo `test -f 'pgm_sender.cpp' || echo '$(srcdir)/'`pgm_sender.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pgm_sender.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pgm_sender.Tpo -c -o libzmq_la-pgm_sender.lo `test -f 'pgm_sender.cpp' || echo '$(srcdir)/'`pgm_sender.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pgm_sender.Tpo $(DEPDIR)/libzmq_la-pgm_sender.Plo
+#	$(AM_V_CXX)source='pgm_sender.cpp' object='libzmq_la-pgm_sender.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pgm_sender.lo `test -f 'pgm_sender.cpp' || echo '$(srcdir)/'`pgm_sender.cpp
 
 libzmq_la-pgm_socket.lo: pgm_socket.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pgm_socket.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pgm_socket.Tpo -c -o libzmq_la-pgm_socket.lo `test -f 'pgm_socket.cpp' || echo '$(srcdir)/'`pgm_socket.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pgm_socket.Tpo $(DEPDIR)/libzmq_la-pgm_socket.Plo
-#	$(AM_V_CXX)source='pgm_socket.cpp' object='libzmq_la-pgm_socket.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pgm_socket.lo `test -f 'pgm_socket.cpp' || echo '$(srcdir)/'`pgm_socket.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pgm_socket.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pgm_socket.Tpo -c -o libzmq_la-pgm_socket.lo `test -f 'pgm_socket.cpp' || echo '$(srcdir)/'`pgm_socket.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pgm_socket.Tpo $(DEPDIR)/libzmq_la-pgm_socket.Plo
+#	$(AM_V_CXX)source='pgm_socket.cpp' object='libzmq_la-pgm_socket.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pgm_socket.lo `test -f 'pgm_socket.cpp' || echo '$(srcdir)/'`pgm_socket.cpp
 
 libzmq_la-pipe.lo: pipe.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pipe.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pipe.Tpo -c -o libzmq_la-pipe.lo `test -f 'pipe.cpp' || echo '$(srcdir)/'`pipe.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pipe.Tpo $(DEPDIR)/libzmq_la-pipe.Plo
-#	$(AM_V_CXX)source='pipe.cpp' object='libzmq_la-pipe.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pipe.lo `test -f 'pipe.cpp' || echo '$(srcdir)/'`pipe.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pipe.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pipe.Tpo -c -o libzmq_la-pipe.lo `test -f 'pipe.cpp' || echo '$(srcdir)/'`pipe.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pipe.Tpo $(DEPDIR)/libzmq_la-pipe.Plo
+#	$(AM_V_CXX)source='pipe.cpp' object='libzmq_la-pipe.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pipe.lo `test -f 'pipe.cpp' || echo '$(srcdir)/'`pipe.cpp
 
 libzmq_la-plain_mechanism.lo: plain_mechanism.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-plain_mechanism.lo -MD -MP -MF $(DEPDIR)/libzmq_la-plain_mechanism.Tpo -c -o libzmq_la-plain_mechanism.lo `test -f 'plain_mechanism.cpp' || echo '$(srcdir)/'`plain_mechanism.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-plain_mechanism.Tpo $(DEPDIR)/libzmq_la-plain_mechanism.Plo
-#	$(AM_V_CXX)source='plain_mechanism.cpp' object='libzmq_la-plain_mechanism.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-plain_mechanism.lo `test -f 'plain_mechanism.cpp' || echo '$(srcdir)/'`plain_mechanism.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-plain_mechanism.lo -MD -MP -MF $(DEPDIR)/libzmq_la-plain_mechanism.Tpo -c -o libzmq_la-plain_mechanism.lo `test -f 'plain_mechanism.cpp' || echo '$(srcdir)/'`plain_mechanism.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-plain_mechanism.Tpo $(DEPDIR)/libzmq_la-plain_mechanism.Plo
+#	$(AM_V_CXX)source='plain_mechanism.cpp' object='libzmq_la-plain_mechanism.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-plain_mechanism.lo `test -f 'plain_mechanism.cpp' || echo '$(srcdir)/'`plain_mechanism.cpp
 
 libzmq_la-poll.lo: poll.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-poll.lo -MD -MP -MF $(DEPDIR)/libzmq_la-poll.Tpo -c -o libzmq_la-poll.lo `test -f 'poll.cpp' || echo '$(srcdir)/'`poll.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-poll.Tpo $(DEPDIR)/libzmq_la-poll.Plo
-#	$(AM_V_CXX)source='poll.cpp' object='libzmq_la-poll.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-poll.lo `test -f 'poll.cpp' || echo '$(srcdir)/'`poll.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-poll.lo -MD -MP -MF $(DEPDIR)/libzmq_la-poll.Tpo -c -o libzmq_la-poll.lo `test -f 'poll.cpp' || echo '$(srcdir)/'`poll.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-poll.Tpo $(DEPDIR)/libzmq_la-poll.Plo
+#	$(AM_V_CXX)source='poll.cpp' object='libzmq_la-poll.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-poll.lo `test -f 'poll.cpp' || echo '$(srcdir)/'`poll.cpp
 
 libzmq_la-poller_base.lo: poller_base.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-poller_base.lo -MD -MP -MF $(DEPDIR)/libzmq_la-poller_base.Tpo -c -o libzmq_la-poller_base.lo `test -f 'poller_base.cpp' || echo '$(srcdir)/'`poller_base.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-poller_base.Tpo $(DEPDIR)/libzmq_la-poller_base.Plo
-#	$(AM_V_CXX)source='poller_base.cpp' object='libzmq_la-poller_base.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-poller_base.lo `test -f 'poller_base.cpp' || echo '$(srcdir)/'`poller_base.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-poller_base.lo -MD -MP -MF $(DEPDIR)/libzmq_la-poller_base.Tpo -c -o libzmq_la-poller_base.lo `test -f 'poller_base.cpp' || echo '$(srcdir)/'`poller_base.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-poller_base.Tpo $(DEPDIR)/libzmq_la-poller_base.Plo
+#	$(AM_V_CXX)source='poller_base.cpp' object='libzmq_la-poller_base.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-poller_base.lo `test -f 'poller_base.cpp' || echo '$(srcdir)/'`poller_base.cpp
 
 libzmq_la-pull.lo: pull.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pull.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pull.Tpo -c -o libzmq_la-pull.lo `test -f 'pull.cpp' || echo '$(srcdir)/'`pull.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pull.Tpo $(DEPDIR)/libzmq_la-pull.Plo
-#	$(AM_V_CXX)source='pull.cpp' object='libzmq_la-pull.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pull.lo `test -f 'pull.cpp' || echo '$(srcdir)/'`pull.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pull.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pull.Tpo -c -o libzmq_la-pull.lo `test -f 'pull.cpp' || echo '$(srcdir)/'`pull.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pull.Tpo $(DEPDIR)/libzmq_la-pull.Plo
+#	$(AM_V_CXX)source='pull.cpp' object='libzmq_la-pull.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pull.lo `test -f 'pull.cpp' || echo '$(srcdir)/'`pull.cpp
 
 libzmq_la-push.lo: push.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-push.lo -MD -MP -MF $(DEPDIR)/libzmq_la-push.Tpo -c -o libzmq_la-push.lo `test -f 'push.cpp' || echo '$(srcdir)/'`push.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-push.Tpo $(DEPDIR)/libzmq_la-push.Plo
-#	$(AM_V_CXX)source='push.cpp' object='libzmq_la-push.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-push.lo `test -f 'push.cpp' || echo '$(srcdir)/'`push.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-push.lo -MD -MP -MF $(DEPDIR)/libzmq_la-push.Tpo -c -o libzmq_la-push.lo `test -f 'push.cpp' || echo '$(srcdir)/'`push.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-push.Tpo $(DEPDIR)/libzmq_la-push.Plo
+#	$(AM_V_CXX)source='push.cpp' object='libzmq_la-push.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-push.lo `test -f 'push.cpp' || echo '$(srcdir)/'`push.cpp
 
 libzmq_la-proxy.lo: proxy.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-proxy.lo -MD -MP -MF $(DEPDIR)/libzmq_la-proxy.Tpo -c -o libzmq_la-proxy.lo `test -f 'proxy.cpp' || echo '$(srcdir)/'`proxy.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-proxy.Tpo $(DEPDIR)/libzmq_la-proxy.Plo
-#	$(AM_V_CXX)source='proxy.cpp' object='libzmq_la-proxy.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-proxy.lo `test -f 'proxy.cpp' || echo '$(srcdir)/'`proxy.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-proxy.lo -MD -MP -MF $(DEPDIR)/libzmq_la-proxy.Tpo -c -o libzmq_la-proxy.lo `test -f 'proxy.cpp' || echo '$(srcdir)/'`proxy.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-proxy.Tpo $(DEPDIR)/libzmq_la-proxy.Plo
+#	$(AM_V_CXX)source='proxy.cpp' object='libzmq_la-proxy.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-proxy.lo `test -f 'proxy.cpp' || echo '$(srcdir)/'`proxy.cpp
 
 libzmq_la-reaper.lo: reaper.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-reaper.lo -MD -MP -MF $(DEPDIR)/libzmq_la-reaper.Tpo -c -o libzmq_la-reaper.lo `test -f 'reaper.cpp' || echo '$(srcdir)/'`reaper.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-reaper.Tpo $(DEPDIR)/libzmq_la-reaper.Plo
-#	$(AM_V_CXX)source='reaper.cpp' object='libzmq_la-reaper.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-reaper.lo `test -f 'reaper.cpp' || echo '$(srcdir)/'`reaper.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-reaper.lo -MD -MP -MF $(DEPDIR)/libzmq_la-reaper.Tpo -c -o libzmq_la-reaper.lo `test -f 'reaper.cpp' || echo '$(srcdir)/'`reaper.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-reaper.Tpo $(DEPDIR)/libzmq_la-reaper.Plo
+#	$(AM_V_CXX)source='reaper.cpp' object='libzmq_la-reaper.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-reaper.lo `test -f 'reaper.cpp' || echo '$(srcdir)/'`reaper.cpp
 
 libzmq_la-pub.lo: pub.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pub.Tpo -c -o libzmq_la-pub.lo `test -f 'pub.cpp' || echo '$(srcdir)/'`pub.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pub.Tpo $(DEPDIR)/libzmq_la-pub.Plo
-#	$(AM_V_CXX)source='pub.cpp' object='libzmq_la-pub.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pub.lo `test -f 'pub.cpp' || echo '$(srcdir)/'`pub.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-pub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-pub.Tpo -c -o libzmq_la-pub.lo `test -f 'pub.cpp' || echo '$(srcdir)/'`pub.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-pub.Tpo $(DEPDIR)/libzmq_la-pub.Plo
+#	$(AM_V_CXX)source='pub.cpp' object='libzmq_la-pub.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-pub.lo `test -f 'pub.cpp' || echo '$(srcdir)/'`pub.cpp
 
 libzmq_la-random.lo: random.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-random.lo -MD -MP -MF $(DEPDIR)/libzmq_la-random.Tpo -c -o libzmq_la-random.lo `test -f 'random.cpp' || echo '$(srcdir)/'`random.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-random.Tpo $(DEPDIR)/libzmq_la-random.Plo
-#	$(AM_V_CXX)source='random.cpp' object='libzmq_la-random.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-random.lo `test -f 'random.cpp' || echo '$(srcdir)/'`random.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-random.lo -MD -MP -MF $(DEPDIR)/libzmq_la-random.Tpo -c -o libzmq_la-random.lo `test -f 'random.cpp' || echo '$(srcdir)/'`random.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-random.Tpo $(DEPDIR)/libzmq_la-random.Plo
+#	$(AM_V_CXX)source='random.cpp' object='libzmq_la-random.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-random.lo `test -f 'random.cpp' || echo '$(srcdir)/'`random.cpp
 
 libzmq_la-rep.lo: rep.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-rep.lo -MD -MP -MF $(DEPDIR)/libzmq_la-rep.Tpo -c -o libzmq_la-rep.lo `test -f 'rep.cpp' || echo '$(srcdir)/'`rep.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-rep.Tpo $(DEPDIR)/libzmq_la-rep.Plo
-#	$(AM_V_CXX)source='rep.cpp' object='libzmq_la-rep.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-rep.lo `test -f 'rep.cpp' || echo '$(srcdir)/'`rep.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-rep.lo -MD -MP -MF $(DEPDIR)/libzmq_la-rep.Tpo -c -o libzmq_la-rep.lo `test -f 'rep.cpp' || echo '$(srcdir)/'`rep.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-rep.Tpo $(DEPDIR)/libzmq_la-rep.Plo
+#	$(AM_V_CXX)source='rep.cpp' object='libzmq_la-rep.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-rep.lo `test -f 'rep.cpp' || echo '$(srcdir)/'`rep.cpp
 
 libzmq_la-req.lo: req.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-req.lo -MD -MP -MF $(DEPDIR)/libzmq_la-req.Tpo -c -o libzmq_la-req.lo `test -f 'req.cpp' || echo '$(srcdir)/'`req.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-req.Tpo $(DEPDIR)/libzmq_la-req.Plo
-#	$(AM_V_CXX)source='req.cpp' object='libzmq_la-req.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-req.lo `test -f 'req.cpp' || echo '$(srcdir)/'`req.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-req.lo -MD -MP -MF $(DEPDIR)/libzmq_la-req.Tpo -c -o libzmq_la-req.lo `test -f 'req.cpp' || echo '$(srcdir)/'`req.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-req.Tpo $(DEPDIR)/libzmq_la-req.Plo
+#	$(AM_V_CXX)source='req.cpp' object='libzmq_la-req.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-req.lo `test -f 'req.cpp' || echo '$(srcdir)/'`req.cpp
 
 libzmq_la-select.lo: select.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-select.lo -MD -MP -MF $(DEPDIR)/libzmq_la-select.Tpo -c -o libzmq_la-select.lo `test -f 'select.cpp' || echo '$(srcdir)/'`select.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-select.Tpo $(DEPDIR)/libzmq_la-select.Plo
-#	$(AM_V_CXX)source='select.cpp' object='libzmq_la-select.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-select.lo `test -f 'select.cpp' || echo '$(srcdir)/'`select.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-select.lo -MD -MP -MF $(DEPDIR)/libzmq_la-select.Tpo -c -o libzmq_la-select.lo `test -f 'select.cpp' || echo '$(srcdir)/'`select.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-select.Tpo $(DEPDIR)/libzmq_la-select.Plo
+#	$(AM_V_CXX)source='select.cpp' object='libzmq_la-select.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-select.lo `test -f 'select.cpp' || echo '$(srcdir)/'`select.cpp
 
 libzmq_la-session_base.lo: session_base.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-session_base.lo -MD -MP -MF $(DEPDIR)/libzmq_la-session_base.Tpo -c -o libzmq_la-session_base.lo `test -f 'session_base.cpp' || echo '$(srcdir)/'`session_base.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-session_base.Tpo $(DEPDIR)/libzmq_la-session_base.Plo
-#	$(AM_V_CXX)source='session_base.cpp' object='libzmq_la-session_base.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-session_base.lo `test -f 'session_base.cpp' || echo '$(srcdir)/'`session_base.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-session_base.lo -MD -MP -MF $(DEPDIR)/libzmq_la-session_base.Tpo -c -o libzmq_la-session_base.lo `test -f 'session_base.cpp' || echo '$(srcdir)/'`session_base.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-session_base.Tpo $(DEPDIR)/libzmq_la-session_base.Plo
+#	$(AM_V_CXX)source='session_base.cpp' object='libzmq_la-session_base.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-session_base.lo `test -f 'session_base.cpp' || echo '$(srcdir)/'`session_base.cpp
 
 libzmq_la-signaler.lo: signaler.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-signaler.lo -MD -MP -MF $(DEPDIR)/libzmq_la-signaler.Tpo -c -o libzmq_la-signaler.lo `test -f 'signaler.cpp' || echo '$(srcdir)/'`signaler.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-signaler.Tpo $(DEPDIR)/libzmq_la-signaler.Plo
-#	$(AM_V_CXX)source='signaler.cpp' object='libzmq_la-signaler.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-signaler.lo `test -f 'signaler.cpp' || echo '$(srcdir)/'`signaler.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-signaler.lo -MD -MP -MF $(DEPDIR)/libzmq_la-signaler.Tpo -c -o libzmq_la-signaler.lo `test -f 'signaler.cpp' || echo '$(srcdir)/'`signaler.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-signaler.Tpo $(DEPDIR)/libzmq_la-signaler.Plo
+#	$(AM_V_CXX)source='signaler.cpp' object='libzmq_la-signaler.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-signaler.lo `test -f 'signaler.cpp' || echo '$(srcdir)/'`signaler.cpp
 
 libzmq_la-socket_base.lo: socket_base.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-socket_base.lo -MD -MP -MF $(DEPDIR)/libzmq_la-socket_base.Tpo -c -o libzmq_la-socket_base.lo `test -f 'socket_base.cpp' || echo '$(srcdir)/'`socket_base.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-socket_base.Tpo $(DEPDIR)/libzmq_la-socket_base.Plo
-#	$(AM_V_CXX)source='socket_base.cpp' object='libzmq_la-socket_base.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-socket_base.lo `test -f 'socket_base.cpp' || echo '$(srcdir)/'`socket_base.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-socket_base.lo -MD -MP -MF $(DEPDIR)/libzmq_la-socket_base.Tpo -c -o libzmq_la-socket_base.lo `test -f 'socket_base.cpp' || echo '$(srcdir)/'`socket_base.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-socket_base.Tpo $(DEPDIR)/libzmq_la-socket_base.Plo
+#	$(AM_V_CXX)source='socket_base.cpp' object='libzmq_la-socket_base.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-socket_base.lo `test -f 'socket_base.cpp' || echo '$(srcdir)/'`socket_base.cpp
 
 libzmq_la-stream.lo: stream.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-stream.lo -MD -MP -MF $(DEPDIR)/libzmq_la-stream.Tpo -c -o libzmq_la-stream.lo `test -f 'stream.cpp' || echo '$(srcdir)/'`stream.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-stream.Tpo $(DEPDIR)/libzmq_la-stream.Plo
-#	$(AM_V_CXX)source='stream.cpp' object='libzmq_la-stream.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-stream.lo `test -f 'stream.cpp' || echo '$(srcdir)/'`stream.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-stream.lo -MD -MP -MF $(DEPDIR)/libzmq_la-stream.Tpo -c -o libzmq_la-stream.lo `test -f 'stream.cpp' || echo '$(srcdir)/'`stream.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-stream.Tpo $(DEPDIR)/libzmq_la-stream.Plo
+#	$(AM_V_CXX)source='stream.cpp' object='libzmq_la-stream.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-stream.lo `test -f 'stream.cpp' || echo '$(srcdir)/'`stream.cpp
 
 libzmq_la-stream_engine.lo: stream_engine.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-stream_engine.lo -MD -MP -MF $(DEPDIR)/libzmq_la-stream_engine.Tpo -c -o libzmq_la-stream_engine.lo `test -f 'stream_engine.cpp' || echo '$(srcdir)/'`stream_engine.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-stream_engine.Tpo $(DEPDIR)/libzmq_la-stream_engine.Plo
-#	$(AM_V_CXX)source='stream_engine.cpp' object='libzmq_la-stream_engine.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-stream_engine.lo `test -f 'stream_engine.cpp' || echo '$(srcdir)/'`stream_engine.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-stream_engine.lo -MD -MP -MF $(DEPDIR)/libzmq_la-stream_engine.Tpo -c -o libzmq_la-stream_engine.lo `test -f 'stream_engine.cpp' || echo '$(srcdir)/'`stream_engine.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-stream_engine.Tpo $(DEPDIR)/libzmq_la-stream_engine.Plo
+#	$(AM_V_CXX)source='stream_engine.cpp' object='libzmq_la-stream_engine.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-stream_engine.lo `test -f 'stream_engine.cpp' || echo '$(srcdir)/'`stream_engine.cpp
 
 libzmq_la-sub.lo: sub.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-sub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-sub.Tpo -c -o libzmq_la-sub.lo `test -f 'sub.cpp' || echo '$(srcdir)/'`sub.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-sub.Tpo $(DEPDIR)/libzmq_la-sub.Plo
-#	$(AM_V_CXX)source='sub.cpp' object='libzmq_la-sub.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-sub.lo `test -f 'sub.cpp' || echo '$(srcdir)/'`sub.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-sub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-sub.Tpo -c -o libzmq_la-sub.lo `test -f 'sub.cpp' || echo '$(srcdir)/'`sub.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-sub.Tpo $(DEPDIR)/libzmq_la-sub.Plo
+#	$(AM_V_CXX)source='sub.cpp' object='libzmq_la-sub.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-sub.lo `test -f 'sub.cpp' || echo '$(srcdir)/'`sub.cpp
 
 libzmq_la-tcp.lo: tcp.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp.Tpo -c -o libzmq_la-tcp.lo `test -f 'tcp.cpp' || echo '$(srcdir)/'`tcp.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp.Tpo $(DEPDIR)/libzmq_la-tcp.Plo
-#	$(AM_V_CXX)source='tcp.cpp' object='libzmq_la-tcp.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp.lo `test -f 'tcp.cpp' || echo '$(srcdir)/'`tcp.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp.Tpo -c -o libzmq_la-tcp.lo `test -f 'tcp.cpp' || echo '$(srcdir)/'`tcp.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp.Tpo $(DEPDIR)/libzmq_la-tcp.Plo
+#	$(AM_V_CXX)source='tcp.cpp' object='libzmq_la-tcp.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp.lo `test -f 'tcp.cpp' || echo '$(srcdir)/'`tcp.cpp
 
 libzmq_la-tcp_address.lo: tcp_address.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp_address.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp_address.Tpo -c -o libzmq_la-tcp_address.lo `test -f 'tcp_address.cpp' || echo '$(srcdir)/'`tcp_address.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp_address.Tpo $(DEPDIR)/libzmq_la-tcp_address.Plo
-#	$(AM_V_CXX)source='tcp_address.cpp' object='libzmq_la-tcp_address.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp_address.lo `test -f 'tcp_address.cpp' || echo '$(srcdir)/'`tcp_address.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp_address.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp_address.Tpo -c -o libzmq_la-tcp_address.lo `test -f 'tcp_address.cpp' || echo '$(srcdir)/'`tcp_address.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp_address.Tpo $(DEPDIR)/libzmq_la-tcp_address.Plo
+#	$(AM_V_CXX)source='tcp_address.cpp' object='libzmq_la-tcp_address.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp_address.lo `test -f 'tcp_address.cpp' || echo '$(srcdir)/'`tcp_address.cpp
 
 libzmq_la-tcp_connecter.lo: tcp_connecter.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp_connecter.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp_connecter.Tpo -c -o libzmq_la-tcp_connecter.lo `test -f 'tcp_connecter.cpp' || echo '$(srcdir)/'`tcp_connecter.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp_connecter.Tpo $(DEPDIR)/libzmq_la-tcp_connecter.Plo
-#	$(AM_V_CXX)source='tcp_connecter.cpp' object='libzmq_la-tcp_connecter.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp_connecter.lo `test -f 'tcp_connecter.cpp' || echo '$(srcdir)/'`tcp_connecter.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp_connecter.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp_connecter.Tpo -c -o libzmq_la-tcp_connecter.lo `test -f 'tcp_connecter.cpp' || echo '$(srcdir)/'`tcp_connecter.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp_connecter.Tpo $(DEPDIR)/libzmq_la-tcp_connecter.Plo
+#	$(AM_V_CXX)source='tcp_connecter.cpp' object='libzmq_la-tcp_connecter.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp_connecter.lo `test -f 'tcp_connecter.cpp' || echo '$(srcdir)/'`tcp_connecter.cpp
 
 libzmq_la-tcp_listener.lo: tcp_listener.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp_listener.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp_listener.Tpo -c -o libzmq_la-tcp_listener.lo `test -f 'tcp_listener.cpp' || echo '$(srcdir)/'`tcp_listener.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp_listener.Tpo $(DEPDIR)/libzmq_la-tcp_listener.Plo
-#	$(AM_V_CXX)source='tcp_listener.cpp' object='libzmq_la-tcp_listener.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp_listener.lo `test -f 'tcp_listener.cpp' || echo '$(srcdir)/'`tcp_listener.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-tcp_listener.lo -MD -MP -MF $(DEPDIR)/libzmq_la-tcp_listener.Tpo -c -o libzmq_la-tcp_listener.lo `test -f 'tcp_listener.cpp' || echo '$(srcdir)/'`tcp_listener.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-tcp_listener.Tpo $(DEPDIR)/libzmq_la-tcp_listener.Plo
+#	$(AM_V_CXX)source='tcp_listener.cpp' object='libzmq_la-tcp_listener.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-tcp_listener.lo `test -f 'tcp_listener.cpp' || echo '$(srcdir)/'`tcp_listener.cpp
 
 libzmq_la-thread.lo: thread.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-thread.lo -MD -MP -MF $(DEPDIR)/libzmq_la-thread.Tpo -c -o libzmq_la-thread.lo `test -f 'thread.cpp' || echo '$(srcdir)/'`thread.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-thread.Tpo $(DEPDIR)/libzmq_la-thread.Plo
-#	$(AM_V_CXX)source='thread.cpp' object='libzmq_la-thread.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-thread.lo `test -f 'thread.cpp' || echo '$(srcdir)/'`thread.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-thread.lo -MD -MP -MF $(DEPDIR)/libzmq_la-thread.Tpo -c -o libzmq_la-thread.lo `test -f 'thread.cpp' || echo '$(srcdir)/'`thread.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-thread.Tpo $(DEPDIR)/libzmq_la-thread.Plo
+#	$(AM_V_CXX)source='thread.cpp' object='libzmq_la-thread.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-thread.lo `test -f 'thread.cpp' || echo '$(srcdir)/'`thread.cpp
 
 libzmq_la-trie.lo: trie.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-trie.lo -MD -MP -MF $(DEPDIR)/libzmq_la-trie.Tpo -c -o libzmq_la-trie.lo `test -f 'trie.cpp' || echo '$(srcdir)/'`trie.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-trie.Tpo $(DEPDIR)/libzmq_la-trie.Plo
-#	$(AM_V_CXX)source='trie.cpp' object='libzmq_la-trie.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-trie.lo `test -f 'trie.cpp' || echo '$(srcdir)/'`trie.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-trie.lo -MD -MP -MF $(DEPDIR)/libzmq_la-trie.Tpo -c -o libzmq_la-trie.lo `test -f 'trie.cpp' || echo '$(srcdir)/'`trie.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-trie.Tpo $(DEPDIR)/libzmq_la-trie.Plo
+#	$(AM_V_CXX)source='trie.cpp' object='libzmq_la-trie.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-trie.lo `test -f 'trie.cpp' || echo '$(srcdir)/'`trie.cpp
 
 libzmq_la-xpub.lo: xpub.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-xpub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-xpub.Tpo -c -o libzmq_la-xpub.lo `test -f 'xpub.cpp' || echo '$(srcdir)/'`xpub.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-xpub.Tpo $(DEPDIR)/libzmq_la-xpub.Plo
-#	$(AM_V_CXX)source='xpub.cpp' object='libzmq_la-xpub.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-xpub.lo `test -f 'xpub.cpp' || echo '$(srcdir)/'`xpub.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-xpub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-xpub.Tpo -c -o libzmq_la-xpub.lo `test -f 'xpub.cpp' || echo '$(srcdir)/'`xpub.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-xpub.Tpo $(DEPDIR)/libzmq_la-xpub.Plo
+#	$(AM_V_CXX)source='xpub.cpp' object='libzmq_la-xpub.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-xpub.lo `test -f 'xpub.cpp' || echo '$(srcdir)/'`xpub.cpp
 
 libzmq_la-router.lo: router.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-router.lo -MD -MP -MF $(DEPDIR)/libzmq_la-router.Tpo -c -o libzmq_la-router.lo `test -f 'router.cpp' || echo '$(srcdir)/'`router.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-router.Tpo $(DEPDIR)/libzmq_la-router.Plo
-#	$(AM_V_CXX)source='router.cpp' object='libzmq_la-router.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-router.lo `test -f 'router.cpp' || echo '$(srcdir)/'`router.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-router.lo -MD -MP -MF $(DEPDIR)/libzmq_la-router.Tpo -c -o libzmq_la-router.lo `test -f 'router.cpp' || echo '$(srcdir)/'`router.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-router.Tpo $(DEPDIR)/libzmq_la-router.Plo
+#	$(AM_V_CXX)source='router.cpp' object='libzmq_la-router.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-router.lo `test -f 'router.cpp' || echo '$(srcdir)/'`router.cpp
 
 libzmq_la-dealer.lo: dealer.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-dealer.lo -MD -MP -MF $(DEPDIR)/libzmq_la-dealer.Tpo -c -o libzmq_la-dealer.lo `test -f 'dealer.cpp' || echo '$(srcdir)/'`dealer.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-dealer.Tpo $(DEPDIR)/libzmq_la-dealer.Plo
-#	$(AM_V_CXX)source='dealer.cpp' object='libzmq_la-dealer.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-dealer.lo `test -f 'dealer.cpp' || echo '$(srcdir)/'`dealer.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-dealer.lo -MD -MP -MF $(DEPDIR)/libzmq_la-dealer.Tpo -c -o libzmq_la-dealer.lo `test -f 'dealer.cpp' || echo '$(srcdir)/'`dealer.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-dealer.Tpo $(DEPDIR)/libzmq_la-dealer.Plo
+#	$(AM_V_CXX)source='dealer.cpp' object='libzmq_la-dealer.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-dealer.lo `test -f 'dealer.cpp' || echo '$(srcdir)/'`dealer.cpp
 
 libzmq_la-v1_decoder.lo: v1_decoder.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v1_decoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v1_decoder.Tpo -c -o libzmq_la-v1_decoder.lo `test -f 'v1_decoder.cpp' || echo '$(srcdir)/'`v1_decoder.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v1_decoder.Tpo $(DEPDIR)/libzmq_la-v1_decoder.Plo
-#	$(AM_V_CXX)source='v1_decoder.cpp' object='libzmq_la-v1_decoder.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v1_decoder.lo `test -f 'v1_decoder.cpp' || echo '$(srcdir)/'`v1_decoder.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v1_decoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v1_decoder.Tpo -c -o libzmq_la-v1_decoder.lo `test -f 'v1_decoder.cpp' || echo '$(srcdir)/'`v1_decoder.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v1_decoder.Tpo $(DEPDIR)/libzmq_la-v1_decoder.Plo
+#	$(AM_V_CXX)source='v1_decoder.cpp' object='libzmq_la-v1_decoder.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v1_decoder.lo `test -f 'v1_decoder.cpp' || echo '$(srcdir)/'`v1_decoder.cpp
 
 libzmq_la-v1_encoder.lo: v1_encoder.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v1_encoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v1_encoder.Tpo -c -o libzmq_la-v1_encoder.lo `test -f 'v1_encoder.cpp' || echo '$(srcdir)/'`v1_encoder.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v1_encoder.Tpo $(DEPDIR)/libzmq_la-v1_encoder.Plo
-#	$(AM_V_CXX)source='v1_encoder.cpp' object='libzmq_la-v1_encoder.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v1_encoder.lo `test -f 'v1_encoder.cpp' || echo '$(srcdir)/'`v1_encoder.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v1_encoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v1_encoder.Tpo -c -o libzmq_la-v1_encoder.lo `test -f 'v1_encoder.cpp' || echo '$(srcdir)/'`v1_encoder.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v1_encoder.Tpo $(DEPDIR)/libzmq_la-v1_encoder.Plo
+#	$(AM_V_CXX)source='v1_encoder.cpp' object='libzmq_la-v1_encoder.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v1_encoder.lo `test -f 'v1_encoder.cpp' || echo '$(srcdir)/'`v1_encoder.cpp
 
 libzmq_la-v2_decoder.lo: v2_decoder.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v2_decoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v2_decoder.Tpo -c -o libzmq_la-v2_decoder.lo `test -f 'v2_decoder.cpp' || echo '$(srcdir)/'`v2_decoder.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v2_decoder.Tpo $(DEPDIR)/libzmq_la-v2_decoder.Plo
-#	$(AM_V_CXX)source='v2_decoder.cpp' object='libzmq_la-v2_decoder.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v2_decoder.lo `test -f 'v2_decoder.cpp' || echo '$(srcdir)/'`v2_decoder.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v2_decoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v2_decoder.Tpo -c -o libzmq_la-v2_decoder.lo `test -f 'v2_decoder.cpp' || echo '$(srcdir)/'`v2_decoder.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v2_decoder.Tpo $(DEPDIR)/libzmq_la-v2_decoder.Plo
+#	$(AM_V_CXX)source='v2_decoder.cpp' object='libzmq_la-v2_decoder.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v2_decoder.lo `test -f 'v2_decoder.cpp' || echo '$(srcdir)/'`v2_decoder.cpp
 
 libzmq_la-v2_encoder.lo: v2_encoder.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v2_encoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v2_encoder.Tpo -c -o libzmq_la-v2_encoder.lo `test -f 'v2_encoder.cpp' || echo '$(srcdir)/'`v2_encoder.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v2_encoder.Tpo $(DEPDIR)/libzmq_la-v2_encoder.Plo
-#	$(AM_V_CXX)source='v2_encoder.cpp' object='libzmq_la-v2_encoder.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v2_encoder.lo `test -f 'v2_encoder.cpp' || echo '$(srcdir)/'`v2_encoder.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-v2_encoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-v2_encoder.Tpo -c -o libzmq_la-v2_encoder.lo `test -f 'v2_encoder.cpp' || echo '$(srcdir)/'`v2_encoder.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-v2_encoder.Tpo $(DEPDIR)/libzmq_la-v2_encoder.Plo
+#	$(AM_V_CXX)source='v2_encoder.cpp' object='libzmq_la-v2_encoder.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-v2_encoder.lo `test -f 'v2_encoder.cpp' || echo '$(srcdir)/'`v2_encoder.cpp
 
 libzmq_la-xsub.lo: xsub.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-xsub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-xsub.Tpo -c -o libzmq_la-xsub.lo `test -f 'xsub.cpp' || echo '$(srcdir)/'`xsub.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-xsub.Tpo $(DEPDIR)/libzmq_la-xsub.Plo
-#	$(AM_V_CXX)source='xsub.cpp' object='libzmq_la-xsub.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-xsub.lo `test -f 'xsub.cpp' || echo '$(srcdir)/'`xsub.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-xsub.lo -MD -MP -MF $(DEPDIR)/libzmq_la-xsub.Tpo -c -o libzmq_la-xsub.lo `test -f 'xsub.cpp' || echo '$(srcdir)/'`xsub.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-xsub.Tpo $(DEPDIR)/libzmq_la-xsub.Plo
+#	$(AM_V_CXX)source='xsub.cpp' object='libzmq_la-xsub.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-xsub.lo `test -f 'xsub.cpp' || echo '$(srcdir)/'`xsub.cpp
 
 libzmq_la-zmq.lo: zmq.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-zmq.lo -MD -MP -MF $(DEPDIR)/libzmq_la-zmq.Tpo -c -o libzmq_la-zmq.lo `test -f 'zmq.cpp' || echo '$(srcdir)/'`zmq.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-zmq.Tpo $(DEPDIR)/libzmq_la-zmq.Plo
-#	$(AM_V_CXX)source='zmq.cpp' object='libzmq_la-zmq.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-zmq.lo `test -f 'zmq.cpp' || echo '$(srcdir)/'`zmq.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-zmq.lo -MD -MP -MF $(DEPDIR)/libzmq_la-zmq.Tpo -c -o libzmq_la-zmq.lo `test -f 'zmq.cpp' || echo '$(srcdir)/'`zmq.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-zmq.Tpo $(DEPDIR)/libzmq_la-zmq.Plo
+#	$(AM_V_CXX)source='zmq.cpp' object='libzmq_la-zmq.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-zmq.lo `test -f 'zmq.cpp' || echo '$(srcdir)/'`zmq.cpp
 
 libzmq_la-zmq_utils.lo: zmq_utils.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-zmq_utils.lo -MD -MP -MF $(DEPDIR)/libzmq_la-zmq_utils.Tpo -c -o libzmq_la-zmq_utils.lo `test -f 'zmq_utils.cpp' || echo '$(srcdir)/'`zmq_utils.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-zmq_utils.Tpo $(DEPDIR)/libzmq_la-zmq_utils.Plo
-#	$(AM_V_CXX)source='zmq_utils.cpp' object='libzmq_la-zmq_utils.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-zmq_utils.lo `test -f 'zmq_utils.cpp' || echo '$(srcdir)/'`zmq_utils.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-zmq_utils.lo -MD -MP -MF $(DEPDIR)/libzmq_la-zmq_utils.Tpo -c -o libzmq_la-zmq_utils.lo `test -f 'zmq_utils.cpp' || echo '$(srcdir)/'`zmq_utils.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-zmq_utils.Tpo $(DEPDIR)/libzmq_la-zmq_utils.Plo
+#	$(AM_V_CXX)source='zmq_utils.cpp' object='libzmq_la-zmq_utils.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-zmq_utils.lo `test -f 'zmq_utils.cpp' || echo '$(srcdir)/'`zmq_utils.cpp
 
 libzmq_la-raw_decoder.lo: raw_decoder.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-raw_decoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-raw_decoder.Tpo -c -o libzmq_la-raw_decoder.lo `test -f 'raw_decoder.cpp' || echo '$(srcdir)/'`raw_decoder.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-raw_decoder.Tpo $(DEPDIR)/libzmq_la-raw_decoder.Plo
-#	$(AM_V_CXX)source='raw_decoder.cpp' object='libzmq_la-raw_decoder.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-raw_decoder.lo `test -f 'raw_decoder.cpp' || echo '$(srcdir)/'`raw_decoder.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-raw_decoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-raw_decoder.Tpo -c -o libzmq_la-raw_decoder.lo `test -f 'raw_decoder.cpp' || echo '$(srcdir)/'`raw_decoder.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-raw_decoder.Tpo $(DEPDIR)/libzmq_la-raw_decoder.Plo
+#	$(AM_V_CXX)source='raw_decoder.cpp' object='libzmq_la-raw_decoder.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-raw_decoder.lo `test -f 'raw_decoder.cpp' || echo '$(srcdir)/'`raw_decoder.cpp
 
 libzmq_la-raw_encoder.lo: raw_encoder.cpp
-#	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-raw_encoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-raw_encoder.Tpo -c -o libzmq_la-raw_encoder.lo `test -f 'raw_encoder.cpp' || echo '$(srcdir)/'`raw_encoder.cpp
-#	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-raw_encoder.Tpo $(DEPDIR)/libzmq_la-raw_encoder.Plo
-#	$(AM_V_CXX)source='raw_encoder.cpp' object='libzmq_la-raw_encoder.lo' libtool=yes 
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) 
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-raw_encoder.lo `test -f 'raw_encoder.cpp' || echo '$(srcdir)/'`raw_encoder.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -MT libzmq_la-raw_encoder.lo -MD -MP -MF $(DEPDIR)/libzmq_la-raw_encoder.Tpo -c -o libzmq_la-raw_encoder.lo `test -f 'raw_encoder.cpp' || echo '$(srcdir)/'`raw_encoder.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libzmq_la-raw_encoder.Tpo $(DEPDIR)/libzmq_la-raw_encoder.Plo
+#	$(AM_V_CXX)source='raw_encoder.cpp' object='libzmq_la-raw_encoder.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libzmq_la_CPPFLAGS) $(CPPFLAGS) $(libzmq_la_CXXFLAGS) $(CXXFLAGS) -c -o libzmq_la-raw_encoder.lo `test -f 'raw_encoder.cpp' || echo '$(srcdir)/'`raw_encoder.cpp
 
 mostlyclean-libtool:
 	-rm -f *.lo

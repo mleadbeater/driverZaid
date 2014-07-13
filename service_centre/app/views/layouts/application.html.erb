@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DriverZaid Service Portal</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render :template => "layouts/_header" %>
+<%= render :template => "layouts/_nav_menu"  %>
+<div class="body_spacer"></div>
+<div class="body">
+
+<%= yield %>
+
+</div>
+</body>
+</html>
